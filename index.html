@@ -1,189 +1,191 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="AI Samjho — Free AI learning app in Hindi-English by Abhishek Tiwari">
+<meta name="description" content="AI Samjho — Learn AI for Free by Abhishek Tiwari">
 <meta name="theme-color" content="#ffffff">
-<title>AI Samjho — by Abhishek Tiwari</title>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+<title>AI Samjho — Learn AI Free | by Abhishek Tiwari</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 :root{
-  --primary:#6C3FF5;
-  --primary2:#8B5CF6;
-  --accent:#FF6B00;
-  --green:#059669;--green-bg:#ECFDF5;
-  --blue:#2563EB;--blue-bg:#EFF6FF;
-  --pink:#DB2777;--pink-bg:#FDF2F8;
-  --orange:#EA580C;--orange-bg:#FFF7ED;
-  --bg:#F8F7FF;--bg2:#FFFFFF;
-  --card:#FFFFFF;
+  --primary:#6C3FF5;--primary2:#8B5CF6;--primary-light:#EDE9FE;
+  --accent:#FF6B00;--accent-light:#FFF7ED;
+  --green:#059669;--green-light:#ECFDF5;
+  --blue:#2563EB;--blue-light:#EFF6FF;
+  --red:#DC2626;--red-light:#FEF2F2;
+  --yellow:#D97706;--yellow-light:#FFFBEB;
+  --bg:#F5F5F8;--card:#FFFFFF;
+  --text:#111827;--muted:#6B7280;--faint:#9CA3AF;
   --border:#E5E7EB;--border2:#D1D5DB;
-  --text:#1F2937;--muted:#6B7280;--faint:#9CA3AF;
-  --shadow:0 1px 3px rgba(0,0,0,0.08),0 1px 2px rgba(0,0,0,0.06);
-  --shadow-md:0 4px 6px rgba(0,0,0,0.07),0 2px 4px rgba(0,0,0,0.06);
+  --shadow:0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md:0 4px 12px rgba(0,0,0,0.08);
 }
 html,body{height:100%;overflow:hidden}
-body{background:var(--bg);font-family:'Hind',sans-serif;color:var(--text)}
-
-.app{max-width:430px;margin:0 auto;height:100vh;display:flex;flex-direction:column;overflow:hidden;background:var(--bg)}
+body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--text);font-size:14px}
+.app{max-width:430px;margin:0 auto;height:100vh;display:flex;flex-direction:column;background:var(--bg)}
 
 /* HEADER */
-.hdr{padding:12px 16px 10px;display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border-bottom:1px solid var(--border);flex-shrink:0;box-shadow:var(--shadow)}
+.hdr{padding:12px 16px;display:flex;align-items:center;justify-content:space-between;background:var(--card);border-bottom:1px solid var(--border);flex-shrink:0;box-shadow:var(--shadow)}
 .logo{display:flex;align-items:center;gap:9px}
-.logo-ic{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--primary2));display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;box-shadow:0 2px 8px rgba(108,63,245,.3)}
-.logo-tx{font-family:'Baloo 2',cursive;font-weight:800;font-size:19px;background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.logo-by{font-size:9px;color:var(--faint);margin-top:-3px;letter-spacing:.3px}
-.hdr-right{display:flex;align-items:center;gap:6px}
-.streak-chip{display:flex;align-items:center;gap:3px;background:#FFF7ED;border:1px solid #FED7AA;border-radius:20px;padding:4px 10px;font-size:11px;color:#EA580C;font-weight:600}
-.xp-chip{background:var(--blue-bg);border:1px solid #BFDBFE;border-radius:20px;padding:4px 10px;font-size:11px;color:var(--blue);font-weight:600}
+.logo-ic{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--primary2));display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.logo-name{font-family:'Baloo 2',cursive;font-weight:800;font-size:20px;background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.logo-by{font-size:9px;color:var(--faint);margin-top:-4px}
+.chips-hdr{display:flex;gap:6px}
+.chip-sm{display:flex;align-items:center;gap:3px;border-radius:20px;padding:4px 10px;font-size:11px;font-weight:600}
+.chip-fire{background:var(--accent-light);color:var(--accent);border:1px solid #FED7AA}
+.chip-xp{background:var(--primary-light);color:var(--primary);border:1px solid #C4B5FD}
 
 /* NAV */
-.nav{display:flex;background:var(--bg2);border-bottom:1px solid var(--border);flex-shrink:0}
-.nb{flex:1;padding:8px 2px 7px;font-size:10px;font-family:'Hind',sans-serif;font-weight:500;color:var(--faint);background:none;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;border-bottom:2px solid transparent;transition:all .2s}
+.nav{display:flex;background:var(--card);border-bottom:1px solid var(--border);flex-shrink:0}
+.nb{flex:1;padding:8px 2px 7px;font-size:10px;font-weight:500;color:var(--faint);background:none;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;border-bottom:2px solid transparent;transition:all .2s;font-family:'Inter',sans-serif}
 .nb.on{color:var(--primary);border-bottom-color:var(--primary)}
-.nb-ic{font-size:16px}
+.nb-ic{font-size:17px}
 
 /* SCREENS */
 .scr{display:none;flex:1;overflow-y:auto;padding:14px 14px 80px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
 .scr.on{display:block}
 
-/* CARDS */
-.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:12px;box-shadow:var(--shadow)}
-.card-tap{cursor:pointer;transition:all .15s}
-.card-tap:hover{box-shadow:var(--shadow-md);transform:translateY(-1px);border-color:#C4B5FD}
+/* WELCOME CARD */
+.wcard{background:linear-gradient(135deg,var(--primary),var(--primary2));border-radius:16px;padding:18px;margin-bottom:14px;position:relative;overflow:hidden}
+.wcard::after{content:'🇮🇳';position:absolute;right:16px;top:14px;font-size:30px;opacity:.2}
+.wcard-hi{font-family:'Baloo 2',cursive;font-size:22px;font-weight:800;color:#fff;margin-bottom:4px}
+.wcard-sub{font-size:13px;color:rgba(255,255,255,.8);line-height:1.5}
+.wcard-tag{display:inline-block;margin-top:10px;background:rgba(255,255,255,.18);color:#fff;font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500}
 
-/* WELCOME */
-.wcard{background:linear-gradient(135deg,var(--primary),var(--primary2));border-radius:16px;padding:16px;margin-bottom:14px;position:relative;overflow:hidden;box-shadow:0 4px 15px rgba(108,63,245,.3)}
-.wcard::after{content:'🇮🇳';position:absolute;right:14px;top:12px;font-size:28px;opacity:.25}
-.w-hi{font-family:'Baloo 2',cursive;font-size:22px;font-weight:800;color:#fff}
-.w-sub{font-size:12px;color:rgba(255,255,255,.8);margin-top:3px}
-.w-tag{font-size:11px;color:rgba(255,255,255,.7);margin-top:8px;background:rgba(255,255,255,.15);display:inline-block;padding:3px 10px;border-radius:20px}
+/* SECTION LABEL */
+.sec-lbl{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px}
+
+/* LESSON CARD */
+.l-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:15px;margin-bottom:10px;cursor:pointer;transition:all .15s;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.l-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.l-card.beg::before{background:linear-gradient(90deg,var(--green),#34D399)}
+.l-card.mid::before{background:linear-gradient(90deg,var(--blue),#60A5FA)}
+.l-card.adv::before{background:linear-gradient(90deg,var(--red),#F87171)}
+.l-card:hover{box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.l-emoji{font-size:28px;display:block;margin-bottom:7px}
+.l-title{font-family:'Baloo 2',cursive;font-size:16px;font-weight:700;color:var(--text);margin-bottom:3px}
+.l-sub{font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:8px}
+.l-meta{display:flex;align-items:center;justify-content:space-between}
+.l-time{font-size:11px;color:var(--faint)}
+.l-arr{color:var(--primary);font-size:15px;font-weight:700}
+.tag{font-size:10px;font-weight:600;padding:3px 8px;border-radius:6px;display:inline-block;margin-bottom:7px}
+.tag.beg{background:var(--green-light);color:var(--green)}
+.tag.mid{background:var(--blue-light);color:var(--blue)}
+.tag.adv{background:var(--red-light);color:var(--red)}
+.tag.new{background:var(--accent-light);color:var(--accent)}
+
+/* CHIPS ROW */
+.chips-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:14px;scrollbar-width:none}
+.chips-row::-webkit-scrollbar{display:none}
+.topic-chip{flex-shrink:0;background:var(--card);border:1.5px solid var(--border);border-radius:12px;padding:10px 12px;text-align:center;cursor:pointer;transition:all .15s;min-width:82px}
+.topic-chip:hover{border-color:var(--primary);background:var(--primary-light)}
+.tc-ic{font-size:18px;display:block;margin-bottom:3px}
+.tc-tx{font-size:10px;color:var(--muted);font-weight:500;line-height:1.3}
 
 /* PROGRESS */
-.prog-wrap{background:#E5E7EB;border-radius:20px;height:7px;overflow:hidden;margin:6px 0}
+.prog-wrap{background:var(--border);border-radius:20px;height:7px;overflow:hidden;margin:6px 0}
 .prog-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--primary),var(--primary2));transition:width .5s}
-
-/* LABELS */
-.lbl{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px}
-.tag{font-size:10px;font-weight:600;padding:3px 8px;border-radius:6px;display:inline-block;margin-bottom:7px}
-.tag.beg{background:var(--green-bg);color:var(--green)}
-.tag.mid{background:var(--blue-bg);color:var(--blue)}
-.tag.adv{background:var(--pink-bg);color:var(--pink)}
-.tag.new{background:var(--orange-bg);color:var(--orange)}
-
-/* LESSON CARDS */
-.l-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:10px;cursor:pointer;transition:all .15s;box-shadow:var(--shadow);position:relative;overflow:hidden}
-.l-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--primary),var(--accent))}
-.l-card:hover{box-shadow:var(--shadow-md);transform:translateY(-1px);border-color:#C4B5FD}
-.l-emoji{font-size:28px;margin-bottom:6px;display:block}
-.l-title{font-family:'Baloo 2',cursive;font-size:16px;font-weight:700;color:var(--text);margin-bottom:3px;line-height:1.3}
-.l-sub{font-size:12px;color:var(--muted);margin-bottom:8px;line-height:1.5}
-.l-meta{display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--faint)}
-.l-arr{color:var(--primary);font-size:14px;font-weight:700}
-
-/* CHIPS */
-.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:14px;scrollbar-width:none}
-.chips::-webkit-scrollbar{display:none}
-.chip{flex-shrink:0;background:var(--card);border:1.5px solid var(--border);border-radius:12px;padding:10px 12px;text-align:center;cursor:pointer;transition:all .15s;min-width:85px;box-shadow:var(--shadow)}
-.chip:hover{border-color:var(--primary);background:var(--blue-bg)}
-.chip-ic{font-size:18px;display:block;margin-bottom:3px}
-.chip-tx{font-size:10px;color:var(--muted);font-weight:500;line-height:1.3}
-
-/* DETAIL */
-.det-emoji{font-size:40px;display:block;margin-bottom:10px}
-.det-title{font-family:'Baloo 2',cursive;font-size:22px;font-weight:800;color:var(--text);margin-bottom:4px}
-.det-sub{font-size:13px;color:var(--muted);margin-bottom:16px;font-style:italic}
-.det-sec-title{font-size:11px;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:.5px;margin-bottom:7px;margin-top:16px}
-.det-text{font-size:13px;line-height:1.85;color:var(--text)}
-.eg-box{background:var(--orange-bg);border:1px solid #FED7AA;border-radius:10px;padding:12px;margin-top:8px;font-size:12px;line-height:1.7;color:var(--text)}
-.eg-box b{color:var(--orange)}
-.kp-list{list-style:none;margin-top:8px}
-.kp-list li{font-size:13px;padding:7px 0 7px 20px;border-bottom:1px solid var(--border);position:relative;line-height:1.5;color:var(--text)}
-.kp-list li::before{content:'✦';position:absolute;left:0;color:var(--primary);font-size:10px;top:10px}
-
-/* BUTTONS */
-.btn-primary{width:100%;padding:13px;background:linear-gradient(135deg,var(--primary),var(--primary2));color:#fff;border:none;border-radius:12px;font-family:'Baloo 2',cursive;font-size:15px;font-weight:700;cursor:pointer;transition:all .15s;box-shadow:0 4px 12px rgba(108,63,245,.3)}
-.btn-primary:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(108,63,245,.4)}
-.btn-ghost{background:var(--bg);border:1.5px solid var(--border2);color:var(--muted);padding:7px 14px;border-radius:20px;font-size:12px;cursor:pointer;font-family:'Hind',sans-serif;transition:all .15s}
-.btn-ghost:hover{border-color:var(--primary);color:var(--primary)}
-
-/* QUIZ */
-.q-title{font-family:'Baloo 2',cursive;font-size:16px;font-weight:700;line-height:1.4;margin-bottom:14px;color:var(--text)}
-.q-opts{display:flex;flex-direction:column;gap:8px;margin-bottom:10px}
-.q-opt{background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:12px 14px;font-size:13px;cursor:pointer;transition:all .15s;text-align:left;font-family:'Hind',sans-serif;color:var(--text)}
-.q-opt:hover:not(:disabled){border-color:var(--primary);background:var(--blue-bg);color:var(--primary)}
-.q-opt.ok{border-color:var(--green);background:var(--green-bg);color:var(--green)}
-.q-opt.no{border-color:var(--pink);background:var(--pink-bg);color:var(--pink)}
-.q-res{display:none;padding:10px 12px;border-radius:9px;font-size:12px;line-height:1.6;margin-top:4px}
-.q-res.on{display:block}
-.q-res.ok{background:var(--green-bg);border:1px solid #A7F3D0;color:var(--green)}
-.q-res.no{background:var(--pink-bg);border:1px solid #FBCFE8;color:var(--pink)}
-
-/* CHAT */
-.chat-wrap{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
-.msgs{height:320px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;margin-bottom:12px;scrollbar-width:thin;scrollbar-color:var(--border) transparent;padding-right:4px}
-.msg{padding:10px 13px;border-radius:14px;font-size:13px;line-height:1.7;max-width:88%}
-.msg.bot{background:var(--blue-bg);border:1px solid #BFDBFE;color:var(--text);align-self:flex-start;border-radius:4px 14px 14px 14px}
-.msg.usr{background:linear-gradient(135deg,var(--primary),var(--primary2));color:#fff;align-self:flex-end;border-radius:14px 4px 14px 14px}
-.msg.loading{background:var(--bg);border:1px solid var(--border);color:var(--muted);font-style:italic;align-self:flex-start}
-.inp-row{display:flex;gap:8px}
-.chat-inp{flex:1;background:var(--bg);border:1.5px solid var(--border2);border-radius:12px;padding:11px 14px;font-size:13px;color:var(--text);font-family:'Hind',sans-serif;outline:none;transition:border-color .2s}
-.chat-inp:focus{border-color:var(--primary)}
-.chat-inp::placeholder{color:var(--faint)}
-.send-btn{background:linear-gradient(135deg,var(--primary),var(--primary2));border:none;border-radius:12px;padding:11px 16px;color:#fff;font-size:16px;cursor:pointer;transition:opacity .15s;box-shadow:0 2px 8px rgba(108,63,245,.3)}
-.send-btn:hover{opacity:.9}
-.quick-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.q-btn{padding:6px 12px;background:var(--bg);border:1.5px solid var(--border);border-radius:20px;font-size:11px;color:var(--muted);cursor:pointer;font-family:'Hind',sans-serif;transition:all .15s}
-.q-btn:hover{border-color:var(--primary);color:var(--primary);background:var(--blue-bg)}
-
-/* TOOLS */
-.tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
-.tool-card{background:var(--card);border:1.5px solid var(--border);border-radius:14px;padding:13px;cursor:pointer;transition:all .15s;box-shadow:var(--shadow)}
-.tool-card:hover{border-color:var(--primary);box-shadow:var(--shadow-md);transform:translateY(-1px)}
-.tool-ic{font-size:26px;margin-bottom:7px}
-.tool-name{font-family:'Baloo 2',cursive;font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px}
-.tool-desc{font-size:11px;color:var(--muted);line-height:1.4}
-.tool-badge{font-size:9px;padding:2px 8px;border-radius:6px;display:inline-block;margin-top:5px;font-weight:600}
-.tb-free{background:var(--green-bg);color:var(--green)}
-.tb-paid{background:var(--orange-bg);color:var(--orange)}
-
-/* ABOUT */
-.ab-hero{background:linear-gradient(135deg,var(--primary),var(--primary2));border-radius:16px;padding:20px;text-align:center;margin-bottom:14px;box-shadow:0 4px 15px rgba(108,63,245,.3)}
-.ab-av{width:70px;height:70px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 10px;border:3px solid rgba(255,255,255,.4)}
-.ab-name{font-family:'Baloo 2',cursive;font-size:21px;font-weight:800;color:#fff}
-.ab-role{font-size:12px;color:rgba(255,255,255,.75);margin-top:2px}
-.ab-quote{font-size:12px;color:rgba(255,255,255,.85);margin-top:10px;line-height:1.7;font-style:italic}
-.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
-.stat{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px;text-align:center;box-shadow:var(--shadow)}
-.stat-n{font-family:'Baloo 2',cursive;font-size:20px;font-weight:800;color:var(--primary)}
-.stat-l{font-size:10px;color:var(--muted);margin-top:2px}
-.wa-btn{width:100%;padding:13px;background:linear-gradient(135deg,#25D366,#128C7E);border:none;border-radius:12px;color:#fff;font-family:'Baloo 2',cursive;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(37,211,102,.3);margin-top:4px}
 
 /* TIP CARD */
 .tip-card{background:linear-gradient(135deg,#EFF6FF,#F0FDF4);border:1px solid #BFDBFE;border-radius:14px;padding:14px;margin-bottom:12px}
-.tip-label{font-size:10px;font-weight:600;color:var(--blue);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
-.tip-text{font-size:13px;line-height:1.8;color:var(--text)}
-
-/* LEVEL */
-.level-badge{background:var(--blue-bg);border:1px solid #BFDBFE;border-radius:20px;padding:4px 12px;font-size:11px;color:var(--blue);font-weight:600;display:inline-block}
+.tip-lbl{font-size:10px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px}
 
 /* NOTIF */
-.notif{background:var(--orange-bg);border:1px solid #FED7AA;border-radius:12px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:10px;font-size:12px;color:var(--text);cursor:pointer}
+.notif{background:var(--accent-light);border:1px solid #FED7AA;border-radius:12px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:10px;cursor:pointer;font-size:12px;color:var(--text)}
+
+/* LESSON DETAIL */
+.det-emoji{font-size:40px;display:block;margin-bottom:10px}
+.det-title{font-family:'Baloo 2',cursive;font-size:22px;font-weight:800;color:var(--text);margin-bottom:4px}
+.det-sub{font-size:13px;color:var(--muted);margin-bottom:16px;font-style:italic}
+.det-sec{font-size:11px;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:.5px;margin:16px 0 7px}
+.det-text{font-size:13px;line-height:1.9;color:var(--text)}
+.eg-box{background:var(--accent-light);border:1px solid #FED7AA;border-radius:10px;padding:13px;margin-top:10px;font-size:13px;line-height:1.7}
+.eg-box b{color:var(--accent)}
+.kp{list-style:none}
+.kp li{font-size:13px;padding:8px 0 8px 20px;border-bottom:1px solid var(--border);position:relative;line-height:1.5}
+.kp li:last-child{border-bottom:none}
+.kp li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700;font-size:12px;top:10px}
+
+/* BUTTONS */
+.btn-main{width:100%;padding:13px;background:linear-gradient(135deg,var(--primary),var(--primary2));color:#fff;border:none;border-radius:12px;font-family:'Baloo 2',cursive;font-size:15px;font-weight:700;cursor:pointer;transition:all .15s;box-shadow:0 4px 12px rgba(108,63,245,.25)}
+.btn-main:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(108,63,245,.35)}
+.btn-out{background:var(--bg);border:1.5px solid var(--border2);color:var(--muted);padding:8px 16px;border-radius:20px;font-size:12px;cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s}
+.btn-out:hover{border-color:var(--primary);color:var(--primary)}
+
+/* QUIZ */
+.q-n{font-family:'Baloo 2',cursive;font-size:16px;font-weight:700;line-height:1.4;margin-bottom:14px;color:var(--text)}
+.q-opts{display:flex;flex-direction:column;gap:8px;margin-bottom:10px}
+.q-opt{background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:12px 14px;font-size:13px;cursor:pointer;transition:all .15s;text-align:left;font-family:'Inter',sans-serif;color:var(--text)}
+.q-opt:hover:not(:disabled){border-color:var(--primary);background:var(--primary-light)}
+.q-opt.ok{border-color:var(--green);background:var(--green-light);color:var(--green);font-weight:500}
+.q-opt.no{border-color:var(--red);background:var(--red-light);color:var(--red)}
+.q-res{display:none;padding:10px 12px;border-radius:9px;font-size:12px;line-height:1.6;margin-top:4px}
+.q-res.on{display:block}
+.q-res.ok{background:var(--green-light);border:1px solid #A7F3D0;color:var(--green)}
+.q-res.no{background:var(--red-light);border:1px solid #FECACA;color:var(--red)}
+
+/* CHAT */
+.chat-box{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
+.msgs{height:300px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;margin-bottom:12px;padding-right:2px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.msg{padding:10px 13px;border-radius:14px;font-size:13px;line-height:1.7;max-width:90%}
+.msg.bot{background:var(--blue-light);border:1px solid #BFDBFE;color:var(--text);align-self:flex-start;border-radius:4px 14px 14px 14px}
+.msg.usr{background:linear-gradient(135deg,var(--primary),var(--primary2));color:#fff;align-self:flex-end;border-radius:14px 4px 14px 14px}
+.msg.load{background:var(--bg);border:1px solid var(--border);color:var(--muted);font-style:italic;align-self:flex-start;animation:pulse 1.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+.inp-row{display:flex;gap:8px}
+.chat-inp{flex:1;background:var(--bg);border:1.5px solid var(--border2);border-radius:12px;padding:11px 14px;font-size:13px;color:var(--text);font-family:'Inter',sans-serif;outline:none;transition:border-color .2s}
+.chat-inp:focus{border-color:var(--primary)}
+.chat-inp::placeholder{color:var(--faint)}
+.send-btn{background:linear-gradient(135deg,var(--primary),var(--primary2));border:none;border-radius:12px;padding:11px 16px;color:#fff;font-size:16px;cursor:pointer;transition:opacity .15s}
+.send-btn:hover{opacity:.9}
+.qbtns{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.qbtn{padding:6px 12px;background:var(--card);border:1.5px solid var(--border);border-radius:20px;font-size:11px;color:var(--muted);cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s}
+.qbtn:hover{border-color:var(--primary);color:var(--primary);background:var(--primary-light)}
+
+/* TOOLS */
+.tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+.tool-c{background:var(--card);border:1.5px solid var(--border);border-radius:14px;padding:13px;cursor:pointer;transition:all .15s;box-shadow:var(--shadow)}
+.tool-c:hover{border-color:var(--primary);box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.tool-ic{font-size:26px;margin-bottom:7px}
+.tool-nm{font-family:'Baloo 2',cursive;font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px}
+.tool-ds{font-size:11px;color:var(--muted);line-height:1.4}
+.tool-bg{font-size:9px;padding:2px 8px;border-radius:6px;display:inline-block;margin-top:5px;font-weight:600}
+.free{background:var(--green-light);color:var(--green)}
+.freemium{background:var(--yellow-light);color:var(--yellow)}
+
+/* ABOUT */
+.ab-hero{background:linear-gradient(135deg,var(--primary),var(--primary2));border-radius:16px;padding:20px;text-align:center;margin-bottom:14px;box-shadow:0 4px 16px rgba(108,63,245,.25)}
+.ab-av{width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,.2);border:3px solid rgba(255,255,255,.4);display:flex;align-items:center;justify-content:center;font-size:30px;margin:0 auto 10px}
+.ab-name{font-family:'Baloo 2',cursive;font-size:22px;font-weight:800;color:#fff}
+.ab-role{font-size:12px;color:rgba(255,255,255,.75);margin-top:2px}
+.ab-quote{font-size:12px;color:rgba(255,255,255,.85);margin-top:10px;line-height:1.7;font-style:italic}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px;text-align:center;box-shadow:var(--shadow)}
+.stat-n{font-family:'Baloo 2',cursive;font-size:21px;font-weight:800;color:var(--primary)}
+.stat-l{font-size:10px;color:var(--muted);margin-top:2px}
+.wa-btn{width:100%;padding:13px;background:linear-gradient(135deg,#25D366,#128C7E);border:none;border-radius:12px;color:#fff;font-family:'Baloo 2',cursive;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(37,211,102,.25)}
 
 /* AMAZON */
-.az-box{background:#FFFBEB;border:1px solid #FDE68A;border-radius:12px;padding:12px;margin-bottom:12px}
-.az-title{font-size:10px;font-weight:600;color:#B45309;margin-bottom:9px;text-transform:uppercase;letter-spacing:.5px}
-.az-item{display:flex;align-items:center;gap:10px;padding:9px 10px;background:#fff;border-radius:9px;margin-bottom:6px;cursor:pointer;border:1px solid #FDE68A;text-decoration:none;transition:border-color .15s}
+.az-box{background:var(--yellow-light);border:1px solid #FDE68A;border-radius:14px;padding:13px;margin-bottom:12px}
+.az-lbl{font-size:10px;font-weight:600;color:#92400E;text-transform:uppercase;letter-spacing:.5px;margin-bottom:9px}
+.az-item{display:flex;align-items:center;gap:10px;padding:9px 10px;background:#fff;border-radius:9px;margin-bottom:6px;text-decoration:none;border:1px solid #FDE68A;transition:border-color .15s}
 .az-item:hover{border-color:#F59E0B}
 .az-item:last-child{margin-bottom:0}
-.az-ic{font-size:18px;flex-shrink:0}
+.az-ic{font-size:20px;flex-shrink:0}
 .az-tx{font-size:12px;color:var(--text);line-height:1.4;flex:1}
-.az-pr{font-size:10px;color:#B45309;font-weight:600;margin-top:2px}
+.az-pr{font-size:10px;color:#92400E;font-weight:600;margin-top:2px}
+
+/* INFO CARD */
+.info-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:10px;box-shadow:var(--shadow)}
+.info-lbl{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+
+/* LEVEL */
+.level-chip{background:var(--primary-light);border:1px solid #C4B5FD;border-radius:20px;padding:4px 12px;font-size:11px;color:var(--primary);font-weight:600;display:inline-block}
 
 /* TOAST */
-.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(10px);background:var(--text);color:#fff;border-radius:10px;padding:10px 18px;font-size:12px;opacity:0;transition:all .3s;z-index:999;white-space:nowrap;pointer-events:none}
+.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(10px);background:var(--text);color:#fff;border-radius:10px;padding:9px 18px;font-size:12px;opacity:0;transition:all .3s;z-index:999;white-space:nowrap;pointer-events:none;font-weight:500}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 </style>
 </head>
@@ -195,85 +197,85 @@ body{background:var(--bg);font-family:'Hind',sans-serif;color:var(--text)}
   <div class="logo">
     <div class="logo-ic">🧠</div>
     <div>
-      <div class="logo-tx">AI Samjho</div>
+      <div class="logo-name">AI Samjho</div>
       <div class="logo-by">by Abhishek Tiwari</div>
     </div>
   </div>
-  <div class="hdr-right">
-    <div class="streak-chip">🔥 <span id="sc">1</span></div>
-    <div class="xp-chip">⭐ <span id="xpc">0</span> XP</div>
+  <div class="chips-hdr">
+    <div class="chip-sm chip-fire">🔥 <span id="sc">1</span></div>
+    <div class="chip-sm chip-xp">⭐ <span id="xpc">0</span> XP</div>
   </div>
 </div>
 
 <!-- NAV -->
 <div class="nav">
   <button class="nb on" onclick="go('home',this)"><span class="nb-ic">🏠</span>Home</button>
-  <button class="nb" onclick="go('learn',this)"><span class="nb-ic">📚</span>Seekho</button>
+  <button class="nb" onclick="go('learn',this)"><span class="nb-ic">📚</span>Learn</button>
   <button class="nb" onclick="go('quiz',this)"><span class="nb-ic">🧩</span>Quiz</button>
   <button class="nb" onclick="go('tools',this)"><span class="nb-ic">🛠️</span>Tools</button>
-  <button class="nb" onclick="go('ask',this)"><span class="nb-ic">🤖</span>Poocho</button>
+  <button class="nb" onclick="go('ask',this)"><span class="nb-ic">🤖</span>Ask AI</button>
   <button class="nb" onclick="go('about',this)"><span class="nb-ic">👤</span>About</button>
 </div>
 
 <!-- HOME -->
 <div class="scr on" id="s-home">
   <div class="wcard">
-    <div class="w-hi">Namaste! 🙏</div>
-    <div class="w-sub">AI Seekho, Aage Badho — Roz ek naya lesson</div>
-    <div class="w-tag">✦ Abhishek Tiwari ke saath</div>
+    <div class="wcard-hi">Welcome! 🙏</div>
+    <div class="wcard-sub">Learn AI for free — simple lessons, real examples, no tech background needed.</div>
+    <div class="wcard-tag">✦ by Abhishek Tiwari</div>
   </div>
 
   <div class="tip-card">
-    <div class="tip-label">💡 Aaj Ki AI Tip</div>
-    <div class="tip-text" id="dailyTip">Loading...</div>
+    <div class="tip-lbl">💡 Today's AI Tip</div>
+    <div style="font-size:13px;line-height:1.8;color:var(--text)" id="dailyTip">Loading...</div>
   </div>
 
   <div class="notif" onclick="go('learn',document.querySelectorAll('.nb')[1])">
     <span style="font-size:18px">📖</span>
-    <span>Aaj ka lesson complete karo aur <strong style="color:var(--orange)">+10 XP</strong> pao!</span>
+    <span>Complete today's lesson and earn <strong style="color:var(--accent)">+10 XP!</strong></span>
     <span style="color:var(--primary);margin-left:auto;font-weight:700">→</span>
   </div>
 
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
-    <div class="lbl" style="margin:0">Level:</div>
-    <div class="level-badge" id="levelBadge">🌱 Beginner</div>
+    <div class="sec-lbl" style="margin:0">Your Level</div>
+    <div class="level-chip" id="levelBadge">🌱 Beginner</div>
   </div>
   <div class="prog-wrap"><div class="prog-fill" id="progFill" style="width:5%"></div></div>
-  <div style="font-size:10px;color:var(--faint);margin-bottom:14px;text-align:right" id="xpLabel">5/100 XP</div>
+  <div style="font-size:10px;color:var(--faint);text-align:right;margin-bottom:14px" id="xpLabel">5/100 XP to next level</div>
 
-  <div class="lbl">⚡ Aaj Ka Featured Lesson</div>
-  <div class="l-card" onclick="openLesson(0)">
-    <span class="tag new">New Today</span>
-    <span class="l-emoji">🤖</span>
-    <div class="l-title">AI Kya Hota Hai?</div>
-    <div class="l-sub">Artificial Intelligence ko bilkul simple language mein samjho</div>
-    <div class="l-meta"><span>⏱ 3 min · Beginner</span><span class="l-arr">→</span></div>
+  <!-- DAILY BANNER -->
+  <div id="dailyBanner" style="background:linear-gradient(135deg,#F0FDF4,#EFF6FF);border:1px solid #BFDBFE;border-radius:12px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:10px;font-size:12px;color:var(--text)">
+    <span style="font-size:18px">📅</span>
+    <span id="dailyBannerText">Loading today's content...</span>
   </div>
 
-  <div class="lbl">🔥 Popular Topics</div>
-  <div class="chips">
-    <div class="chip" onclick="openLesson(1)"><span class="chip-ic">💬</span><span class="chip-tx">ChatGPT Kya Hai?</span></div>
-    <div class="chip" onclick="openLesson(2)"><span class="chip-ic">🎨</span><span class="chip-tx">AI Image Banao</span></div>
-    <div class="chip" onclick="openLesson(3)"><span class="chip-ic">💰</span><span class="chip-tx">AI Se Kamao</span></div>
-    <div class="chip" onclick="openLesson(4)"><span class="chip-ic">🔍</span><span class="chip-tx">AI Search</span></div>
-    <div class="chip" onclick="openLesson(5)"><span class="chip-ic">📝</span><span class="chip-tx">AI Writing</span></div>
-    <div class="chip" onclick="openLesson(6)"><span class="chip-ic">🎵</span><span class="chip-tx">AI Music</span></div>
-    <div class="chip" onclick="openLesson(7)"><span class="chip-ic">💼</span><span class="chip-tx">AI Business</span></div>
+  <div class="sec-lbl">⚡ Featured Lesson Today</div>
+  <div id="featuredLesson"></div>
+
+  <div class="sec-lbl">🔥 Popular Topics</div>
+  <div class="chips-row">
+    <div class="topic-chip" onclick="openLesson(1)"><span class="tc-ic">💬</span><span class="tc-tx">What is ChatGPT?</span></div>
+    <div class="topic-chip" onclick="openLesson(2)"><span class="tc-ic">🎨</span><span class="tc-tx">AI Image Maker</span></div>
+    <div class="topic-chip" onclick="openLesson(3)"><span class="tc-ic">💰</span><span class="tc-tx">Earn with AI</span></div>
+    <div class="topic-chip" onclick="openLesson(4)"><span class="tc-ic">🔍</span><span class="tc-tx">AI Search Tools</span></div>
+    <div class="topic-chip" onclick="openLesson(5)"><span class="tc-ic">📝</span><span class="tc-tx">AI Writing Help</span></div>
+    <div class="topic-chip" onclick="openLesson(6)"><span class="tc-ic">🎵</span><span class="tc-tx">AI Music Maker</span></div>
+    <div class="topic-chip" onclick="openLesson(7)"><span class="tc-ic">💼</span><span class="tc-tx">AI for Business</span></div>
   </div>
 
-  <div class="lbl">📖 Sabhi Lessons</div>
-  <div id="lessonList"></div>
+  <div class="sec-lbl">📖 All Lessons</div>
+  <div id="lessonListHome"></div>
 
   <div class="az-box">
-    <div class="az-title">🛒 AI Ke Liye Best Products — Amazon</div>
+    <div class="az-lbl">🛒 Recommended AI Products on Amazon</div>
     <a class="az-item" href="https://www.amazon.in/s?k=wireless+earbuds&tag=attech002-21" target="_blank">
       <span class="az-ic">🎧</span><div><div class="az-tx">Best Wireless Earbuds 2026</div><div class="az-pr">From ₹999 on Amazon →</div></div>
     </a>
     <a class="az-item" href="https://www.amazon.in/s?k=smartwatch+under+2000&tag=attech002-21" target="_blank">
       <span class="az-ic">⌚</span><div><div class="az-tx">Best Smartwatch Under ₹2,000</div><div class="az-pr">From ₹1,299 on Amazon →</div></div>
     </a>
-    <a class="az-item" href="https://www.amazon.in/s?k=phone+stand+for+desk&tag=attech002-21" target="_blank">
-      <span class="az-ic">📱</span><div><div class="az-tx">Phone Stand — WFH Must Have</div><div class="az-pr">From ₹299 on Amazon →</div></div>
+    <a class="az-item" href="https://www.amazon.in/s?k=bluetooth+keyboard&tag=attech002-21" target="_blank">
+      <span class="az-ic">⌨️</span><div><div class="az-tx">Bluetooth Keyboard — Work Smarter</div><div class="az-pr">From ₹799 on Amazon →</div></div>
     </a>
     <a class="az-item" href="https://www.amazon.in/s?k=laptop+cooling+pad&tag=attech002-21" target="_blank">
       <span class="az-ic">💻</span><div><div class="az-tx">Laptop Cooling Pad</div><div class="az-pr">From ₹599 on Amazon →</div></div>
@@ -283,80 +285,84 @@ body{background:var(--bg);font-family:'Hind',sans-serif;color:var(--text)}
 
 <!-- LEARN -->
 <div class="scr" id="s-learn">
-  <div id="lessonList2"></div>
+  <div style="font-family:'Baloo 2',cursive;font-size:21px;font-weight:800;color:var(--text);margin-bottom:3px">📚 All Lessons</div>
+  <div style="font-size:12px;color:var(--muted);margin-bottom:14px">8 lessons — Beginner to Advanced. Free forever.</div>
+  <div id="lessonListLearn"></div>
 </div>
 
 <!-- DETAIL -->
 <div class="scr" id="s-detail">
-  <button class="btn-ghost" style="margin-bottom:14px" onclick="go('learn',document.querySelectorAll('.nb')[1])">← Wapas Jao</button>
+  <button class="btn-out" style="margin-bottom:14px" onclick="go('learn',document.querySelectorAll('.nb')[1])">← Back to Lessons</button>
   <div id="detailContent"></div>
 </div>
 
 <!-- QUIZ -->
 <div class="scr" id="s-quiz">
-  <div style="font-family:'Baloo 2',cursive;font-size:20px;font-weight:800;color:var(--text);margin-bottom:3px">🧩 Quiz Time!</div>
-  <div style="font-size:12px;color:var(--muted);margin-bottom:12px">Kitna seekha? Test karo aur XP jeet!</div>
+  <div style="font-family:'Baloo 2',cursive;font-size:21px;font-weight:800;color:var(--text);margin-bottom:3px">🧩 Quiz Time!</div>
+  <div style="font-size:12px;color:var(--muted);margin-bottom:12px">Test what you've learned and earn XP!</div>
   <div class="prog-wrap" style="margin-bottom:14px"><div class="prog-fill" id="qBar" style="width:0%"></div></div>
   <div id="quizWrap"></div>
-  <div style="display:flex;gap:8px;margin-top:8px">
-    <button onclick="loadQuiz()" class="btn-ghost" style="flex:1">🔄 Naye Sawaal</button>
-    <button onclick="go('learn',document.querySelectorAll('.nb')[1])" class="btn-ghost" style="flex:1">📚 Lessons Dekho</button>
+  <div style="display:flex;gap:8px;margin-top:10px">
+    <button onclick="loadQuiz()" class="btn-out" style="flex:1">🔄 New Questions</button>
+    <button onclick="go('learn',document.querySelectorAll('.nb')[1])" class="btn-out" style="flex:1">📚 Back to Lessons</button>
   </div>
 </div>
 
 <!-- TOOLS -->
 <div class="scr" id="s-tools">
-  <div style="font-family:'Baloo 2',cursive;font-size:20px;font-weight:800;color:var(--text);margin-bottom:3px">🛠️ Free AI Tools</div>
-  <div style="font-size:12px;color:var(--muted);margin-bottom:14px">India ke liye best free AI tools — aaj se use karo!</div>
+  <div style="font-family:'Baloo 2',cursive;font-size:21px;font-weight:800;color:var(--text);margin-bottom:3px">🛠️ Free AI Tools</div>
+  <div style="font-size:12px;color:var(--muted);margin-bottom:16px">Best free AI tools for India — start using today!</div>
 
-  <div class="lbl">💬 AI Chatbots</div>
+  <div class="sec-lbl">💬 AI Chatbots</div>
   <div class="tools-grid">
-    <div class="tool-card" onclick="openTool('https://chat.openai.com')"><div class="tool-ic">💬</div><div class="tool-name">ChatGPT</div><div class="tool-desc">Kuch bhi poocho, kuch bhi likhwao</div><div class="tool-badge tb-free">Free Plan</div></div>
-    <div class="tool-card" onclick="openTool('https://gemini.google.com')"><div class="tool-ic">✨</div><div class="tool-name">Google Gemini</div><div class="tool-desc">Hindi mein baat karo</div><div class="tool-badge tb-free">Bilkul Free</div></div>
-    <div class="tool-card" onclick="openTool('https://claude.ai')"><div class="tool-ic">🧠</div><div class="tool-name">Claude AI</div><div class="tool-desc">Best for long writing</div><div class="tool-badge tb-free">Free Plan</div></div>
-    <div class="tool-card" onclick="openTool('https://copilot.microsoft.com')"><div class="tool-ic">🪟</div><div class="tool-name">MS Copilot</div><div class="tool-desc">Real-time web access</div><div class="tool-badge tb-free">Bilkul Free</div></div>
+    <div class="tool-c" onclick="openTool('https://chat.openai.com')"><div class="tool-ic">💬</div><div class="tool-nm">ChatGPT</div><div class="tool-ds">Ask anything, write anything — most popular AI</div><div class="tool-bg free">Free Plan</div></div>
+    <div class="tool-c" onclick="openTool('https://gemini.google.com')"><div class="tool-ic">✨</div><div class="tool-nm">Google Gemini</div><div class="tool-ds">Google's AI — works great in Hindi too</div><div class="tool-bg free">Completely Free</div></div>
+    <div class="tool-c" onclick="openTool('https://claude.ai')"><div class="tool-ic">🧠</div><div class="tool-nm">Claude AI</div><div class="tool-ds">Best for long writing, analysis & research</div><div class="tool-bg free">Free Plan</div></div>
+    <div class="tool-c" onclick="openTool('https://copilot.microsoft.com')"><div class="tool-ic">🪟</div><div class="tool-nm">MS Copilot</div><div class="tool-ds">Free, real-time web access built in</div><div class="tool-bg free">Completely Free</div></div>
   </div>
 
-  <div class="lbl">🎨 AI Image Tools</div>
+  <div class="sec-lbl">🎨 AI Image Generators</div>
   <div class="tools-grid">
-    <div class="tool-card" onclick="openTool('https://www.bing.com/images/create')"><div class="tool-ic">🎨</div><div class="tool-name">Bing Image Creator</div><div class="tool-desc">DALL-E powered, free</div><div class="tool-badge tb-free">Bilkul Free</div></div>
-    <div class="tool-card" onclick="openTool('https://canva.com')"><div class="tool-ic">🖌️</div><div class="tool-name">Canva AI</div><div class="tool-desc">Design + AI image</div><div class="tool-badge tb-free">Free Plan</div></div>
-    <div class="tool-card" onclick="openTool('https://leonardo.ai')"><div class="tool-ic">🦁</div><div class="tool-name">Leonardo AI</div><div class="tool-desc">Professional AI art</div><div class="tool-badge tb-free">Free Credits</div></div>
-    <div class="tool-card" onclick="openTool('https://firefly.adobe.com')"><div class="tool-ic">🦋</div><div class="tool-name">Adobe Firefly</div><div class="tool-desc">Commercial use allowed</div><div class="tool-badge tb-free">Free Credits</div></div>
+    <div class="tool-c" onclick="openTool('https://www.bing.com/images/create')"><div class="tool-ic">🎨</div><div class="tool-nm">Bing Image Creator</div><div class="tool-ds">Microsoft's free AI image tool — DALL-E powered</div><div class="tool-bg free">Completely Free</div></div>
+    <div class="tool-c" onclick="openTool('https://canva.com')"><div class="tool-ic">🖌️</div><div class="tool-nm">Canva AI</div><div class="tool-ds">Design + AI images in one place</div><div class="tool-bg free">Free Plan</div></div>
+    <div class="tool-c" onclick="openTool('https://leonardo.ai')"><div class="tool-ic">🦁</div><div class="tool-nm">Leonardo AI</div><div class="tool-ds">Professional AI art — free daily credits</div><div class="tool-bg free">Free Credits</div></div>
+    <div class="tool-c" onclick="openTool('https://firefly.adobe.com')"><div class="tool-ic">🦋</div><div class="tool-nm">Adobe Firefly</div><div class="tool-ds">Adobe's AI — commercial use allowed</div><div class="tool-bg free">Free Credits</div></div>
   </div>
 
-  <div class="lbl">🔍 AI Search</div>
+  <div class="sec-lbl">🔍 AI Search Engines</div>
   <div class="tools-grid">
-    <div class="tool-card" onclick="openTool('https://perplexity.ai')"><div class="tool-ic">🔍</div><div class="tool-name">Perplexity AI</div><div class="tool-desc">Direct answers + sources</div><div class="tool-badge tb-free">Free Plan</div></div>
-    <div class="tool-card" onclick="openTool('https://you.com')"><div class="tool-ic">🌐</div><div class="tool-name">You.com</div><div class="tool-desc">Multiple AI models</div><div class="tool-badge tb-free">Bilkul Free</div></div>
+    <div class="tool-c" onclick="openTool('https://perplexity.ai')"><div class="tool-ic">🔍</div><div class="tool-nm">Perplexity AI</div><div class="tool-ds">Direct answers with real sources — better than Google</div><div class="tool-bg free">Free Plan</div></div>
+    <div class="tool-c" onclick="openTool('https://you.com')"><div class="tool-ic">🌐</div><div class="tool-nm">You.com</div><div class="tool-ds">Multiple AI models in one search bar</div><div class="tool-bg free">Completely Free</div></div>
   </div>
 
-  <div class="lbl">💰 Paise Kamao</div>
+  <div class="sec-lbl">💰 Earn Money with AI</div>
   <div class="tools-grid">
-    <div class="tool-card" onclick="openTool('https://affiliate-program.amazon.in')"><div class="tool-ic">🛒</div><div class="tool-name">Amazon Affiliate</div><div class="tool-desc">Pins → links → commission</div><div class="tool-badge tb-free">Free to Join</div></div>
-    <div class="tool-card" onclick="openTool('https://fiverr.com')"><div class="tool-ic">💼</div><div class="tool-name">Fiverr</div><div class="tool-desc">AI services becho</div><div class="tool-badge tb-free">Free to Join</div></div>
+    <div class="tool-c" onclick="openTool('https://affiliate-program.amazon.in')"><div class="tool-ic">🛒</div><div class="tool-nm">Amazon Affiliate</div><div class="tool-ds">Make AI pins → add link → earn commission</div><div class="tool-bg free">Free to Join</div></div>
+    <div class="tool-c" onclick="openTool('https://fiverr.com')"><div class="tool-ic">💼</div><div class="tool-nm">Fiverr</div><div class="tool-ds">Sell AI services — content, images, videos</div><div class="tool-bg free">Free to Join</div></div>
+    <div class="tool-c" onclick="openTool('https://www.canva.com')"><div class="tool-ic">📌</div><div class="tool-nm">Canva + Pinterest</div><div class="tool-ds">Design pins with AI + earn affiliate income</div><div class="tool-bg free">Free Plan</div></div>
+    <div class="tool-c" onclick="openTool('https://chat.openai.com')"><div class="tool-ic">✍️</div><div class="tool-nm">ChatGPT Writing</div><div class="tool-ds">Write content for clients — ₹200-500 per piece</div><div class="tool-bg free">Free Plan</div></div>
   </div>
 </div>
 
-<!-- ASK AI / POOCHO -->
+<!-- ASK AI -->
 <div class="scr" id="s-ask">
-  <div style="font-family:'Baloo 2',cursive;font-size:20px;font-weight:800;color:var(--text);margin-bottom:3px">🤖 AI Se Poocho</div>
-  <div style="font-size:12px;color:var(--muted);margin-bottom:14px">Koi bhi AI sawaal poocho — Hindi ya English mein!</div>
-  <div class="chat-wrap">
+  <div style="font-family:'Baloo 2',cursive;font-size:21px;font-weight:800;color:var(--text);margin-bottom:3px">🤖 Ask AI</div>
+  <div style="font-size:12px;color:var(--muted);margin-bottom:14px">Ask any question about AI — get instant simple answers!</div>
+  <div class="chat-box">
     <div class="msgs" id="chatMsgs">
-      <div class="msg bot">Namaste! 🙏 Main <strong>AI Samjho</strong> ka assistant hoon — Abhishek Tiwari ka banaya hua!<br><br>AI ke baare mein kuch bhi poocho — Hindi ya English mein. Main simple language mein samjhaunga. 😊</div>
+      <div class="msg bot">👋 Hello! I'm the <strong>AI Samjho</strong> assistant — created by <strong>Abhishek Tiwari</strong>.<br><br>Ask me anything about AI — what it is, how to use it, how to earn money with it. I'll explain it simply! 😊</div>
     </div>
     <div class="inp-row">
-      <input class="chat-inp" id="chatInp" placeholder="Kuch bhi poocho AI ke baare mein..." onkeydown="if(event.key==='Enter')sendMsg()"/>
+      <input class="chat-inp" id="chatInp" placeholder="Ask anything about AI..." onkeydown="if(event.key==='Enter')sendMsg()"/>
       <button class="send-btn" onclick="sendMsg()">➤</button>
     </div>
   </div>
-  <div class="quick-btns" style="margin-top:12px">
-    <button class="q-btn" onclick="quickAsk('ChatGPT kya hai simple mein batao?')">ChatGPT kya hai?</button>
-    <button class="q-btn" onclick="quickAsk('AI se ghar baithe paise kaise kamaye?')">AI se paise?</button>
-    <button class="q-btn" onclick="quickAsk('India ke liye best free AI tools kaunse hain?')">Free AI tools?</button>
-    <button class="q-btn" onclick="quickAsk('AI aur machine learning mein kya fark hai?')">AI vs ML?</button>
-    <button class="q-btn" onclick="quickAsk('AI kya galat kaam nahi kar sakta?')">AI ki limits?</button>
+  <div class="qbtns">
+    <button class="qbtn" onclick="quickAsk('What is ChatGPT and how do I use it?')">What is ChatGPT?</button>
+    <button class="qbtn" onclick="quickAsk('How can I earn money using AI from home in India?')">Earn with AI?</button>
+    <button class="qbtn" onclick="quickAsk('What are the best free AI tools available in India?')">Free AI tools?</button>
+    <button class="qbtn" onclick="quickAsk('What is the difference between AI and Machine Learning?')">AI vs ML?</button>
+    <button class="qbtn" onclick="quickAsk('Can AI replace human jobs? What should I learn to be safe?')">Will AI take my job?</button>
   </div>
 </div>
 
@@ -366,28 +372,33 @@ body{background:var(--bg);font-family:'Hind',sans-serif;color:var(--text)}
     <div class="ab-av">👨‍💻</div>
     <div class="ab-name">Abhishek Tiwari</div>
     <div class="ab-role">Founder, AI Samjho</div>
-    <div class="ab-quote">"Mera sapna hai ki India ka har insaan AI samjhe aur use apni zindagi behtar banane ke liye use kare."</div>
+    <div class="ab-quote">"My dream is that every person in India — regardless of background — understands AI and uses it to improve their life and career."</div>
   </div>
-  <div class="stats-row">
+
+  <div class="stat-grid">
     <div class="stat"><div class="stat-n">8+</div><div class="stat-l">Lessons</div></div>
-    <div class="stat"><div class="stat-n">Free</div><div class="stat-l">Hamesha</div></div>
+    <div class="stat"><div class="stat-n">Free</div><div class="stat-l">Always</div></div>
     <div class="stat"><div class="stat-n">🇮🇳</div><div class="stat-l">Made in India</div></div>
   </div>
-  <div class="card" style="margin-bottom:10px">
-    <div class="lbl" style="margin-bottom:7px">AI Samjho Kya Hai?</div>
-    <div style="font-size:13px;line-height:1.8;color:var(--text)">AI Samjho ek free learning platform hai jahan aap AI ko simple Hindi-English mein seekh sakte hain. Koi technical background ki zaroorat nahi. Ghar baithe, apni pace se, apni bhasha mein seekho.</div>
+
+  <div class="info-card">
+    <div class="info-lbl">About AI Samjho</div>
+    <div style="font-size:13px;line-height:1.85;color:var(--text)">AI Samjho is a free learning platform where you can learn Artificial Intelligence in simple everyday English. No technical background required. Learn from home, at your own pace, completely free.</div>
   </div>
-  <div class="card" style="margin-bottom:10px">
-    <div class="lbl" style="margin-bottom:7px">Aapki Progress</div>
+
+  <div class="info-card">
+    <div class="info-lbl">Your Progress</div>
     <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:8px"><span style="color:var(--muted)">XP Earned</span><span style="color:var(--primary);font-weight:600" id="xpTotal">0 XP</span></div>
-    <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:8px"><span style="color:var(--muted)">Lessons Padhe</span><span style="color:var(--green);font-weight:600" id="lessonsRead">0</span></div>
-    <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:var(--muted)">Quiz Score</span><span style="color:var(--blue);font-weight:600" id="quizScore">0 Sahi</span></div>
+    <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:8px"><span style="color:var(--muted)">Lessons Read</span><span style="color:var(--green);font-weight:600" id="lessonsRead">0</span></div>
+    <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:8px"><span style="color:var(--muted)">Quiz Correct</span><span style="color:var(--blue);font-weight:600" id="quizScore">0</span></div>
+    <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:var(--muted)">Current Level</span><span style="color:var(--primary);font-weight:600" id="levelText">🌱 Beginner</span></div>
   </div>
-  <div class="card">
-    <div class="lbl" style="margin-bottom:7px">WhatsApp Community</div>
-    <div style="font-size:13px;color:var(--muted);margin-bottom:10px;line-height:1.7">Roz ek free AI tip pao WhatsApp par — bilkul free!</div>
-    <button class="wa-btn" onclick="shareWA()">📱 WhatsApp Join Karo — Free!</button>
-    <button class="btn-ghost" style="width:100%;margin-top:8px;text-align:center" onclick="shareApp()">🔗 App Share Karo</button>
+
+  <div class="info-card">
+    <div class="info-lbl">Join Our Community</div>
+    <div style="font-size:13px;color:var(--muted);margin-bottom:10px;line-height:1.7">Get one free AI tip every morning on WhatsApp. Join thousands of learners across India!</div>
+    <button class="wa-btn" onclick="shareWA()">📱 Join WhatsApp Community — Free!</button>
+    <button class="btn-out" style="width:100%;margin-top:8px;text-align:center" onclick="shareApp()">🔗 Share this App</button>
   </div>
 </div>
 
@@ -396,133 +407,174 @@ body{background:var(--bg);font-family:'Hind',sans-serif;color:var(--text)}
 
 <script>
 const tips=[
-  "💡 ChatGPT se apna CV improve karo — paste karo aur boldo 'Professional banao'. 5 minute mein kamaal ho jaata hai!",
-  "💡 Google Gemini bilkul free hai aur Hindi mein baat kar sakta hai. Aaj hi try karo — gemini.google.com",
-  "💡 AI image banana ke liye Bing Image Creator best free option hai. Koi bhi cheez imagine karo — AI bana dega!",
-  "💡 WhatsApp pe Meta AI already built-in hai — sirf @ Meta AI type karo chat mein!",
-  "💡 Pinterest pe AI pins share karo aur Amazon affiliate links add karo — passive income ka best tarika!",
-  "💡 Perplexity.ai Google se 3x better answers deta hai — aur sources bhi deta hai. Free mein use karo.",
-  "💡 AI se email likhwao — 'Ek professional email likho mere boss ke liye' — 30 seconds mein ready!",
-  "💡 Canva ka AI Magic Write feature free hai — design mein text automatically generate karta hai.",
-  "💡 YouTube thumbnails banana hai? Canva + AI = professional thumbnail in 5 minutes!",
-  "💡 AI se paise kamane ka aasaan tarika: ChatGPT se content likho, Canva se design banao, sell karo."
+  "💡 Use ChatGPT to improve your CV — paste it and say 'Make this more professional'. Done in 5 minutes!",
+  "💡 Google Gemini is completely free and understands Hindi. Try it today at gemini.google.com",
+  "💡 To make AI images for free, use Bing Image Creator — just describe what you want and it generates!",
+  "💡 Meta AI is already built into WhatsApp — type @Meta AI in any chat to start using it!",
+  "💡 Pinterest + Amazon affiliate links = passive income. Post 1 pin daily and watch clicks grow!",
+  "💡 Perplexity.ai gives 3x better answers than Google — with real sources. Free to use.",
+  "💡 Ask ChatGPT to write emails for you: 'Write a professional email to my boss explaining...' Done!",
+  "💡 Canva's AI Magic Write feature is free — it generates text automatically inside your designs.",
+  "💡 Want YouTube thumbnails? Use Canva + AI image generator — professional quality in 5 minutes!",
+  "💡 Easiest way to earn with AI: Write content using ChatGPT, design with Canva, sell on Fiverr."
 ];
 
 const lessons=[
-  {id:0,emoji:"🤖",tag:"beg",tagL:"Beginner",time:"3 min",title:"AI Kya Hota Hai?",sub:"Artificial Intelligence ko bilkul simple language mein samjho",intro:"AI matlab Artificial Intelligence — ek aisi technology jo computers ko insaano ki tarah sochne aur seekhne ki shakti deti hai.",explain:"Socho ek chota bacha hai jo roz naye cheezein seekhta hai. Pehle A seekha, phir B, phir words. AI bhi bilkul aise hi kaam karta hai — usse bahut saara data diya jaata hai aur woh ussse seekh ke smart banta jaata hai. Fark sirf itna hai ki AI seconds mein lakho cheezein seekh leta hai!",eg:"Jab aap YouTube dekhte ho aur YouTube automatically aapko wahi videos suggest karta hai jo aapko pasand hain — yeh AI ka kaam hai! YouTube ne aapki past videos dekh ke samajh liya ki aapko kya pasand hai.",pts:["AI ek computer program hai jo data se seekhta hai","Yeh insaan ki tarah decisions le sakta hai","AI already aapki life mein hai — Google, YouTube, Swiggy sab use karte hain","AI ko train karne ke liye lakho examples chahiye hote hain","AI ka matlab robots nahi — mostly it's just smart software"],quiz:0},
-  {id:1,emoji:"💬",tag:"beg",tagL:"Beginner",time:"4 min",title:"ChatGPT Kya Hai?",sub:"Duniya ka sabse popular AI tool — Hindi mein samjho",intro:"ChatGPT ek AI chatbot hai jo OpenAI company ne banaya hai. Yeh aapke saath bilkul ek insaan ki tarah baat kar sakta hai!",explain:"ChatGPT ko internet ka almost poora text padha ke train kiya gaya hai — books, articles, websites, sab kuch. Isliye yeh almost kisi bhi topic par baat kar sakta hai. Aap isse Hindi mein bhi baat kar sakte ho!",eg:"Aap ChatGPT se keh sakte ho: 'Mujhe biryani recipe batao' ya 'Mera resume likhne mein help karo' — aur yeh turat jawab dega!",pts:["ChatGPT.com par free available hai","Hindi aur English dono mein baat kar sakte ho","Essay, email, code, recipe — kuch bhi likh sakta hai","GPT-4o ab free users ke liye bhi available hai","Galat jawab bhi de sakta hai — important info double check karo"],quiz:1},
-  {id:2,emoji:"🎨",tag:"mid",tagL:"Intermediate",time:"3 min",title:"AI Se Image Kaise Banate Hain?",sub:"Sirf words likho — AI apne aap image bana dega!",intro:"AI image generation tools se aap sirf text likhke amazing images bana sakte ho — bilkul free mein!",explain:"Yeh tools aapke likhe hue words padh ke ek image create karte hain. Jitna achha aap describe karoge, utni achhi image milegi. Ise 'prompt' likhna kehte hain.",eg:"Agar aap likho: 'A beautiful Indian woman in red saree standing in a mustard field at sunset' — toh AI exactly aisi image bana dega!",pts:["Bing Image Creator — bilkul free, DALL-E 3 powered","Canva mein bhi Magic Image feature available hai","Leonardo.ai — roz free credits milte hain","Achha prompt = achhi image — jitna detail utna better"],quiz:2},
-  {id:3,emoji:"💰",tag:"mid",tagL:"Intermediate",time:"5 min",title:"AI Se Paise Kaise Kamao?",sub:"2026 mein AI se earning ke top tarike — ghar baithe!",intro:"AI ne earning ke naye raaste khol diye hain — aur inke liye koi technical degree ki zaroorat nahi!",explain:"AI tools ab itne powerful hain ki aap unse professional level ka kaam kar sakte ho. Pinterest + Amazon affiliate, freelancing, content creation — sab possible hai.",eg:"Real example: Ek Lucknow ki teacher ChatGPT se WhatsApp status ideas likhti hai aur sell karti hai — mahine ke ₹15,000!",pts:["Amazon Affiliate — AI se pins banao, link share karo, commission pao","Fiverr — AI content, images, videos becho","WhatsApp/Instagram — affiliate links share karo","YouTube — AI tools review karo, ads se paise kamao"],quiz:3},
-  {id:4,emoji:"🔍",tag:"beg",tagL:"Beginner",time:"3 min",title:"AI Search Tools — Google Se Better?",sub:"Perplexity, Gemini, Copilot — kaunsa use karein?",intro:"Google ke alawa ab bahut saare AI-powered search tools hain jo better answers dete hain — bina ads ke!",explain:"Traditional Google links deta hai — aapko phir khud padhna padta hai. AI search tools directly answer dete hain, sources ke saath.",eg:"Google par search karo 'best phone under 15000' — 10 listicles milte hain. Perplexity par — seedha comparison milta hai latest prices ke saath!",pts:["Perplexity.ai — best AI search, free available","Google Gemini — Hindi mein bolta hai","Microsoft Copilot — free, real-time web access","ChatGPT with browse — paid but most powerful"],quiz:4},
-  {id:5,emoji:"📝",tag:"mid",tagL:"Intermediate",time:"4 min",title:"AI Se Writing Help Kaise Lo?",sub:"Email, essay, caption, resume — sab AI likhega!",intro:"AI aapka personal writer ban sakta hai — professional emails se lekar creative stories tak, sab kuch minutes mein!",explain:"AI writing tools ke saath aapko sirf bataana hai KYA likhna hai — AI khud likhe ga. Sabse badi problem — blank page ka darr — solve ho jaati hai!",eg:"Bolo ChatGPT se: 'Mere boss ko ek professional email likho Hindi mein' — 30 seconds mein perfect email taiyar!",pts:["ChatGPT — best for all kinds of writing","Claude AI — best for long articles","Grammarly AI — English grammar instantly fix","Tip: AI ka output copy mat karo — apni voice mein edit karo"],quiz:5},
-  {id:6,emoji:"🎵",tag:"adv",tagL:"Advanced",time:"4 min",title:"AI Se Music Kaise Banate Hain?",sub:"Bina instruments ke professional songs banao!",intro:"2026 mein AI se complete songs bana sakte hain — lyrics, music, vocals sab kuch!",explain:"AI music tools ko aap text description dete ho aur AI puri song generate kar deta hai. YouTube, Instagram Reels, short films ke liye use kar sakte hain.",eg:"Suno.ai par free mein try karo — type karo 'upbeat Bollywood style song about chai' — AI 2 minute ki full song bana deta hai!",pts:["Suno.ai — best AI music generator, free plan","Udio.com — high quality AI music","ElevenLabs — realistic AI vocals","Mubert — background music for videos"],quiz:6},
-  {id:7,emoji:"💼",tag:"mid",tagL:"Intermediate",time:"5 min",title:"AI Se Apna Business Kaise Grow Karo?",sub:"Small business owners ke liye AI tips",intro:"AI sirf bade companies ke liye nahi — India ka har chhota business owner AI se apna kaam better kar sakta hai!",explain:"Customer service, marketing content, social media posts, product descriptions — sab kuch AI se 10 guna tezi se ho sakta hai.",eg:"Ek Delhi ki mithai shop ne ChatGPT se WhatsApp messages likhne shuru kiye — unka sales double ho gaya!",pts:["ChatGPT se product descriptions likho","Canva AI se social media posts banao in minutes","Google Gemini se customer FAQs ka jawab likhwa lo","Email marketing ke liye AI se subject lines test karo"],quiz:7}
+  {id:0,cat:"beg",tagL:"Beginner",emoji:"🤖",time:"3 min",
+   title:"What is Artificial Intelligence?",
+   sub:"Understand AI in plain simple English — no tech background needed",
+   intro:"AI stands for Artificial Intelligence — a technology that gives computers the ability to think and learn like humans.",
+   explain:"Think of a small child who learns new things every day — first the alphabet, then words, then sentences. AI works in exactly the same way. It is given massive amounts of data and it learns from that data to get smarter. The only difference is that AI can learn millions of things in seconds!",
+   eg:"When you watch YouTube and it automatically suggests videos you like — that's AI at work! YouTube studied your past watching history and figured out what you enjoy.",
+   pts:["AI is a computer program that learns from data","It can make decisions similar to how humans do","AI is already part of your daily life — Google, YouTube, Swiggy, Zomato all use it","AI needs millions of examples to be trained properly","AI does not mean robots — it is mostly just smart software"],quiz:0},
+  {id:1,cat:"beg",tagL:"Beginner",emoji:"💬",time:"4 min",
+   title:"What is ChatGPT?",
+   sub:"The world's most popular AI tool — explained simply",
+   intro:"ChatGPT is an AI chatbot made by a company called OpenAI. It can have a real conversation with you and answer almost any question you ask!",
+   explain:"ChatGPT was trained on almost the entire text of the internet — books, articles, websites, research papers, everything. That's why it can talk about almost any topic. You can even talk to it in Hindi and it understands perfectly!",
+   eg:"You can tell ChatGPT: 'Give me a biryani recipe' or 'Help me write my resume' or 'Explain English grammar to me' — and it gives a detailed answer in seconds!",
+   pts:["Available for free at ChatGPT.com","You can chat in Hindi, English or any language","It can write essays, emails, code, recipes — almost anything","GPT-4o is now free for all users","It can sometimes give wrong answers — always double check important information"],quiz:1},
+  {id:2,cat:"mid",tagL:"Intermediate",emoji:"🎨",time:"3 min",
+   title:"How to Create Images Using AI?",
+   sub:"Just type words — AI will create the image for you!",
+   intro:"With AI image generation tools, you can create stunning images just by typing a description — completely free! This is called Text-to-Image generation.",
+   explain:"These tools read your description and create an image based on it. The more detail you provide in your description, the better the image will be. This description is called a 'prompt'. For example: 'A sunset over the Taj Mahal, golden hour, cinematic photography, 4K' gives amazing results!",
+   eg:"If you type: 'A beautiful Indian woman in a red saree standing in a mustard field at sunset, cinematic photography' — AI will create exactly that stunning image! Use these for Pinterest pins to earn affiliate income.",
+   pts:["Bing Image Creator — completely free, powered by DALL-E 3 from Microsoft","Canva also has a free AI image feature called Magic Image","Leonardo.ai — gives free credits every day","Adobe Firefly — allows commercial use of generated images","Better description (prompt) = better image quality"],quiz:2},
+  {id:3,cat:"mid",tagL:"Intermediate",emoji:"💰",time:"5 min",
+   title:"How to Earn Money Using AI?",
+   sub:"Top ways to earn from home with AI in 2026",
+   intro:"AI has opened new ways to earn money — and you don't need any technical degree for most of them! All you need is creativity and a smartphone.",
+   explain:"AI tools are now powerful enough to do professional-level work. You can create that work and sell it to others. Pinterest affiliate marketing, freelancing, content creation — all of this is possible from home. The best part: some of these are passive income — do the work once, earn again and again!",
+   eg:"Real example: A teacher from Lucknow uses ChatGPT to write WhatsApp status ideas and sells them to small businesses — earning ₹15,000 per month! A student in Delhi makes logos using AI on Fiverr — charging ₹500-2000 per logo.",
+   pts:["Amazon Affiliate — make pins with AI, share your affiliate link, earn commission","Fiverr — sell AI-generated content, images and videos","WhatsApp/Instagram — share affiliate links with your warm audience","YouTube — review AI tools and earn from ads","Freelancing — write content for clients using ChatGPT"],quiz:3},
+  {id:4,cat:"beg",tagL:"Beginner",emoji:"🔍",time:"3 min",
+   title:"AI Search Tools — Better than Google?",
+   sub:"Perplexity, Gemini, Copilot — which one should you use?",
+   intro:"Beyond Google, there are now several AI-powered search tools that give you better, faster and more accurate answers — without ads!",
+   explain:"Traditional Google gives you 10 links and you have to read through them yourself. AI search tools give you a direct answer in conversation format, with sources listed, and you can ask follow-up questions too!",
+   eg:"Search 'best phone under ₹15,000' on Google — you get 10 generic listicles. Search the same on Perplexity — you get a direct comparison with latest prices and honest recommendations, with real sources!",
+   pts:["Perplexity.ai — best AI search engine, free plan available","Google Gemini — Google's AI, great real-time search and Deep Research","Microsoft Copilot — free, built into Edge browser, real-time internet","You.com — multiple AI models in one search bar, completely free","Best part: no ads, direct answers, can ask follow-up questions"],quiz:4},
+  {id:5,cat:"mid",tagL:"Intermediate",emoji:"📝",time:"4 min",
+   title:"How to Use AI for Writing Help?",
+   sub:"Emails, essays, captions, resumes — AI writes it all!",
+   intro:"AI can be your personal writer — from professional emails to creative stories, from social media captions to full resumes, it all takes minutes.",
+   explain:"With AI writing tools you just need to tell it WHAT to write — AI does the writing. Then you edit it in your own style. The biggest problem it solves: blank page anxiety. AI gives you a great starting point and you improve from there.",
+   eg:"Tell ChatGPT: 'Write a professional email to my boss explaining why I need to take half-day leave tomorrow, in a respectful and professional tone' — a perfect email is ready in 30 seconds!",
+   pts:["ChatGPT — best for all kinds of writing","Claude AI — best for long articles and detailed analysis","Grammarly AI — fixes English grammar instantly as you type","Copy.ai — specially designed for marketing copy and social media captions","Important: Don't just copy-paste AI output — edit it in your own voice"],quiz:5},
+  {id:6,cat:"adv",tagL:"Advanced",emoji:"🎵",time:"4 min",
+   title:"How to Create Music Using AI?",
+   sub:"Create full professional songs without any musical training!",
+   intro:"In 2026, you can create complete songs using AI — lyrics, instruments, vocals, everything included! No musical training required.",
+   explain:"AI music tools work like image generators — you give them a text description and they create music based on it. For example: 'A sad romantic Hindi song with acoustic guitar and female vocals'. These songs can be used for YouTube, Instagram Reels and short films.",
+   eg:"Try Suno.ai for free — type 'upbeat Bollywood style song about chai and morning vibes' and AI creates a full 2-minute song with lyrics in seconds!",
+   pts:["Suno.ai — best AI music generator, free plan available","Udio.com — high quality AI music generation","ElevenLabs — create realistic AI vocals and voice cloning","Mubert — generates background music for videos, free tier available","Important: Read the commercial use terms carefully before using AI music commercially"],quiz:6},
+  {id:7,cat:"mid",tagL:"Intermediate",emoji:"💼",time:"5 min",
+   title:"How to Grow Your Business Using AI?",
+   sub:"AI tips for small business owners in India",
+   intro:"AI is not just for big companies — every small business owner in India can use AI to work better, faster and cheaper.",
+   explain:"Customer service, marketing content, social media posts, product descriptions, invoice drafting — everything can be done 10x faster with AI. And the best part: it works 24/7, never gets tired, and never asks for a salary!",
+   eg:"A sweet shop in Delhi started using ChatGPT to write their WhatsApp messages — 'Diwali Special: 20% off on all sweets!' type updates. Their WhatsApp group engagement tripled and sales doubled in one month!",
+   pts:["Write product descriptions using ChatGPT — professional and SEO-friendly","Create social media posts with Canva AI in minutes","Use Google Gemini to automatically generate answers to customer FAQs","Test email subject lines using AI — higher open rates means more sales","Analyze competitor businesses using ChatGPT — 'Suggest 5 improvements for my business'"],quiz:7}
 ];
 
 const quizData=[
-  {q:"AI ka full form kya hai?",opts:["Automatic Intelligence","Artificial Intelligence","Advanced Internet","Automated Information"],ans:1,exp:"AI stands for Artificial Intelligence — ek technology jo computers ko insaano ki tarah sochne deti hai."},
-  {q:"ChatGPT kis company ne banaya hai?",opts:["Google","Microsoft","OpenAI","Meta"],ans:2,exp:"ChatGPT OpenAI ne banaya hai — ek AI research company."},
-  {q:"AI image banana ke liye kya likhte hain?",opts:["Code","Prompt","Password","Command"],ans:1,exp:"AI image generation mein aap ek 'prompt' likhte ho — text description jo AI ko batati hai kya banana hai."},
-  {q:"AI se kaunsa kaam ghar baithe kar sakte hain?",opts:["Sirf coding","Content writing aur design","Sirf gaming","Kuch nahi"],ans:1,exp:"AI se content writing, design, affiliate marketing — bahut kuch ghar baithe kar sakte hain!"},
-  {q:"Perplexity.ai kya karta hai?",opts:["Videos edit karta hai","AI-powered search karta hai","Photos banata hai","Games khelata hai"],ans:1,exp:"Perplexity ek AI search engine hai jo direct answers deta hai real sources ke saath!"},
-  {q:"AI writing ka sabse achha use kya hai?",opts:["Copy-paste karke submit karna","Starting point lena aur edit karna","Apni thinking band karna","Sirf English mein"],ans:1,exp:"AI ek starting point deta hai — aap use apni voice mein edit karke better banate ho."},
-  {q:"Suno.ai kya karta hai?",opts:["Photos banata hai","AI se music aur songs banata hai","AI chatbot hai","Search engine hai"],ans:1,exp:"Suno.ai ek AI music generator hai jo text se complete songs bana sakta hai!"},
-  {q:"Small business AI se kya kar sakta hai?",opts:["Kuch nahi","Social media posts, messages, descriptions","Sirf accounting","Sirf website"],ans:1,exp:"Small businesses AI se social media posts, customer messages, product descriptions efficiently kar sakte hain!"}
+  {q:"What does AI stand for?",opts:["Automatic Intelligence","Artificial Intelligence","Advanced Internet","Automated Information"],ans:1,exp:"AI stands for Artificial Intelligence — technology that gives computers the ability to think and learn like humans."},
+  {q:"Which company made ChatGPT?",opts:["Google","Microsoft","OpenAI","Meta"],ans:2,exp:"ChatGPT was made by OpenAI — an AI research company based in San Francisco."},
+  {q:"What do you write to create an AI image?",opts:["Code","A Prompt","A Password","A Command"],ans:1,exp:"You write a 'prompt' — a text description that tells the AI exactly what image to create. More detail = better image!"},
+  {q:"Which of these can you do from home using AI?",opts:["Only coding","Content writing and design","Only gaming","Nothing"],ans:1,exp:"With AI you can do content writing, design, social media management, affiliate marketing and much more from home!"},
+  {q:"What does Perplexity.ai do?",opts:["Edits videos","AI-powered search with direct answers","Generates photos","Plays games"],ans:1,exp:"Perplexity is an AI search engine that gives you direct answers with real sources — no need to click through multiple links!"},
+  {q:"What is the best way to use AI writing tools?",opts:["Copy-paste directly and submit","Use it as a starting point and edit in your voice","Stop thinking yourself","Use only in English"],ans:1,exp:"AI gives you a great starting point — then you edit it in your own voice and style to make it original and personal."},
+  {q:"What does Suno.ai create?",opts:["Photos","AI-generated songs and music","An AI chatbot","A search engine"],ans:1,exp:"Suno.ai is an AI music generator that creates complete songs with lyrics, music and vocals from a text description!"},
+  {q:"How can a small business use AI effectively?",opts:["It cannot help small businesses","Social media posts, customer messages, product descriptions","Only for accounting","Only for building websites"],ans:1,exp:"Small businesses can use AI for social media posts, WhatsApp messages, product descriptions, customer FAQs — saving hours of work daily!"}
 ];
 
 let xp=0,lessonsRead=0,quizCorrect=0;
-
-// DAILY TIP
 document.getElementById('dailyTip').textContent=tips[new Date().getDay()%tips.length];
 
-// NAV
-function go(screen,el){
-  document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));
-  document.getElementById('s-'+screen).classList.add('on');
+function go(s,el){
+  document.querySelectorAll('.scr').forEach(x=>x.classList.remove('on'));
+  document.getElementById('s-'+s).classList.add('on');
   document.querySelectorAll('.nb').forEach(b=>b.classList.remove('on'));
   if(el)el.classList.add('on');
 }
 
-// LESSONS
 function renderLessons(){
   const html=lessons.map((l,i)=>`
-    <div class="l-card" onclick="openLesson(${i})">
-      <span class="tag ${l.tag}">${l.tagL}</span>
+    <div class="l-card ${l.cat}" onclick="openLesson(${i})">
+      <span class="tag ${l.cat}">${l.tagL}</span>
       <span class="l-emoji">${l.emoji}</span>
       <div class="l-title">${l.title}</div>
       <div class="l-sub">${l.sub}</div>
-      <div class="l-meta"><span>⏱ ${l.time}</span><span class="l-arr">→</span></div>
+      <div class="l-meta"><span class="l-time">⏱ ${l.time}</span><span class="l-arr">→</span></div>
     </div>`).join('');
-  document.getElementById('lessonList').innerHTML=html;
-  document.getElementById('lessonList2').innerHTML=`
-    <div style="font-family:'Baloo 2',cursive;font-size:20px;font-weight:800;color:var(--text);margin-bottom:3px">📚 Sabhi Lessons</div>
-    <div style="font-size:12px;color:var(--muted);margin-bottom:14px">${lessons.length} lessons — beginner se advanced tak</div>${html}`;
+  document.getElementById('lessonListHome').innerHTML=html;
+  document.getElementById('lessonListLearn').innerHTML=html;
 }
 
 function openLesson(i){
   const l=lessons[i];
-  lessonsRead++;addXP(10);showToast(`+10 XP! "${l.title}" padha!`);
+  lessonsRead++;addXP(10);showToast(`+10 XP! Great job reading!`);
   document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));
   document.getElementById('s-detail').classList.add('on');
   document.querySelectorAll('.nb').forEach(b=>b.classList.remove('on'));
   document.querySelectorAll('.nb')[1].classList.add('on');
   document.getElementById('detailContent').innerHTML=`
-    <span class="tag ${l.tag}">${l.tagL}</span>
+    <span class="tag ${l.cat}">${l.tagL}</span>
     <span class="det-emoji">${l.emoji}</span>
     <div class="det-title">${l.title}</div>
     <div class="det-sub">${l.sub}</div>
-    <div class="det-sec-title">📖 Kya Hai Yeh?</div>
+    <div class="det-sec">📖 What is it?</div>
     <div class="det-text">${l.intro}</div>
-    <div class="det-sec-title">🧠 Simple Explanation</div>
+    <div class="det-sec">🧠 Simple Explanation</div>
     <div class="det-text">${l.explain}</div>
     <div class="eg-box">💡 <b>Real Life Example:</b><br>${l.eg}</div>
-    <div class="det-sec-title">✦ Key Points</div>
-    <ul class="kp-list">${l.pts.map(p=>`<li>${p}</li>`).join('')}</ul>
-    <div style="height:14px"></div>
-    <button class="btn-primary" onclick="goToQuiz(${l.quiz})">🧩 Is Topic Ka Quiz Do — +15 XP!</button>
+    <div class="det-sec">✓ Key Takeaways</div>
+    <ul class="kp">${l.pts.map(p=>`<li>${p}</li>`).join('')}</ul>
+    <div style="height:16px"></div>
+    <button class="btn-main" onclick="goQuiz(${l.quiz})">🧩 Take Quiz on This Topic — +15 XP!</button>
     <div style="height:8px"></div>
-    <button class="btn-ghost" style="width:100%;text-align:center" onclick="go('learn',document.querySelectorAll('.nb')[1])">← Wapas Lessons</button>`;
+    <button class="btn-out" style="width:100%;text-align:center" onclick="go('learn',document.querySelectorAll('.nb')[1])">← Back to Lessons</button>`;
   document.getElementById('s-detail').scrollTop=0;
   updateStats();
 }
 
-// QUIZ
-let cq=[],qCorr=0;
-function loadQuiz(specific){
-  qCorr=0;document.getElementById('qBar').style.width='0%';
-  const pool=specific!==undefined?[quizData[specific],...quizData.filter((_,i)=>i!==specific).sort(()=>Math.random()-.5).slice(0,2)]:[...quizData].sort(()=>Math.random()-.5).slice(0,4);
+let cq=[],qCor=0;
+function loadQuiz(spec){
+  qCor=0;document.getElementById('qBar').style.width='0%';
+  const pool=spec!==undefined?[quizData[spec],...quizData.filter((_,i)=>i!==spec).sort(()=>Math.random()-.5).slice(0,2)]:[...quizData].sort(()=>Math.random()-.5).slice(0,4);
   cq=pool;
   document.getElementById('quizWrap').innerHTML=pool.map((q,i)=>`
-    <div class="card" id="qc${i}">
-      <div class="q-title">Q${i+1}. ${q.q}</div>
+    <div class="info-card" id="qc${i}">
+      <div class="q-n">Q${i+1}. ${q.q}</div>
       <div class="q-opts">${q.opts.map((o,j)=>`<button class="q-opt" onclick="ans(${i},${j})">${o}</button>`).join('')}</div>
       <div class="q-res" id="qr${i}"></div>
     </div>`).join('');
 }
-function goToQuiz(idx){go('quiz',document.querySelectorAll('.nb')[2]);loadQuiz(idx);}
+function goQuiz(idx){go('quiz',document.querySelectorAll('.nb')[2]);loadQuiz(idx);}
 function ans(qi,oi){
   const q=cq[qi];
   const opts=document.getElementById('qc'+qi).querySelectorAll('.q-opt');
   opts.forEach(o=>o.disabled=true);
   opts[q.ans].classList.add('ok');
   if(oi!==q.ans)opts[oi].classList.add('no');
-  else{qCorr++;quizCorrect++;addXP(15);showToast('+15 XP! Sahi jawab! 🎉');}
+  else{qCor++;quizCorrect++;addXP(15);showToast('+15 XP! Correct answer! 🎉');}
   const res=document.getElementById('qr'+qi);
-  res.textContent=(oi===q.ans?'✅ Sahi! ':'❌ Galat! ')+q.exp;
+  res.textContent=(oi===q.ans?'✅ Correct! ':'❌ Wrong! ')+q.exp;
   res.className='q-res on '+(oi===q.ans?'ok':'no');
-  document.getElementById('qBar').style.width=(qCorr/cq.length*100)+'%';
+  document.getElementById('qBar').style.width=(qCor/cq.length*100)+'%';
   updateStats();
 }
 
-// XP
 function addXP(n){
   xp+=n;
   document.getElementById('xpc').textContent=xp;
   const pct=Math.min(xp%100,100);
   document.getElementById('progFill').style.width=pct+'%';
-  document.getElementById('xpLabel').textContent=pct+'/100 XP';
-  const lvl=getLevel();
-  document.getElementById('levelBadge').textContent=lvl;
+  document.getElementById('xpLabel').textContent=pct+'/100 XP to next level';
+  const lv=getLevel();
+  document.getElementById('levelBadge').textContent=lv;
+  document.getElementById('levelText').textContent=lv;
 }
 function getLevel(){
   if(xp<50)return'🌱 Beginner';
@@ -533,56 +585,218 @@ function getLevel(){
 }
 function updateStats(){
   document.getElementById('lessonsRead').textContent=lessonsRead;
-  document.getElementById('quizScore').textContent=quizCorrect+' Sahi';
+  document.getElementById('quizScore').textContent=quizCorrect;
   document.getElementById('xpTotal').textContent=xp+' XP';
 }
 
-// CHAT — FIXED VERSION
+// CHAT — uses free Pollinations AI (no API key needed, works from browser)
 async function sendMsg(){
   const inp=document.getElementById('chatInp');
   const msgs=document.getElementById('chatMsgs');
   const text=inp.value.trim();
   if(!text)return;
   inp.value='';
-  msgs.innerHTML+=`<div class="msg usr">${text}</div>`;
-  const loadId='load_'+Date.now();
-  msgs.innerHTML+=`<div class="msg loading" id="${loadId}">🤔 Soch raha hoon...</div>`;
+  msgs.innerHTML+=`<div class="msg usr">${escHtml(text)}</div>`;
+  const lid='ld'+Date.now();
+  msgs.innerHTML+=`<div class="msg load" id="${lid}">🤔 Thinking...</div>`;
   msgs.scrollTop=msgs.scrollHeight;
   try{
-    const response=await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-      body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',
-        max_tokens:500,
-        system:'You are AI Samjho assistant created by Abhishek Tiwari for non-technical Indian users. Answer in Hinglish (Hindi+English mix). Be friendly, warm, use Indian examples (Zomato, Swiggy, IRCTC, Jio). Keep answers to 3-5 lines max. Use emojis. End with - AI Samjho 🧠',
-        messages:[{role:'user',content:text}]
-      })
-    });
-    const data=await response.json();
-    const loadEl=document.getElementById(loadId);
-    if(loadEl)loadEl.remove();
-    if(data.content&&data.content[0]&&data.content[0].text){
-      msgs.innerHTML+=`<div class="msg bot">${data.content[0].text}</div>`;
-      addXP(5);showToast('+5 XP! Good question! 🌟');
-    } else {
-      msgs.innerHTML+=`<div class="msg bot">Kuch issue aaya. Dobara try karo! 🙏</div>`;
-    }
-  } catch(err){
-    const loadEl=document.getElementById(loadId);
-    if(loadEl)loadEl.textContent='⚠️ Network issue. Internet check karo aur try karo!';
+    const sysPrompt=`You are "AI Samjho" assistant created by Abhishek Tiwari to help non-technical Indian users learn about AI. 
+    Answer in clear simple English. Be warm and friendly. Use Indian examples where helpful (Swiggy, Zomato, IRCTC, Jio, etc).
+    Keep answers to 4-5 lines maximum. Use line breaks for readability. Use emojis occasionally.
+    If someone asks who made you, say: "I was created by Abhishek Tiwari as part of the AI Samjho platform."`;
+    const res=await fetch(`https://text.pollinations.ai/${encodeURIComponent(text)}?system=${encodeURIComponent(sysPrompt)}&model=openai&json=false`,{method:'GET'});
+    const reply=await res.text();
+    const el=document.getElementById(lid);
+    if(el)el.remove();
+    msgs.innerHTML+=`<div class="msg bot">${escHtml(reply).replace(/\n/g,'<br>')}</div>`;
+    addXP(5);showToast('+5 XP! Great question!');
+  }catch(err){
+    const el=document.getElementById(lid);
+    if(el)el.textContent='⚠️ Could not connect. Please check your internet and try again.';
   }
   msgs.scrollTop=msgs.scrollHeight;
   updateStats();
 }
+
+function escHtml(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function quickAsk(q){document.getElementById('chatInp').value=q;sendMsg();}
 function openTool(url){window.open(url,'_blank');}
-function shareWA(){window.open('https://wa.me/?text=AI%20Samjho%20app%20try%20karo%20%E2%80%94%20free%20mein%20AI%20seekho!%20by%20Abhishek%20Tiwari%20%F0%9F%A7%A0','_blank');}
-function shareApp(){if(navigator.share){navigator.share({title:'AI Samjho',text:'Free mein AI seekho! by Abhishek Tiwari',url:window.location.href});}else{navigator.clipboard.writeText(window.location.href).catch(()=>{});showToast('Link copied!');}}
-function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
+function shareWA(){window.open('https://wa.me/?text=Learn%20AI%20for%20free%20with%20AI%20Samjho%20by%20Abhishek%20Tiwari!%20Simple%20lessons%2C%20quizzes%20%26%20free%20AI%20tools.%20Check%20it%20out!','_blank');}
+function shareApp(){
+  if(navigator.share){navigator.share({title:'AI Samjho — Learn AI Free',text:'Learn AI for free! Simple lessons by Abhishek Tiwari.',url:window.location.href});}
+  else{navigator.clipboard.writeText(window.location.href).catch(()=>{});showToast('Link copied!');}
+}
+function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
+
+// ── DAILY ROTATION SYSTEM ──────────────────────────────────────────
+// App launch date — day 1. Every day a new lesson, tip, quiz & fact rotates.
+const LAUNCH = new Date('2026-05-07');
+
+// 30 daily tips — one per day, loops after 30
+const allTips = [
+  "💡 Use ChatGPT to improve your CV — paste it and say 'Make this more professional'. Done in 5 minutes!",
+  "💡 Google Gemini is completely free and understands Hindi. Try it today at gemini.google.com",
+  "💡 To make AI images for free, use Bing Image Creator — just describe what you want and it generates!",
+  "💡 Meta AI is already built into WhatsApp — type @Meta AI in any chat to start using it!",
+  "💡 Pinterest + Amazon affiliate links = passive income. Post 1 pin daily and watch clicks grow!",
+  "💡 Perplexity.ai gives 3x better answers than Google — with real sources. Free to use.",
+  "💡 Ask ChatGPT to write emails for you: 'Write a professional email to my boss explaining...' Done in 30 seconds!",
+  "💡 Canva's AI Magic Write feature is free — it generates text automatically inside your designs.",
+  "💡 Want YouTube thumbnails? Use Canva + AI image generator — professional quality in 5 minutes!",
+  "💡 Easiest way to earn with AI: Write content using ChatGPT, design with Canva, sell on Fiverr.",
+  "💡 Claude AI (claude.ai) is excellent for writing long articles, reports and business emails — free to use.",
+  "💡 You can use AI to summarize long YouTube videos — paste the transcript into ChatGPT and ask for a summary.",
+  "💡 AI can translate documents instantly — paste any text into ChatGPT and say 'Translate to Hindi'.",
+  "💡 Use Perplexity AI to research before any big purchase — it gives honest comparisons with sources.",
+  "💡 Create a WhatsApp Business account + use ChatGPT for replies = professional customer service for free!",
+  "💡 Adobe Firefly generates AI images that are safe for commercial use — great for business owners.",
+  "💡 ChatGPT can help you prepare for job interviews — say 'Ask me interview questions for [role]'.",
+  "💡 Use AI to write product descriptions for your online shop — ChatGPT makes them SEO-friendly.",
+  "💡 Suno.ai creates full songs from a text description — great for YouTube background music, free credits daily.",
+  "💡 Google Gemini's Deep Research feature reads 100+ articles and gives you a summary — completely free.",
+  "💡 You can use AI to create a full business plan — tell ChatGPT your idea and ask for a plan.",
+  "💡 Microsoft Copilot is built into Bing search — just search normally and AI answers appear automatically.",
+  "💡 Use Leonardo.ai for product mockup images — looks professional, completely free with daily credits.",
+  "💡 AI can help you learn any language — ask ChatGPT to teach you English conversation skills daily.",
+  "💡 ElevenLabs creates realistic voiceovers for free — great for making YouTube videos without recording yourself.",
+  "💡 Notion AI helps organize your notes and tasks — free plan available, great for students and professionals.",
+  "💡 Use ChatGPT to write social media posts for a whole week in one sitting — saves hours every week.",
+  "💡 Grammarly AI fixes your English writing in real-time as you type — free plan is very useful.",
+  "💡 You can ask AI to explain any complex topic 'as if I am 10 years old' — always gets a simple answer.",
+  "💡 AI image tools can remove backgrounds from photos for free — try remove.bg or Canva background remover."
+];
+
+// 20 daily AI facts — rotate every day
+const allFacts = [
+  "🤖 AI Fact: ChatGPT reached 100 million users in just 2 months — faster than any app in history!",
+  "🤖 AI Fact: India is now the world's #1 country for AI app downloads as of 2026.",
+  "🤖 AI Fact: Over 70% of emails you receive have been filtered or prioritized using AI.",
+  "🤖 AI Fact: Google Translate uses AI to translate over 100 billion words every single day.",
+  "🤖 AI Fact: Netflix uses AI to recommend shows — it saves them $1 billion per year in customer retention.",
+  "🤖 AI Fact: The first AI program was written in 1951 — it played checkers!",
+  "🤖 AI Fact: Swiggy and Zomato use AI to predict delivery times — accurate to within 3 minutes.",
+  "🤖 AI Fact: AI can now detect cancer in X-rays more accurately than most human doctors.",
+  "🤖 AI Fact: Your smartphone's face unlock uses AI — it maps 30,000 invisible dots on your face.",
+  "🤖 AI Fact: GPT-4 was trained on more text than a human could read in 300,000 lifetimes.",
+  "🤖 AI Fact: AI is expected to add $15.7 trillion to the global economy by 2030.",
+  "🤖 AI Fact: Over 50% of customer service chats on major Indian websites are now handled by AI chatbots.",
+  "🤖 AI Fact: IRCTC uses AI to detect fraudulent ticket bookings — saves crores every year.",
+  "🤖 AI Fact: The word 'Artificial Intelligence' was first used in 1956 at a conference in the USA.",
+  "🤖 AI Fact: AI music tools can compose a full song in under 30 seconds — something that took humans days.",
+  "🤖 AI Fact: YouTube's AI recommendation system drives over 70% of all video views on the platform.",
+  "🤖 AI Fact: India's government is investing ₹10,000 crore in AI research and development by 2025-2026.",
+  "🤖 AI Fact: AI can now write computer code — GitHub Copilot helps developers write 40% faster.",
+  "🤖 AI Fact: The global AI market is expected to grow from $200 billion in 2023 to $2 trillion by 2030.",
+  "🤖 AI Fact: Google's AI DeepMind solved a 50-year-old biology problem (protein folding) in 2020."
+];
+
+// Daily featured lessons — cycle through all 8 lessons one per day
+// Additional mini-lessons shown as "Daily Update" — new content each week
+const weeklyUpdates = [
+  {title:"AI Prompt Engineering 101", emoji:"✍️", cat:"mid", tagL:"Intermediate", time:"4 min",
+   intro:"A prompt is the instruction you give to an AI. The better your prompt, the better the AI's answer. Learning to write good prompts is the most valuable AI skill in 2026.",
+   explain:"Think of a prompt like talking to a very smart but literal assistant. If you say 'write something about dogs' — you get a generic answer. If you say 'Write a 200-word engaging Instagram caption about a golden retriever puppy playing in rain, for a pet accessories brand, friendly and fun tone' — you get something professional and ready to use.",
+   eg:"Bad prompt: 'Write an email'. Good prompt: 'Write a polite email to my client explaining that the project will be delayed by one week due to a technical issue. Keep it professional and apologetic, under 100 words.'",
+   pts:["Be specific — give context, tone, length and format","Tell AI who the audience is","Specify the format you want — bullet points, email, paragraph","If you don't like the answer — just say 'Make it shorter' or 'More formal'","You can chain prompts — build on the previous answer"],quiz:1},
+  {title:"How to Use AI for Free Education", emoji:"🎓", cat:"beg", tagL:"Beginner", time:"3 min",
+   intro:"AI has made world-class education available to anyone with a smartphone — completely free. You can learn anything from coding to cooking to business from AI.",
+   explain:"Instead of paying for expensive courses, you can simply ask ChatGPT or Gemini to teach you any topic. It creates a personalized lesson just for you, answers your questions, gives examples, and quizzes you — all for free!",
+   eg:"Say to ChatGPT: 'Teach me basic accounting in 10 simple lessons. Start with lesson 1 and wait for me to say Next before continuing.' — It becomes your personal teacher!",
+   pts:["ChatGPT and Gemini are better than most paid courses for basic learning","Ask AI to quiz you after each topic to test yourself","Say 'Give me a real-life example' after every concept","Khan Academy now uses AI — free world-class education","YouTube + ChatGPT together = most powerful free learning combo"],quiz:4},
+  {title:"AI Safety — What You Need to Know", emoji:"🔒", cat:"beg", tagL:"Beginner", time:"3 min",
+   intro:"AI is powerful but you need to be careful about what information you share with it and how you use it. Here's what every beginner should know.",
+   explain:"AI chatbots are trained on massive data but they can make mistakes. They can confidently give wrong information — this is called 'hallucination'. Never share personal information like Aadhaar number, bank details or passwords with any AI tool. Always verify important facts from official sources.",
+   eg:"A person asked ChatGPT for a medicine dosage and followed the answer without checking — the AI was wrong. Always verify health, legal and financial information with a real professional!",
+   pts:["Never share Aadhaar, PAN, bank details, or passwords with AI","AI can give confident but wrong answers — always verify important facts","Don't use AI to make major medical, legal or financial decisions alone","Your chat history may be used to train AI — be careful what you share","Use official websites for government information — not AI chatbots"],quiz:0},
+  {title:"5 AI Tools Every Student Should Use", emoji:"📚", cat:"beg", tagL:"Beginner", time:"4 min",
+   intro:"If you're a student in 2026 and not using AI tools, you're working 3x harder than you need to. These free tools will save you hours every week.",
+   explain:"AI doesn't do your homework for you — but it helps you understand concepts faster, organize your notes, practice for exams, and write better. Think of it as having a very knowledgeable study partner available 24/7.",
+   eg:"Use Gemini to explain a difficult chapter: 'I'm a 12th grade student. Explain photosynthesis in simple terms with a diagram description.' — instant clear explanation better than most textbooks!",
+   pts:["Google Gemini — explain any concept from your textbook simply","Perplexity AI — research for assignments with real sources","Grammarly — improve your English writing automatically","Canva — create beautiful presentations and projects","ChatGPT — practice for interviews, debate topics and essay writing"],quiz:4}
+];
+
+function getDayIndex(){
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  const diff = Math.floor((today - LAUNCH) / (1000*60*60*24));
+  return Math.max(0, diff);
+}
+
+function initDailyContent(){
+  const dayIdx = getDayIndex();
+  const today = new Date();
+  const dateStr = today.toLocaleDateString('en-IN',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+
+  // Daily tip — cycles through 30 tips
+  document.getElementById('dailyTip').textContent = allTips[dayIdx % allTips.length];
+
+  // Daily banner
+  const fact = allFacts[dayIdx % allFacts.length];
+  document.getElementById('dailyBannerText').innerHTML = `<strong>${dateStr}</strong> &nbsp;·&nbsp; ${fact}`;
+
+  // Featured lesson — cycles through main lessons + weekly updates
+  const featuredIdx = dayIdx % lessons.length;
+  const fl = lessons[featuredIdx];
+  document.getElementById('featuredLesson').innerHTML = `
+    <div class="l-card ${fl.cat}" onclick="openLesson(${featuredIdx})">
+      <span class="tag new">Today's Pick</span>
+      <span class="l-emoji">${fl.emoji}</span>
+      <div class="l-title">${fl.title}</div>
+      <div class="l-sub">${fl.sub}</div>
+      <div class="l-meta"><span class="l-time">⏱ ${fl.time} · ${fl.tagL}</span><span class="l-arr">→</span></div>
+    </div>`;
+
+  // Weekly update card — new mini-lesson every 7 days
+  const weekIdx = Math.floor(dayIdx / 7) % weeklyUpdates.length;
+  const wu = weeklyUpdates[weekIdx];
+  const homeList = document.getElementById('lessonListHome');
+  const weekCard = document.createElement('div');
+  weekCard.innerHTML = `
+    <div style="margin-bottom:10px">
+      <div class="sec-lbl" style="margin-bottom:8px">🆕 This Week's Special Lesson</div>
+      <div class="l-card mid" onclick="openWeeklyLesson(${weekIdx})" style="border:2px solid #C4B5FD">
+        <span class="tag mid">Weekly Special</span>
+        <span class="l-emoji">${wu.emoji}</span>
+        <div class="l-title">${wu.title}</div>
+        <div class="l-sub">Fresh content — updated every week!</div>
+        <div class="l-meta"><span class="l-time">⏱ ${wu.time} · ${wu.tagL}</span><span class="l-arr">→</span></div>
+      </div>
+    </div>`;
+  if(homeList) homeList.insertAdjacentElement('afterbegin', weekCard);
+}
+
+function openWeeklyLesson(i){
+  const l = weeklyUpdates[i];
+  lessonsRead++;addXP(10);showToast('+10 XP! Great reading!');
+  document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));
+  document.getElementById('s-detail').classList.add('on');
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('on'));
+  document.querySelectorAll('.nb')[1].classList.add('on');
+  document.getElementById('detailContent').innerHTML=`
+    <span class="tag mid">${l.tagL}</span>
+    <span class="det-emoji">${l.emoji}</span>
+    <div class="det-title">${l.title}</div>
+    <div class="det-sub">This week's special lesson — updated every 7 days</div>
+    <div class="det-sec">📖 What is it?</div>
+    <div class="det-text">${l.intro}</div>
+    <div class="det-sec">🧠 Simple Explanation</div>
+    <div class="det-text">${l.explain}</div>
+    <div class="eg-box">💡 <b>Real Life Example:</b><br>${l.eg}</div>
+    <div class="det-sec">✓ Key Takeaways</div>
+    <ul class="kp">${l.pts.map(p=>`<li>${p}</li>`).join('')}</ul>
+    <div style="height:16px"></div>
+    <button class="btn-main" onclick="goQuiz(${l.quiz})">🧩 Take Quiz — +15 XP!</button>
+    <div style="height:8px"></div>
+    <button class="btn-out" style="width:100%;text-align:center" onclick="go('learn',document.querySelectorAll('.nb')[1])">← Back to Lessons</button>`;
+  document.getElementById('s-detail').scrollTop=0;
+  updateStats();
+}
+// ───────────────────────────────────────────────────────────────────
 
 renderLessons();
 loadQuiz();
+initDailyContent();
 </script>
 </body>
 </html>
