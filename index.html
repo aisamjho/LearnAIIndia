@@ -2,11 +2,28 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="theme-color" content="#7C3AED">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#6D28D9">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>AI Samjho — Learn AI Free | by Abhishek Tiwari</title>
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Learn AI India">
+<!-- SEO -->
+<meta name="description" content="Learn AI India — Free AI learning for everyone. Learn ChatGPT, Machine Learning, AI tools in simple English. By Abhishek Tiwari.">
+<meta name="keywords" content="learn AI India, artificial intelligence India, ChatGPT tutorial, free AI course India, AI for beginners, machine learning India, Abhishek Tiwari">
+<meta name="author" content="Abhishek Tiwari">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Learn AI India — Free AI Learning for Everyone">
+<meta property="og:description" content="Learn AI for free in simple English. Lessons, quizzes, tools. By Abhishek Tiwari.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aisamjho.github.io/aisamjho">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Learn AI India — Free AI Learning">
+<!-- PWA Manifest -->
+<link rel="manifest" href="data:application/json,{%22name%22:%22Learn%20AI%20India%22,%22short_name%22:%22Learn%20AI%22,%22start_url%22:%22.%22,%22display%22:%22standalone%22,%22background_color%22:%22%23F0EEFF%22,%22theme_color%22:%22%236D28D9%22,%22description%22:%22Free%20AI%20Learning%20for%20India%22,%22icons%22:[{%22src%22:%22data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20512%20512'%3E%3Crect%20width='512'%20height='512'%20rx='80'%20fill='%236D28D9'/%3E%3Ctext%20x='256'%20y='340'%20font-size='300'%20text-anchor='middle'%3E%F0%9F%A7%A0%3C/text%3E%3C/svg%3E%22,%22sizes%22:%22512x512%22,%22type%22:%22image/svg+xml%22}]}">
+<!-- Structured Data for Google -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Learn AI India","description":"Free AI learning platform for Indians. Learn AI, ChatGPT, Machine Learning in simple English.","url":"https://aisamjho.github.io/aisamjho","author":{"@type":"Person","name":"Abhishek Tiwari"},"applicationCategory":"EducationalApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
+<title>Learn AI India — Free AI Learning | by Abhishek Tiwari</title>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -15,69 +32,61 @@
   --g:#059669;--gbg:#ECFDF5;--gb:#6EE7B7;
   --b:#2563EB;--bbg:#EFF6FF;--bb:#93C5FD;
   --r:#DC2626;--rbg:#FEF2F2;--rb:#FCA5A5;
-  --a:#D97706;--abg:#FFFBEB;--ab:#FCD34D;
-  --pk:#DB2777;--pkbg:#FDF2F8;
-  --cy:#0891B2;
-  --bg:#F0EEFF;--bg2:#F8F6FF;
-  --card:#FFFFFF;--card2:#F5F3FF;
+  --a:#D97706;--abg:#FFFBEB;--ab:#FDE68A;
+  --pk:#DB2777;
+  --bg:#F0EEFF;--card:#FFFFFF;
   --t:#1E1B4B;--t2:#3730A3;--t3:#6B7280;--t4:#9CA3AF;
-  --border:#DDD6FE;--border2:#C4B5FD;
-  --s1:0 1px 4px rgba(109,40,217,.1),0 1px 2px rgba(109,40,217,.06);
-  --s2:0 4px 16px rgba(109,40,217,.12),0 2px 6px rgba(109,40,217,.08);
-  --s3:0 0 0 3px rgba(124,58,237,.15);
+  --bdr:#DDD6FE;--bdr2:#C4B5FD;
+  --s1:0 1px 4px rgba(109,40,217,.1);
+  --s2:0 4px 16px rgba(109,40,217,.12);
 }
+body{font-family:'Inter',sans-serif;color:var(--t);background:var(--bg);min-height:100vh}
 
-/* BASE */
-html{height:100%}
-body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--t);min-height:100vh}
-
-/* ══════════════════════════════
-   MOBILE LAYOUT (default)
-══════════════════════════════ */
+/* ═══ MOBILE ═══ */
 .app{max-width:440px;margin:0 auto;height:100vh;display:flex;flex-direction:column;overflow:hidden}
-.hdr{padding:11px 14px;background:var(--card);border-bottom:1px solid var(--border);flex-shrink:0;display:flex;align-items:center;justify-content:space-between;box-shadow:var(--s1)}
-.nav{display:flex;background:var(--card);border-bottom:1px solid var(--border);flex-shrink:0;overflow-x:auto;scrollbar-width:none}
-.nav::-webkit-scrollbar{display:none}
-.scr{display:none;flex:1;overflow-y:auto;padding:14px 13px 84px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.hdr{padding:11px 14px;background:var(--card);border-bottom:1px solid var(--bdr);flex-shrink:0;display:flex;align-items:center;justify-content:space-between;box-shadow:var(--s1);z-index:50}
+.mob-nav{display:flex;background:var(--card);border-bottom:1px solid var(--bdr);flex-shrink:0;overflow-x:auto;scrollbar-width:none}
+.mob-nav::-webkit-scrollbar{display:none}
+.mob-nb{flex-shrink:0;padding:8px 11px 6px;font-size:9.5px;font-weight:500;color:var(--t4);background:none;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;border-bottom:2.5px solid transparent;transition:all .2s;font-family:'Inter',sans-serif}
+.mob-nb.on{color:var(--p);border-bottom-color:var(--p)}
+.mob-nb-ic{font-size:17px}
+.scr{display:none;flex:1;overflow-y:auto;padding:14px 13px 84px;scrollbar-width:thin;scrollbar-color:var(--bdr) transparent}
 .scr.on{display:block}
 
-/* ══════════════════════════════
-   DESKTOP LAYOUT (768px+)
-══════════════════════════════ */
+/* ═══ DESKTOP ═══ */
 @media(min-width:768px){
-  body{background:linear-gradient(135deg,#F0EEFF 0%,#EEF2FF 50%,#F0F9FF 100%);overflow:auto}
+  body{background:linear-gradient(135deg,#F0EEFF 0%,#EEF2FF 50%,#F0F9FF 100%)}
   .app{max-width:100%;height:auto;min-height:100vh;flex-direction:row;overflow:visible}
-
-  /* Sidebar header */
-  .hdr{position:fixed;left:0;top:0;width:240px;height:100vh;flex-direction:column;align-items:flex-start;justify-content:flex-start;padding:24px 16px 20px;border-right:1px solid var(--border);border-bottom:none;z-index:100;overflow-y:auto;box-shadow:var(--s2);background:linear-gradient(180deg,#fff 0%,#FDFCFF 100%)}
-  .logo{margin-bottom:24px}
-  .hdr-right{flex-direction:column;align-items:stretch;gap:8px;width:100%;margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}
-  .hchip,.visit-badge{width:100%;justify-content:flex-start;padding:9px 13px;border-radius:12px;font-size:12px}
-
-  /* Sidebar nav */
-  .nav{position:fixed;left:0;top:0;width:240px;height:100vh;flex-direction:column;align-items:stretch;border-right:1px solid var(--border);border-bottom:none;padding:140px 10px 20px;overflow-y:auto;scrollbar-width:none;background:linear-gradient(180deg,#fff 0%,#FDFCFF 100%);z-index:99}
-  .nav::-webkit-scrollbar{display:none}
-  .nb{width:100%;flex-direction:row;justify-content:flex-start;gap:11px;padding:11px 14px;border-radius:12px;border-bottom:none!important;border-left:3px solid transparent;font-size:13px;text-align:left;flex-shrink:0;white-space:normal}
-  .nb.on{background:var(--p3);border-left:3px solid var(--p);color:var(--p)}
-  .nb-ic{font-size:18px;flex-shrink:0}
-
-  /* Main content */
+  /* Sidebar */
+  .hdr{position:fixed;left:0;top:0;width:230px;height:100vh;flex-direction:column;align-items:flex-start;justify-content:flex-start;padding:22px 14px 16px;border-right:1px solid var(--bdr);border-bottom:none;z-index:100;overflow-y:auto;box-shadow:2px 0 12px rgba(109,40,217,.08);background:#fff}
+  .logo{margin-bottom:20px}
+  .hdr-right{flex-direction:column;align-items:stretch;gap:7px;width:100%;margin-top:12px;padding-top:12px;border-top:1px solid var(--bdr)}
+  .hchip,.visit-badge{width:100%;justify-content:flex-start;padding:9px 13px;border-radius:11px;font-size:12px}
+  /* Desktop nav replaces mob-nav */
+  .mob-nav{display:none!important}
+  .desk-nav{display:flex!important;flex-direction:column;position:fixed;left:0;top:0;width:230px;height:100vh;padding:150px 10px 20px;background:#fff;border-right:1px solid var(--bdr);z-index:99;overflow-y:auto;scrollbar-width:none;box-shadow:2px 0 12px rgba(109,40,217,.08)}
+  .desk-nb{display:flex;align-items:center;gap:11px;width:100%;padding:11px 14px;border-radius:12px;border:none;background:none;cursor:pointer;font-size:13px;font-weight:500;color:var(--t3);font-family:'Inter',sans-serif;transition:all .2s;text-align:left;border-left:3px solid transparent}
+  .desk-nb.on{background:var(--p3);color:var(--p);border-left-color:var(--p);font-weight:600}
+  .desk-nb:hover:not(.on){background:var(--p4);color:var(--p)}
+  .desk-nb-ic{font-size:19px;flex-shrink:0}
+  /* Content */
   .scr{display:none!important}
-  .scr.on{display:block!important;margin-left:240px;padding:32px 40px 60px;max-width:calc(100% - 240px);min-height:100vh;height:auto!important;overflow:visible!important}
-
-  /* Desktop grid */
+  .scr.on{display:block!important;margin-left:230px;padding:32px 40px 60px;max-width:calc(100% - 230px);min-height:100vh;height:auto!important;overflow:visible!important}
+  /* Desktop grids */
   .tools-grid{grid-template-columns:repeat(3,1fr)!important}
   .stats-row{grid-template-columns:repeat(4,1fr)!important}
   #lessonListHome,#lessonListLearn{display:grid!important;grid-template-columns:1fr 1fr;gap:12px}
   #lessonListHome .lcard,#lessonListLearn .lcard{margin-bottom:0}
   .wcard-stats{flex-direction:row;gap:14px}
-  .msgs{height:400px!important}
-  #gameCanvas{height:420px!important}
+  .msgs{height:420px!important}
+  #gameCanvas{height:440px!important}
+  .wcard-hi{font-size:28px}
+  .chat-wrap{max-width:680px}
 }
+/* Hide desk-nav on mobile */
+.desk-nav{display:none}
 
-/* ══════════════════════════════
-   HEADER & NAV
-══════════════════════════════ */
+/* ═══ COMPONENTS ═══ */
 .logo{display:flex;align-items:center;gap:10px}
 .logo-ic{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--p),var(--p2));display:flex;align-items:center;justify-content:center;font-size:19px;box-shadow:0 4px 12px rgba(124,58,237,.3);flex-shrink:0}
 .logo-name{font-family:'Baloo 2',cursive;font-weight:800;font-size:20px;background:linear-gradient(135deg,var(--p),#4F46E5);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
@@ -85,33 +94,33 @@ body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--t);min-heig
 .hdr-right{display:flex;gap:7px;align-items:center}
 .hchip{display:flex;align-items:center;gap:4px;padding:5px 11px;border-radius:20px;font-size:11px;font-weight:600;border:1px solid}
 .hchip.fire{background:#FFF7ED;color:#EA580C;border-color:#FED7AA}
-.hchip.xp{background:var(--p3);color:var(--p);border-color:var(--border2)}
+.hchip.xp{background:var(--p3);color:var(--p);border-color:var(--bdr2)}
 .visit-badge{background:var(--bbg);color:var(--b);border:1px solid var(--bb);border-radius:20px;padding:5px 11px;font-size:10px;font-weight:600;display:flex;align-items:center;gap:4px}
-.nb{flex-shrink:0;padding:8px 10px 6px;font-size:9.5px;font-weight:500;color:var(--t3);background:none;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;border-bottom:2.5px solid transparent;transition:all .2s;font-family:'Inter',sans-serif;white-space:nowrap}
-.nb.on{color:var(--p);border-bottom-color:var(--p)}
-.nb-ic{font-size:17px}
 
-/* ══════════════════════════════
-   CARDS & SECTIONS
-══════════════════════════════ */
-.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:14px;margin-bottom:12px;box-shadow:var(--s1)}
+/* CARDS */
+.card{background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:14px;margin-bottom:12px;box-shadow:var(--s1)}
 .slbl{font-size:11px;font-weight:600;color:var(--t3);text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px;display:flex;align-items:center;gap:6px}
 .slbl::before{content:'';width:3px;height:13px;background:linear-gradient(var(--p),var(--p2));border-radius:3px}
 
 /* WELCOME */
-.wcard{background:linear-gradient(135deg,var(--p) 0%,#4F46E5 50%,var(--cy) 100%);border-radius:20px;padding:20px;margin-bottom:14px;position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(124,58,237,.25)}
+.wcard{background:linear-gradient(135deg,var(--p) 0%,#4F46E5 50%,#0891B2 100%);border-radius:20px;padding:20px;margin-bottom:14px;position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(124,58,237,.25)}
 .wcard::before{content:'';position:absolute;top:-30px;right:-30px;width:130px;height:130px;background:rgba(255,255,255,.08);border-radius:50%}
 .wcard::after{content:'🇮🇳';position:absolute;right:16px;top:14px;font-size:26px;opacity:.25}
 .wcard-hi{font-family:'Baloo 2',cursive;font-size:24px;font-weight:800;color:#fff}
 .wcard-sub{font-size:13px;color:rgba(255,255,255,.85);margin-top:5px;line-height:1.5}
 .wcard-tag{display:inline-flex;align-items:center;gap:5px;margin-top:12px;background:rgba(255,255,255,.2);color:#fff;font-size:11px;font-weight:500;padding:5px 13px;border-radius:20px;border:1px solid rgba(255,255,255,.3)}
 .wcard-stats{display:flex;gap:10px;margin-top:14px}
-.wstat{background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;text-align:center;flex:1}
+.wstat{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;text-align:center;flex:1}
 .wstat-n{font-family:'Baloo 2',cursive;font-size:19px;font-weight:800;color:#fff}
 .wstat-l{font-size:9px;color:rgba(255,255,255,.75);margin-top:1px}
 
-/* DAILY CARD */
-.daily-card{background:linear-gradient(135deg,#EFF6FF,#F0FDF4);border:1px solid #BFDBFE;border-radius:16px;padding:14px;margin-bottom:14px;box-shadow:var(--s1)}
+/* QUOTE */
+.quote-card{background:linear-gradient(135deg,#FDF4FF,#FEFCE8);border:1px solid #E9D5FF;border-radius:16px;padding:16px;margin-bottom:14px;box-shadow:var(--s1);text-align:center}
+.quote-text{font-family:'Baloo 2',cursive;font-size:16px;font-weight:700;color:var(--p);line-height:1.6;margin-bottom:6px}
+.quote-author{font-size:11px;color:var(--t3);font-style:italic}
+
+/* DAILY */
+.daily-card{background:linear-gradient(135deg,#EFF6FF,#F0FDF4);border:1px solid var(--bb);border-radius:16px;padding:14px;margin-bottom:14px;box-shadow:var(--s1)}
 .daily-top{display:flex;align-items:center;gap:9px;margin-bottom:9px}
 .daily-icon{width:34px;height:34px;background:var(--bbg);border:1px solid var(--bb);border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
 .daily-label{font-size:10px;font-weight:700;color:var(--b);text-transform:uppercase;letter-spacing:.7px}
@@ -119,28 +128,23 @@ body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--t);min-heig
 .daily-text{font-size:13px;line-height:1.8;color:var(--t2)}
 .daily-fact{margin-top:9px;padding:9px 13px;background:rgba(124,58,237,.07);border-radius:11px;font-size:12px;color:var(--p);line-height:1.6;border-left:3px solid var(--p)}
 
-/* QUOTE CARD */
-.quote-card{background:linear-gradient(135deg,#FDF4FF,#FEFCE8);border:1px solid #E9D5FF;border-radius:16px;padding:16px;margin-bottom:14px;box-shadow:var(--s1);text-align:center}
-.quote-text{font-family:'Baloo 2',cursive;font-size:16px;font-weight:700;color:var(--p);line-height:1.6;margin-bottom:6px}
-.quote-author{font-size:11px;color:var(--t3);font-style:italic}
-
 /* TAGS */
 .tag{font-size:10px;font-weight:600;padding:3px 9px;border-radius:7px;display:inline-block;margin-bottom:7px;border:1px solid}
 .tag.beg{background:var(--gbg);color:var(--g);border-color:var(--gb)}
 .tag.mid{background:var(--bbg);color:var(--b);border-color:var(--bb)}
 .tag.adv{background:var(--rbg);color:var(--r);border-color:var(--rb)}
 .tag.new{background:var(--abg);color:var(--a);border-color:var(--ab)}
-.tag.spc{background:var(--p3);color:var(--p);border-color:var(--border2)}
+.tag.spc{background:var(--p3);color:var(--p);border-color:var(--bdr2)}
 
-/* LESSON CARDS */
-.lcard{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:15px;margin-bottom:10px;cursor:pointer;transition:all .18s;box-shadow:var(--s1);position:relative;overflow:hidden}
+/* LESSON */
+.lcard{background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:15px;margin-bottom:10px;cursor:pointer;transition:all .18s;box-shadow:var(--s1);position:relative;overflow:hidden}
 .lcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:16px 16px 0 0}
 .lcard.beg::before{background:linear-gradient(90deg,var(--g),#34D399)}
 .lcard.mid::before{background:linear-gradient(90deg,var(--b),#60A5FA)}
 .lcard.adv::before{background:linear-gradient(90deg,var(--r),#F87171)}
 .lcard.spc::before{background:linear-gradient(90deg,var(--p),var(--p2))}
 .lcard:active{transform:scale(.98)}
-@media(hover:hover){.lcard:hover{box-shadow:var(--s2);transform:translateY(-2px);border-color:var(--border2)}}
+@media(hover:hover){.lcard:hover{box-shadow:var(--s2);transform:translateY(-2px);border-color:var(--bdr2)}}
 .lcard-emoji{font-size:28px;display:block;margin-bottom:7px}
 .lcard-title{font-family:'Baloo 2',cursive;font-size:16px;font-weight:700;color:var(--t);margin-bottom:3px;line-height:1.3}
 .lcard-sub{font-size:12px;color:var(--t3);line-height:1.5;margin-bottom:8px}
@@ -150,47 +154,44 @@ body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--t);min-heig
 /* CHIPS */
 .chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:14px;scrollbar-width:none}
 .chips::-webkit-scrollbar{display:none}
-.tchip{flex-shrink:0;background:var(--card);border:1.5px solid var(--border);border-radius:13px;padding:10px 12px;text-align:center;cursor:pointer;transition:all .15s;min-width:82px;box-shadow:var(--s1)}
-.tchip:active{transform:scale(.95)}
+.tchip{flex-shrink:0;background:var(--card);border:1.5px solid var(--bdr);border-radius:13px;padding:10px 12px;text-align:center;cursor:pointer;transition:all .15s;min-width:82px;box-shadow:var(--s1)}
 @media(hover:hover){.tchip:hover{border-color:var(--p);background:var(--p4)}}
 .tchip-ic{font-size:19px;display:block;margin-bottom:3px}
 .tchip-tx{font-size:10px;color:var(--t3);font-weight:500;line-height:1.3}
 
 /* PROGRESS */
-.prog-wrap{background:var(--border);border-radius:20px;height:7px;overflow:hidden;margin:5px 0}
+.prog-wrap{background:var(--bdr);border-radius:20px;height:7px;overflow:hidden;margin:5px 0}
 .prog-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--p),var(--p2));transition:width .6s}
-.lvl-badge{background:var(--p3);border:1px solid var(--border2);border-radius:20px;padding:3px 11px;font-size:11px;color:var(--p);font-weight:600;display:inline-block}
-.notif{background:linear-gradient(135deg,#FFFBEB,#FEF3C7);border:1px solid #FDE68A;border-radius:14px;padding:11px 14px;margin-bottom:14px;display:flex;align-items:center;gap:10px;cursor:pointer;box-shadow:var(--s1)}
+.lvl-badge{background:var(--p3);border:1px solid var(--bdr2);border-radius:20px;padding:3px 11px;font-size:11px;color:var(--p);font-weight:600;display:inline-block}
+.notif{background:linear-gradient(135deg,#FFFBEB,#FEF3C7);border:1px solid var(--ab);border-radius:14px;padding:11px 14px;margin-bottom:14px;display:flex;align-items:center;gap:10px;cursor:pointer;box-shadow:var(--s1)}
 .notif-text{font-size:12px;color:var(--t2);flex:1;line-height:1.5}
 
 /* DETAIL */
 .det-emoji{font-size:42px;display:block;margin-bottom:10px}
-.det-title{font-family:'Baloo 2',cursive;font-size:22px;font-weight:800;color:var(--t);margin-bottom:4px;line-height:1.2}
+.det-title{font-family:'Baloo 2',cursive;font-size:22px;font-weight:800;color:var(--t);margin-bottom:4px}
 .det-sub{font-size:13px;color:var(--t3);margin-bottom:16px;font-style:italic}
 .det-sec{font-size:10.5px;font-weight:700;color:var(--p);text-transform:uppercase;letter-spacing:.6px;margin:18px 0 8px;display:flex;align-items:center;gap:6px}
 .det-sec::before{content:'▶';font-size:8px}
 .det-text{font-size:13.5px;line-height:1.9;color:var(--t2)}
-.eg-box{background:var(--abg);border:1px solid #FDE68A;border-left:4px solid var(--a);border-radius:12px;padding:13px;margin-top:10px;font-size:13px;line-height:1.75;color:var(--t2)}
+.eg-box{background:var(--abg);border:1px solid var(--ab);border-left:4px solid var(--a);border-radius:12px;padding:13px;margin-top:10px;font-size:13px;line-height:1.75;color:var(--t2)}
 .eg-title{font-size:10px;font-weight:700;color:var(--a);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
 .kp{list-style:none}
-.kp li{font-size:13px;padding:9px 0 9px 22px;border-bottom:1px solid var(--border);position:relative;line-height:1.5;color:var(--t2)}
+.kp li{font-size:13px;padding:9px 0 9px 22px;border-bottom:1px solid var(--bdr);position:relative;line-height:1.5;color:var(--t2)}
 .kp li:last-child{border-bottom:none}
 .kp li::before{content:'✓';position:absolute;left:0;color:var(--g);font-weight:700;font-size:13px;top:10px}
 
 /* BUTTONS */
 .btn-main{width:100%;padding:13px;background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;border:none;border-radius:14px;font-family:'Baloo 2',cursive;font-size:16px;font-weight:700;cursor:pointer;transition:all .18s;box-shadow:0 4px 14px rgba(124,58,237,.3)}
 .btn-main:active{transform:scale(.97)}
-@media(hover:hover){.btn-main:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(124,58,237,.4)}}
-.btn-out{background:#fff;border:1.5px solid var(--border2);color:var(--t3);padding:9px 18px;border-radius:20px;font-size:12px;cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s;font-weight:500}
+.btn-out{background:#fff;border:1.5px solid var(--bdr2);color:var(--t3);padding:9px 18px;border-radius:20px;font-size:12px;cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s;font-weight:500}
 @media(hover:hover){.btn-out:hover{border-color:var(--p);color:var(--p)}}
 
 /* QUIZ */
-.qcard{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:var(--s1)}
+.qcard{background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:var(--s1)}
 .q-num{font-size:10px;font-weight:600;color:var(--t4);text-transform:uppercase;margin-bottom:8px}
 .q-text{font-family:'Baloo 2',cursive;font-size:16px;font-weight:700;line-height:1.4;margin-bottom:14px;color:var(--t)}
 .q-opts{display:flex;flex-direction:column;gap:8px}
-.q-opt{background:var(--bg2);border:1.5px solid var(--border);border-radius:11px;padding:12px 15px;font-size:13px;cursor:pointer;text-align:left;font-family:'Inter',sans-serif;color:var(--t2);transition:all .15s;font-weight:500}
-.q-opt:active{transform:scale(.98)}
+.q-opt{background:var(--bg);border:1.5px solid var(--bdr);border-radius:11px;padding:12px 15px;font-size:13px;cursor:pointer;text-align:left;font-family:'Inter',sans-serif;color:var(--t2);transition:all .15s;font-weight:500}
 @media(hover:hover){.q-opt:hover:not(:disabled){border-color:var(--p);background:var(--p4);color:var(--p)}}
 .q-opt.ok{border-color:var(--g);background:var(--gbg);color:var(--g);font-weight:600}
 .q-opt.no{border-color:var(--r);background:var(--rbg);color:var(--r)}
@@ -199,35 +200,31 @@ body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--t);min-heig
 .q-res.ok{background:var(--gbg);border:1px solid var(--gb);color:var(--g)}
 .q-res.no{background:var(--rbg);border:1px solid var(--rb);color:var(--r)}
 
-/* CHAT — GOOGLE STYLE */
+/* CHAT */
 .chat-wrap{background:var(--card);border-radius:20px;overflow:hidden;box-shadow:var(--s2);margin-bottom:14px}
 .chat-hdr{background:linear-gradient(135deg,var(--p),#4F46E5);padding:16px 18px}
 .chat-hdr-title{font-family:'Baloo 2',cursive;font-size:18px;font-weight:800;color:#fff;margin-bottom:2px}
 .chat-hdr-sub{font-size:11px;color:rgba(255,255,255,.8)}
 .chat-body{padding:16px}
-.msgs{height:300px;overflow-y:auto;display:flex;flex-direction:column;gap:10px;margin-bottom:14px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.msgs{height:300px;overflow-y:auto;display:flex;flex-direction:column;gap:10px;margin-bottom:14px;scrollbar-width:thin;scrollbar-color:var(--bdr) transparent}
 .msgs::-webkit-scrollbar{width:3px}
-.msgs::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+.msgs::-webkit-scrollbar-thumb{background:var(--bdr2);border-radius:3px}
 .msg{padding:11px 14px;border-radius:18px;font-size:13px;line-height:1.75;max-width:90%;word-break:break-word}
-.msg.bot{background:var(--p4);border:1px solid var(--border);color:var(--t);align-self:flex-start;border-radius:4px 18px 18px 18px}
+.msg.bot{background:var(--p4);border:1px solid var(--bdr);color:var(--t);align-self:flex-start;border-radius:4px 18px 18px 18px}
 .msg.usr{background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;align-self:flex-end;border-radius:18px 4px 18px 18px}
-.msg.load{background:var(--bg2);border:1px solid var(--border);color:var(--t3);font-style:italic;align-self:flex-start}
-.msg.load::after{content:'...';animation:d 1.2s steps(4,end) infinite}
-@keyframes d{0%,20%{content:'.'}40%{content:'..'}60%,100%{content:'...'}}
-.inp-wrap{display:flex;align-items:center;gap:8px;background:var(--bg);border:2px solid var(--border);border-radius:30px;padding:6px 8px 6px 18px;transition:border-color .2s;box-shadow:var(--s1)}
-.inp-wrap:focus-within{border-color:var(--p);box-shadow:var(--s3)}
+.msg.load{background:var(--bg);border:1px solid var(--bdr);color:var(--t3);font-style:italic;align-self:flex-start}
+.inp-wrap{display:flex;align-items:center;gap:8px;background:var(--bg);border:2px solid var(--bdr);border-radius:30px;padding:6px 8px 6px 18px;transition:border-color .2s;box-shadow:var(--s1)}
+.inp-wrap:focus-within{border-color:var(--p)}
 .chat-inp{flex:1;background:none;border:none;font-size:14px;color:var(--t);font-family:'Inter',sans-serif;outline:none}
 .chat-inp::placeholder{color:var(--t4)}
-.send-btn{background:linear-gradient(135deg,var(--p),var(--p2));border:none;border-radius:50%;width:38px;height:38px;color:#fff;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:opacity .15s}
-.send-btn:hover{opacity:.9}
+.send-btn{background:linear-gradient(135deg,var(--p),var(--p2));border:none;border-radius:50%;width:38px;height:38px;color:#fff;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .qbtns{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
-.qbtn{padding:7px 14px;background:var(--card);border:1.5px solid var(--border);border-radius:20px;font-size:11px;color:var(--t3);cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s;font-weight:500;box-shadow:var(--s1)}
+.qbtn{padding:7px 14px;background:var(--card);border:1.5px solid var(--bdr);border-radius:20px;font-size:11px;color:var(--t3);cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s;font-weight:500;box-shadow:var(--s1)}
 @media(hover:hover){.qbtn:hover{border-color:var(--p);color:var(--p);background:var(--p4)}}
 
 /* TOOLS */
 .tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
-.toolcard{background:var(--card);border:1.5px solid var(--border);border-radius:16px;padding:14px;cursor:pointer;transition:all .15s;box-shadow:var(--s1)}
-.toolcard:active{transform:scale(.96)}
+.toolcard{background:var(--card);border:1.5px solid var(--bdr);border-radius:16px;padding:14px;cursor:pointer;transition:all .15s;box-shadow:var(--s1)}
 @media(hover:hover){.toolcard:hover{border-color:var(--p);box-shadow:var(--s2);transform:translateY(-1px)}}
 .tool-ic{font-size:27px;margin-bottom:7px;display:block}
 .tool-nm{font-family:'Baloo 2',cursive;font-size:13px;font-weight:700;color:var(--t);margin-bottom:3px}
@@ -241,87 +238,105 @@ body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--t);min-heig
 .music-hero::before{content:'🎵';position:absolute;font-size:100px;opacity:.06;top:-10px;right:-10px}
 .music-hero-title{font-family:'Baloo 2',cursive;font-size:22px;font-weight:800;color:#fff;margin-bottom:6px}
 .music-hero-sub{font-size:13px;color:rgba(255,255,255,.8);line-height:1.6}
-.music-tool{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:15px;margin-bottom:10px;cursor:pointer;transition:all .15s;display:flex;gap:13px;align-items:center;box-shadow:var(--s1)}
+.music-tool{background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:15px;margin-bottom:10px;cursor:pointer;transition:all .15s;display:flex;gap:13px;align-items:center;box-shadow:var(--s1)}
 @media(hover:hover){.music-tool:hover{border-color:var(--p);box-shadow:var(--s2)}}
 .music-tool-ic{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0}
 .music-tool-name{font-family:'Baloo 2',cursive;font-size:15px;font-weight:700;color:var(--t);margin-bottom:2px}
 .music-tool-desc{font-size:11px;color:var(--t3);line-height:1.4;margin-bottom:5px}
-.prompt-card{background:var(--p4);border:1px solid var(--border2);border-radius:16px;padding:15px;margin-bottom:12px}
+.prompt-card{background:var(--p4);border:1px solid var(--bdr2);border-radius:16px;padding:15px;margin-bottom:12px}
 .prompt-label{font-size:10px;font-weight:700;color:var(--p);text-transform:uppercase;letter-spacing:.6px;margin-bottom:9px}
-.prompt-item{background:#fff;border:1px solid var(--border);border-radius:11px;padding:11px 14px;margin-bottom:8px;font-size:12.5px;color:var(--t2);line-height:1.5;cursor:pointer;transition:all .15s}
+.prompt-item{background:#fff;border:1px solid var(--bdr);border-radius:11px;padding:11px 14px;margin-bottom:8px;font-size:12.5px;color:var(--t2);line-height:1.5;cursor:pointer;transition:all .15s}
 @media(hover:hover){.prompt-item:hover{border-color:var(--p);background:var(--p4)}}
 
-/* ABOUT & REVIEWS */
-.ab-hero{background:linear-gradient(135deg,var(--p),#4F46E5,var(--cy));border-radius:20px;padding:24px;text-align:center;margin-bottom:16px;box-shadow:0 8px 24px rgba(124,58,237,.25);position:relative;overflow:hidden}
+/* ABOUT */
+.ab-hero{background:linear-gradient(135deg,var(--p),#4F46E5,#0891B2);border-radius:20px;padding:24px;text-align:center;margin-bottom:16px;box-shadow:0 8px 24px rgba(124,58,237,.25);position:relative;overflow:hidden}
 .ab-hero::before{content:'';position:absolute;top:-30px;left:-30px;width:120px;height:120px;background:rgba(255,255,255,.08);border-radius:50%}
-.ab-av{width:74px;height:74px;border-radius:50%;background:rgba(255,255,255,.2);border:3px solid rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 12px;box-shadow:0 4px 16px rgba(0,0,0,.15)}
+.ab-av{width:74px;height:74px;border-radius:50%;background:rgba(255,255,255,.2);border:3px solid rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 12px}
 .ab-name{font-family:'Baloo 2',cursive;font-size:22px;font-weight:800;color:#fff}
 .ab-role{font-size:12px;color:rgba(255,255,255,.8);margin-top:3px}
 .ab-quote{font-size:13px;color:rgba(255,255,255,.9);margin-top:12px;line-height:1.7;font-style:italic;font-weight:500}
 .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
-.stat{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:13px;text-align:center;box-shadow:var(--s1)}
+.stat{background:var(--card);border:1px solid var(--bdr);border-radius:14px;padding:13px;text-align:center;box-shadow:var(--s1)}
 .stat-n{font-family:'Baloo 2',cursive;font-size:21px;font-weight:800;background:linear-gradient(135deg,var(--p),var(--p2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .stat-l{font-size:10px;color:var(--t3);margin-top:2px}
-.info-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:15px;margin-bottom:10px;box-shadow:var(--s1)}
+.info-card{background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:15px;margin-bottom:10px;box-shadow:var(--s1)}
 .info-lbl{font-size:10.5px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.6px;margin-bottom:9px}
-.info-row{display:flex;justify-content:space-between;font-size:13px;padding:7px 0;border-bottom:1px solid var(--border)}
+.info-row{display:flex;justify-content:space-between;font-size:13px;padding:7px 0;border-bottom:1px solid var(--bdr)}
 .info-row:last-child{border-bottom:none}
 .wa-btn{width:100%;padding:13px;background:linear-gradient(135deg,#25D366,#128C7E);border:none;border-radius:14px;color:#fff;font-family:'Baloo 2',cursive;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 14px rgba(37,211,102,.3);margin-bottom:8px}
 
 /* REVIEWS */
-.review-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:10px;box-shadow:var(--s1)}
-.review-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.review-card{background:var(--card);border:1px solid var(--bdr);border-radius:14px;padding:14px;margin-bottom:10px;box-shadow:var(--s1)}
+.review-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px}
 .review-name{font-size:13px;font-weight:600;color:var(--t)}
 .review-date{font-size:10px;color:var(--t4);margin-top:2px}
-.review-stars{color:#F59E0B;font-size:14px}
+.review-stars{color:#F59E0B;font-size:14px;white-space:nowrap}
 .review-text{font-size:12.5px;color:var(--t3);line-height:1.6}
-.like-btn{display:flex;align-items:center;gap:7px;background:var(--pkbg);border:1.5px solid #FBCFE8;border-radius:24px;padding:9px 20px;font-size:13px;color:var(--pk);cursor:pointer;transition:all .2s;font-family:'Inter',sans-serif;font-weight:500;margin:0 auto}
+.like-btn{display:flex;align-items:center;gap:7px;background:#FDF2F8;border:1.5px solid #FBCFE8;border-radius:24px;padding:9px 20px;font-size:13px;color:var(--pk);cursor:pointer;transition:all .2s;font-family:'Inter',sans-serif;font-weight:500;margin:0 auto}
 .like-btn.liked{background:#FCE7F3;border-color:var(--pk);font-weight:600}
 .star-select{display:flex;gap:8px;margin:10px 0}
 .star-btn{font-size:24px;cursor:pointer;transition:transform .1s;filter:grayscale(1);opacity:.4}
 .star-btn.on{filter:none;opacity:1;transform:scale(1.15)}
-.review-inp{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:12px;padding:11px 14px;font-size:13px;color:var(--t);font-family:'Inter',sans-serif;outline:none;resize:none;height:80px;margin-bottom:10px;transition:border-color .2s}
-.review-inp:focus{border-color:var(--p)}
-.name-inp{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:12px;padding:10px 14px;font-size:13px;color:var(--t);font-family:'Inter',sans-serif;outline:none;margin-bottom:8px;transition:border-color .2s}
-.name-inp:focus{border-color:var(--p)}
+.review-inp{width:100%;background:var(--bg);border:1.5px solid var(--bdr);border-radius:12px;padding:11px 14px;font-size:13px;color:var(--t);font-family:'Inter',sans-serif;outline:none;resize:none;height:80px;margin-bottom:10px;transition:border-color .2s}
+.review-inp:focus,.name-inp:focus{border-color:var(--p)}
+.name-inp{width:100%;background:var(--bg);border:1.5px solid var(--bdr);border-radius:12px;padding:10px 14px;font-size:13px;color:var(--t);font-family:'Inter',sans-serif;outline:none;margin-bottom:8px;transition:border-color .2s}
 .submit-review{width:100%;padding:12px;background:linear-gradient(135deg,var(--pk),var(--p));color:#fff;border:none;border-radius:12px;font-family:'Baloo 2',cursive;font-size:15px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(219,39,119,.25)}
 
+/* LIKER AVATAR */
+.likers-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.liker-chip{display:flex;align-items:center;gap:6px;background:var(--p4);border:1px solid var(--bdr2);border-radius:20px;padding:5px 12px;font-size:12px;color:var(--p);font-weight:500}
+.liker-av{width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--p),var(--p2));display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:700;flex-shrink:0}
+
 /* AMAZON */
-.az-box{background:linear-gradient(135deg,#FFFBEB,#FEF9C3);border:1px solid #FDE68A;border-radius:16px;padding:14px;margin-bottom:14px;box-shadow:var(--s1)}
+.az-box{background:linear-gradient(135deg,#FFFBEB,#FEF9C3);border:1px solid var(--ab);border-radius:16px;padding:14px;margin-bottom:14px;box-shadow:var(--s1)}
 .az-lbl{font-size:10px;font-weight:700;color:#92400E;text-transform:uppercase;letter-spacing:.6px;margin-bottom:10px}
-.az-item{display:flex;align-items:center;gap:11px;padding:10px 12px;background:#fff;border-radius:12px;margin-bottom:8px;text-decoration:none;border:1px solid #FDE68A;transition:all .15s;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.az-item{display:flex;align-items:center;gap:11px;padding:10px 12px;background:#fff;border-radius:12px;margin-bottom:8px;text-decoration:none;border:1px solid var(--ab);transition:all .15s;box-shadow:0 1px 3px rgba(0,0,0,.05)}
 .az-item:last-child{margin-bottom:0}
-@media(hover:hover){.az-item:hover{border-color:#F59E0B;box-shadow:0 2px 8px rgba(245,158,11,.15)}}
+@media(hover:hover){.az-item:hover{border-color:#F59E0B}}
 .az-ic{font-size:21px;width:40px;height:40px;background:#FFFBEB;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .az-tx{font-size:12.5px;color:var(--t);font-weight:500;flex:1}
 .az-pr{font-size:10px;color:#92400E;font-weight:600;margin-top:2px}
 
+/* EARN */
+.earn-card{background:linear-gradient(135deg,#F0FDF4,#ECFDF5);border:1px solid var(--gb);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:var(--s1)}
+.earn-title{font-family:'Baloo 2',cursive;font-size:17px;font-weight:800;color:var(--g);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.earn-item{display:flex;gap:11px;align-items:flex-start;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--gb)}
+.earn-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.earn-ic{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.earn-label{font-size:13px;font-weight:600;color:var(--t);margin-bottom:2px}
+.earn-desc{font-size:12px;color:var(--t3);line-height:1.5}
+.earn-amount{font-size:11px;font-weight:700;color:var(--g);margin-top:3px}
+
 /* GAME */
-.game-wrap{background:#050010;border-radius:16px;overflow:hidden;border:2px solid var(--border2);margin-bottom:14px;box-shadow:var(--s2)}
+.game-wrap{background:#050010;border-radius:16px;overflow:hidden;border:2px solid var(--bdr2);margin-bottom:14px;box-shadow:var(--s2)}
 #gameCanvas{display:block;width:100%;touch-action:none}
-.game-ui{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;background:var(--card);border-top:1px solid var(--border)}
+.game-ui{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;background:var(--card);border-top:1px solid var(--bdr)}
 .game-score{font-family:'Baloo 2',cursive;font-size:18px;font-weight:800;background:linear-gradient(135deg,var(--p),var(--pk));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.game-lives{font-size:16px;letter-spacing:3px}
 .game-start{padding:10px 22px;background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;border:none;border-radius:12px;font-family:'Baloo 2',cursive;font-size:15px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(124,58,237,.3)}
-.game-info{background:var(--p4);border:1px solid var(--border2);border-radius:12px;padding:10px 14px;margin-bottom:10px;font-size:12px;color:var(--p);line-height:1.6;text-align:center}
+.game-info{background:var(--p4);border:1px solid var(--bdr2);border-radius:12px;padding:10px 14px;margin-bottom:10px;font-size:12px;color:var(--p);line-height:1.6;text-align:center}
 
 /* TOAST */
 .toast{position:fixed;bottom:88px;left:50%;transform:translateX(-50%) translateY(10px);background:var(--t);color:#fff;border-radius:12px;padding:10px 20px;font-size:12.5px;font-weight:500;opacity:0;transition:all .3s;z-index:9999;pointer-events:none;white-space:nowrap;box-shadow:var(--s2)}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-.div{height:1px;background:var(--border);margin:16px 0}
+.divider{height:1px;background:var(--bdr);margin:16px 0}
 </style>
 </head>
 <body>
+<!-- PWA Install Banner -->
+<div id="installBanner" style="display:none;background:linear-gradient(135deg,#6D28D9,#4F46E5);color:#fff;padding:10px 14px;align-items:center;justify-content:space-between;gap:10px;font-size:12px;flex-shrink:0;z-index:200;position:relative">
+  <span>📱 Add <strong>Learn AI India</strong> to your home screen — use like a real app!</span>
+  <div style="display:flex;gap:8px;flex-shrink:0">
+    <button id="installBtn" style="background:rgba(255,255,255,.25);border:1px solid rgba(255,255,255,.4);color:#fff;padding:6px 14px;border-radius:20px;font-size:11px;font-weight:600;cursor:pointer">Install Free</button>
+    <button onclick="document.getElementById('installBanner').style.display='none'" style="background:none;border:none;color:rgba(255,255,255,.7);cursor:pointer;font-size:16px">✕</button>
+  </div>
+</div>
 <div class="app">
 
-<!-- HEADER / SIDEBAR -->
+<!-- HEADER (mobile top / desktop sidebar top) -->
 <div class="hdr">
   <div class="logo">
     <div class="logo-ic">🧠</div>
-    <div>
-      <div class="logo-name">AI Samjho</div>
-      <div class="logo-sub">by Abhishek Tiwari</div>
-    </div>
+    <div><div class="logo-name">Learn AI India</div><div class="logo-sub">by Abhishek Tiwari</div></div>
   </div>
   <div class="hdr-right">
     <div class="visit-badge">👁 <span id="visitCount">...</span></div>
@@ -330,37 +345,50 @@ body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--t);min-heig
   </div>
 </div>
 
-<!-- NAV / SIDEBAR NAV -->
-<div class="nav">
-  <button class="nb on" onclick="go('home',this)"><span class="nb-ic">🏠</span>Home</button>
-  <button class="nb" onclick="go('learn',this)"><span class="nb-ic">📚</span>Learn</button>
-  <button class="nb" onclick="go('quiz',this)"><span class="nb-ic">🧩</span>Quiz</button>
-  <button class="nb" onclick="go('tools',this)"><span class="nb-ic">🛠️</span>Tools</button>
-  <button class="nb" onclick="go('music',this)"><span class="nb-ic">🎵</span>Music</button>
-  <button class="nb" onclick="go('ask',this)"><span class="nb-ic">🤖</span>Ask AI</button>
-  <button class="nb" onclick="go('game',this)"><span class="nb-ic">🎮</span>Game</button>
-  <button class="nb" onclick="go('reviews',this)"><span class="nb-ic">⭐</span>Reviews</button>
-  <button class="nb" onclick="go('about',this)"><span class="nb-ic">👤</span>About</button>
+<!-- MOBILE NAV -->
+<div class="mob-nav">
+  <button class="mob-nb on" onclick="go('home',this,0)"><span class="mob-nb-ic">🏠</span>Home</button>
+  <button class="mob-nb" onclick="go('learn',this,1)"><span class="mob-nb-ic">📚</span>Learn</button>
+  <button class="mob-nb" onclick="go('quiz',this,2)"><span class="mob-nb-ic">🧩</span>Quiz</button>
+  <button class="mob-nb" onclick="go('tools',this,3)"><span class="mob-nb-ic">🛠️</span>Tools</button>
+  <button class="mob-nb" onclick="go('music',this,4)"><span class="mob-nb-ic">🎵</span>Music</button>
+  <button class="mob-nb" onclick="go('ask',this,5)"><span class="mob-nb-ic">🤖</span>Ask AI</button>
+  <button class="mob-nb" onclick="go('game',this,6)"><span class="mob-nb-ic">🎮</span>Game</button>
+  <button class="mob-nb" onclick="go('earn',this,7)"><span class="mob-nb-ic">💰</span>Earn</button>
+  <button class="mob-nb" onclick="go('reviews',this,8)"><span class="mob-nb-ic">⭐</span>Reviews</button>
+  <button class="mob-nb" onclick="go('about',this,9)"><span class="mob-nb-ic">👤</span>About</button>
+</div>
+
+<!-- DESKTOP SIDEBAR NAV -->
+<div class="desk-nav" id="deskNav">
+  <button class="desk-nb on" onclick="go('home',this,0)"><span class="desk-nb-ic">🏠</span>Home</button>
+  <button class="desk-nb" onclick="go('learn',this,1)"><span class="desk-nb-ic">📚</span>Learn</button>
+  <button class="desk-nb" onclick="go('quiz',this,2)"><span class="desk-nb-ic">🧩</span>Quiz</button>
+  <button class="desk-nb" onclick="go('tools',this,3)"><span class="desk-nb-ic">🛠️</span>Tools</button>
+  <button class="desk-nb" onclick="go('music',this,4)"><span class="desk-nb-ic">🎵</span>Music</button>
+  <button class="desk-nb" onclick="go('ask',this,5)"><span class="desk-nb-ic">🤖</span>Ask AI</button>
+  <button class="desk-nb" onclick="go('game',this,6)"><span class="desk-nb-ic">🎮</span>Game</button>
+  <button class="desk-nb" onclick="go('earn',this,7)"><span class="desk-nb-ic">💰</span>Earn Money</button>
+  <button class="desk-nb" onclick="go('reviews',this,8)"><span class="desk-nb-ic">⭐</span>Reviews</button>
+  <button class="desk-nb" onclick="go('about',this,9)"><span class="desk-nb-ic">👤</span>About</button>
 </div>
 
 <!-- HOME -->
 <div class="scr on" id="s-home">
   <div class="wcard">
     <div class="wcard-hi">Welcome! 🙏</div>
-    <div class="wcard-sub">Learn AI for free — simple lessons, real examples,<br>no tech background needed.</div>
-    <div class="wcard-tag">✦ by Abhishek Tiwari &nbsp;·&nbsp; Free Forever</div>
+    <div class="wcard-sub">Learn AI for free — simple lessons, real examples, no tech background needed.</div>
+    <div class="wcard-tag">✦ by Abhishek Tiwari · Free Forever</div>
     <div class="wcard-stats">
       <div class="wstat"><div class="wstat-n" id="hw-visits">...</div><div class="wstat-l">👁 Visits</div></div>
       <div class="wstat"><div class="wstat-n" id="hw-likes">0</div><div class="wstat-l">❤️ Likes</div></div>
       <div class="wstat"><div class="wstat-n" id="hw-reviews">0</div><div class="wstat-l">⭐ Reviews</div></div>
     </div>
   </div>
-
   <div class="quote-card">
-    <div class="quote-text" id="dailyQuote">"Loading today's quote..."</div>
+    <div class="quote-text" id="dailyQuote">"Loading..."</div>
     <div class="quote-author" id="quoteAuthor">— Loading...</div>
   </div>
-
   <div class="daily-card">
     <div class="daily-top">
       <div class="daily-icon">💡</div>
@@ -369,43 +397,29 @@ body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--t);min-heig
     <div class="daily-text" id="dailyTip">Loading...</div>
     <div class="daily-fact" id="dailyFact">Loading...</div>
   </div>
-
-  <div class="notif" onclick="go('learn',document.querySelectorAll('.nb')[1])">
+  <div class="notif" onclick="go('learn',null,1)">
     <span style="font-size:20px">📖</span>
     <div class="notif-text">Complete today's lesson — earn <strong style="color:#D97706">+10 XP!</strong></div>
     <span style="color:var(--p);font-weight:700;font-size:16px">→</span>
   </div>
-
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
     <div class="slbl" style="margin:0">Your Level</div>
     <div class="lvl-badge" id="levelBadge">🌱 Beginner</div>
   </div>
   <div class="prog-wrap"><div class="prog-fill" id="progFill" style="width:3%"></div></div>
   <div style="font-size:10px;color:var(--t4);text-align:right;margin-bottom:16px" id="xpLabel">0/100 XP</div>
-
   <div class="slbl">⚡ Today's Featured Lesson</div>
   <div id="featuredLesson"></div>
-
   <div class="slbl">🔥 Quick Topics</div>
   <div class="chips" id="topicChips"></div>
-
   <div class="slbl">📖 All Lessons</div>
   <div id="lessonListHome"></div>
-
   <div class="az-box">
     <div class="az-lbl">🛒 Recommended on Amazon</div>
-    <a class="az-item" href="https://www.amazon.in/s?k=wireless+earbuds&tag=attech002-21" target="_blank">
-      <div class="az-ic">🎧</div><div><div class="az-tx">Best Wireless Earbuds 2026</div><div class="az-pr">From ₹999 →</div></div>
-    </a>
-    <a class="az-item" href="https://www.amazon.in/s?k=loreal+hair+serum&tag=attech002-21" target="_blank">
-      <div class="az-ic">💆</div><div><div class="az-tx">L'Oreal Hair Serum — Bestseller</div><div class="az-pr">From ₹349 →</div></div>
-    </a>
-    <a class="az-item" href="https://www.amazon.in/s?k=women+ethnic+kurta&tag=attech002-21" target="_blank">
-      <div class="az-ic">👗</div><div><div class="az-tx">Ethnic Kurta Sets — Sale!</div><div class="az-pr">From ₹499 →</div></div>
-    </a>
-    <a class="az-item" href="https://www.amazon.in/s?k=smartwatch+under+2000&tag=attech002-21" target="_blank">
-      <div class="az-ic">⌚</div><div><div class="az-tx">Smartwatch Under ₹2,000</div><div class="az-pr">From ₹1,299 →</div></div>
-    </a>
+    <a class="az-item" href="https://www.amazon.in/s?k=wireless+earbuds&tag=attech002-21" target="_blank"><div class="az-ic">🎧</div><div><div class="az-tx">Best Wireless Earbuds 2026</div><div class="az-pr">From ₹999 →</div></div></a>
+    <a class="az-item" href="https://www.amazon.in/s?k=loreal+hair+serum&tag=attech002-21" target="_blank"><div class="az-ic">💆</div><div><div class="az-tx">L'Oreal Hair Serum — Bestseller</div><div class="az-pr">From ₹349 →</div></div></a>
+    <a class="az-item" href="https://www.amazon.in/s?k=women+ethnic+kurta&tag=attech002-21" target="_blank"><div class="az-ic">👗</div><div><div class="az-tx">Ethnic Kurta Sets — Sale!</div><div class="az-pr">From ₹499 →</div></div></a>
+    <a class="az-item" href="https://www.amazon.in/s?k=smartwatch+under+2000&tag=attech002-21" target="_blank"><div class="az-ic">⌚</div><div><div class="az-tx">Smartwatch Under ₹2,000</div><div class="az-pr">From ₹1,299 →</div></div></a>
   </div>
 </div>
 
@@ -418,7 +432,7 @@ body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--t);min-heig
 
 <!-- DETAIL -->
 <div class="scr" id="s-detail">
-  <button class="btn-out" style="margin-bottom:14px" onclick="go('learn',document.querySelectorAll('.nb')[1])">← Back to Lessons</button>
+  <button class="btn-out" style="margin-bottom:14px" onclick="go('learn',null,1)">← Back to Lessons</button>
   <div id="detailContent"></div>
 </div>
 
@@ -430,31 +444,31 @@ body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--t);min-heig
   <div id="quizWrap"></div>
   <div style="display:flex;gap:8px;margin-top:10px">
     <button onclick="loadQuiz()" class="btn-out" style="flex:1">🔄 New Questions</button>
-    <button onclick="go('learn',document.querySelectorAll('.nb')[1])" class="btn-out" style="flex:1">📚 Lessons</button>
+    <button onclick="go('learn',null,1)" class="btn-out" style="flex:1">📚 Lessons</button>
   </div>
 </div>
 
 <!-- TOOLS -->
 <div class="scr" id="s-tools">
   <div style="font-family:'Baloo 2',cursive;font-size:22px;font-weight:800;color:var(--t);margin-bottom:3px">🛠️ Free AI Tools</div>
-  <div style="font-size:12px;color:var(--t3);margin-bottom:16px">Best free AI tools for India — start using today!</div>
+  <div style="font-size:12px;color:var(--t3);margin-bottom:16px">Best free AI tools for India!</div>
   <div class="slbl">💬 AI Chatbots</div>
   <div class="tools-grid">
     <div class="toolcard" onclick="OT('https://chat.openai.com')"><span class="tool-ic">💬</span><div class="tool-nm">ChatGPT</div><div class="tool-ds">Ask anything — most popular AI worldwide</div><span class="tbadge free">Free Plan</span></div>
-    <div class="toolcard" onclick="OT('https://gemini.google.com')"><span class="tool-ic">✨</span><div class="tool-nm">Google Gemini</div><div class="tool-ds">Works perfectly in Hindi</div><span class="tbadge free">Completely Free</span></div>
-    <div class="toolcard" onclick="OT('https://claude.ai')"><span class="tool-ic">🧠</span><div class="tool-nm">Claude AI</div><div class="tool-ds">Best for long writing and analysis</div><span class="tbadge free">Free Plan</span></div>
-    <div class="toolcard" onclick="OT('https://copilot.microsoft.com')"><span class="tool-ic">🪟</span><div class="tool-nm">MS Copilot</div><div class="tool-ds">Real-time internet access built-in</div><span class="tbadge free">Completely Free</span></div>
+    <div class="toolcard" onclick="OT('https://gemini.google.com')"><span class="tool-ic">✨</span><div class="tool-nm">Google Gemini</div><div class="tool-ds">Works perfectly in Hindi</div><span class="tbadge free">Free</span></div>
+    <div class="toolcard" onclick="OT('https://claude.ai')"><span class="tool-ic">🧠</span><div class="tool-nm">Claude AI</div><div class="tool-ds">Best for long writing</div><span class="tbadge free">Free Plan</span></div>
+    <div class="toolcard" onclick="OT('https://copilot.microsoft.com')"><span class="tool-ic">🪟</span><div class="tool-nm">MS Copilot</div><div class="tool-ds">Free real-time internet</div><span class="tbadge free">Free</span></div>
   </div>
   <div class="slbl">🎨 AI Image Tools</div>
   <div class="tools-grid">
-    <div class="toolcard" onclick="OT('https://www.bing.com/images/create')"><span class="tool-ic">🎨</span><div class="tool-nm">Bing Image Creator</div><div class="tool-ds">Microsoft's free DALL-E image tool</div><span class="tbadge free">Completely Free</span></div>
-    <div class="toolcard" onclick="OT('https://canva.com')"><span class="tool-ic">🖌️</span><div class="tool-nm">Canva AI</div><div class="tool-ds">Design + AI images in one place</div><span class="tbadge free">Free Plan</span></div>
-    <div class="toolcard" onclick="OT('https://leonardo.ai')"><span class="tool-ic">🦁</span><div class="tool-nm">Leonardo AI</div><div class="tool-ds">Professional AI art, free credits daily</div><span class="tbadge free">Free Credits</span></div>
+    <div class="toolcard" onclick="OT('https://www.bing.com/images/create')"><span class="tool-ic">🎨</span><div class="tool-nm">Bing Creator</div><div class="tool-ds">Free DALL-E image generation</div><span class="tbadge free">Free</span></div>
+    <div class="toolcard" onclick="OT('https://canva.com')"><span class="tool-ic">🖌️</span><div class="tool-nm">Canva AI</div><div class="tool-ds">Design + AI images</div><span class="tbadge free">Free Plan</span></div>
+    <div class="toolcard" onclick="OT('https://leonardo.ai')"><span class="tool-ic">🦁</span><div class="tool-nm">Leonardo AI</div><div class="tool-ds">Professional AI art</div><span class="tbadge free">Free Credits</span></div>
     <div class="toolcard" onclick="OT('https://firefly.adobe.com')"><span class="tool-ic">🦋</span><div class="tool-nm">Adobe Firefly</div><div class="tool-ds">Commercial use allowed</div><span class="tbadge free">Free Credits</span></div>
   </div>
   <div class="slbl">💰 Earn with AI</div>
   <div class="tools-grid">
-    <div class="toolcard" onclick="OT('https://affiliate-program.amazon.in')"><span class="tool-ic">🛒</span><div class="tool-nm">Amazon Affiliate</div><div class="tool-ds">Make pins → link → earn 1-9% commission</div><span class="tbadge free">Free to Join</span></div>
+    <div class="toolcard" onclick="OT('https://affiliate-program.amazon.in')"><span class="tool-ic">🛒</span><div class="tool-nm">Amazon Affiliate</div><div class="tool-ds">Earn 1-9% commission</div><span class="tbadge free">Free to Join</span></div>
     <div class="toolcard" onclick="OT('https://fiverr.com')"><span class="tool-ic">💼</span><div class="tool-nm">Fiverr</div><div class="tool-ds">Sell AI services globally</div><span class="tbadge free">Free to Join</span></div>
     <div class="toolcard" onclick="OT('https://perplexity.ai')"><span class="tool-ic">🔍</span><div class="tool-nm">Perplexity AI</div><div class="tool-ds">Better than Google search</div><span class="tbadge free">Free Plan</span></div>
     <div class="toolcard" onclick="OT('https://groq.com')"><span class="tool-ic">⚡</span><div class="tool-nm">Groq</div><div class="tool-ds">World's fastest free AI API</div><span class="tbadge free">Free API</span></div>
@@ -465,31 +479,18 @@ body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--t);min-heig
 <div class="scr" id="s-music">
   <div class="music-hero">
     <div class="music-hero-title">🎵 Create Music with AI</div>
-    <div class="music-hero-sub">Full professional songs just by typing a description — no instruments or training needed!</div>
+    <div class="music-hero-sub">Full professional songs just by typing — no instruments or training needed!</div>
   </div>
   <div class="slbl">🎹 Best AI Music Tools</div>
-  <div class="music-tool" onclick="OT('https://suno.com')">
-    <div class="music-tool-ic" style="background:linear-gradient(135deg,#FDF2F8,#FCE7F3)">🎵</div>
-    <div><div class="music-tool-name">Suno AI</div><div class="music-tool-desc">Full songs with lyrics, music and vocals. Best overall tool.</div><span class="tbadge free">Free Daily Credits</span></div>
-  </div>
-  <div class="music-tool" onclick="OT('https://udio.com')">
-    <div class="music-tool-ic" style="background:linear-gradient(135deg,#EFF6FF,#DBEAFE)">🎶</div>
-    <div><div class="music-tool-name">Udio</div><div class="music-tool-desc">Exceptional audio quality, great for professional tracks.</div><span class="tbadge free">Free Credits</span></div>
-  </div>
-  <div class="music-tool" onclick="OT('https://elevenlabs.io')">
-    <div class="music-tool-ic" style="background:linear-gradient(135deg,#ECFDF5,#D1FAE5)">🎤</div>
-    <div><div class="music-tool-name">ElevenLabs</div><div class="music-tool-desc">Realistic AI voiceovers in Hindi and English for YouTube.</div><span class="tbadge free">Free Plan</span></div>
-  </div>
-  <div class="music-tool" onclick="OT('https://mubert.com')">
-    <div class="music-tool-ic" style="background:linear-gradient(135deg,#F5F3FF,#EDE9FE)">🎹</div>
-    <div><div class="music-tool-name">Mubert</div><div class="music-tool-desc">Royalty-free AI background music for videos and streams.</div><span class="tbadge free">Free Tier</span></div>
-  </div>
-  <div class="div"></div>
+  <div class="music-tool" onclick="OT('https://suno.com')"><div class="music-tool-ic" style="background:linear-gradient(135deg,#FDF2F8,#FCE7F3)">🎵</div><div><div class="music-tool-name">Suno AI</div><div class="music-tool-desc">Full songs with lyrics, music and vocals. Best overall.</div><span class="tbadge free">Free Daily Credits</span></div></div>
+  <div class="music-tool" onclick="OT('https://udio.com')"><div class="music-tool-ic" style="background:linear-gradient(135deg,#EFF6FF,#DBEAFE)">🎶</div><div><div class="music-tool-name">Udio</div><div class="music-tool-desc">Exceptional audio quality for professional tracks.</div><span class="tbadge free">Free Credits</span></div></div>
+  <div class="music-tool" onclick="OT('https://elevenlabs.io')"><div class="music-tool-ic" style="background:linear-gradient(135deg,#ECFDF5,#D1FAE5)">🎤</div><div><div class="music-tool-name">ElevenLabs</div><div class="music-tool-desc">Realistic AI voiceovers in Hindi and English.</div><span class="tbadge free">Free Plan</span></div></div>
+  <div class="divider"></div>
   <div class="prompt-card">
-    <div class="prompt-label">🎯 Try These Prompts on Suno AI</div>
+    <div class="prompt-label">🎯 Copy These Prompts for Suno AI</div>
     <div class="prompt-item" onclick="cpPrompt(this)"><strong style="color:var(--p)">Tap to copy →</strong> "Upbeat Bollywood pop about morning chai and new beginnings, female vocals, Hindi-English mix, happy mood"</div>
-    <div class="prompt-item" onclick="cpPrompt(this)"><strong style="color:var(--p)">Tap to copy →</strong> "Motivational Indian hip hop about hustle and success, energetic beat, English lyrics, trap style"</div>
-    <div class="prompt-item" onclick="cpPrompt(this)"><strong style="color:var(--p)">Tap to copy →</strong> "Soft calm instrumental background music for tech YouTube video, modern and clean, no lyrics"</div>
+    <div class="prompt-item" onclick="cpPrompt(this)"><strong style="color:var(--p)">Tap to copy →</strong> "Motivational Indian hip hop about hustle and success, energetic beat, English lyrics"</div>
+    <div class="prompt-item" onclick="cpPrompt(this)"><strong style="color:var(--p)">Tap to copy →</strong> "Soft calm background music for a tech YouTube video, modern and clean, no lyrics"</div>
   </div>
 </div>
 
@@ -498,51 +499,108 @@ body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--t);min-heig
   <div class="chat-wrap">
     <div class="chat-hdr">
       <div class="chat-hdr-title">🤖 Ask AI — Anything!</div>
-      <div class="chat-hdr-sub">Like Google — but smarter. Ask any question in English or Hindi!</div>
+      <div class="chat-hdr-sub">Like Google — ask about science, history, sports, AI, cooking, career — anything!</div>
     </div>
     <div class="chat-body">
       <div class="msgs" id="chatMsgs">
-        <div class="msg bot">👋 Hi! I'm <strong>AI Samjho</strong> — created by <strong>Abhishek Tiwari</strong>.<br><br>Ask me <em>anything at all</em> — AI, technology, career, earning money, cooking, history, science, sports — anything! I'll answer clearly and simply. 😊</div>
+        <div class="msg bot">👋 Hi! I'm <strong>Learn AI India</strong> assistant by <strong>Abhishek Tiwari</strong>.<br><br>Ask me <em>anything</em> — AI topics, history, science, sports, cooking, career advice, current events — just like Google but conversational! 😊</div>
       </div>
       <div class="inp-wrap">
-        <input class="chat-inp" id="chatInp" placeholder="Ask me anything — like Google!" onkeydown="if(event.key==='Enter')sendMsg()"/>
+        <input class="chat-inp" id="chatInp" placeholder="Ask me anything — What is USA? Who is PM of India?..." onkeydown="if(event.key==='Enter')sendMsg()"/>
         <button class="send-btn" onclick="sendMsg()">➤</button>
       </div>
     </div>
   </div>
   <div class="qbtns">
-    <button class="qbtn" onclick="QA('What is ChatGPT and how do I use it for free?')">What is ChatGPT?</button>
+    <button class="qbtn" onclick="QA('What is USA and why is it called a superpower?')">What is USA?</button>
+    <button class="qbtn" onclick="QA('What is ChatGPT and how do I use it?')">What is ChatGPT?</button>
     <button class="qbtn" onclick="QA('How can I earn money from home using AI in India?')">Earn with AI?</button>
-    <button class="qbtn" onclick="QA('What are the best free AI tools for Indian users in 2026?')">Free AI tools?</button>
-    <button class="qbtn" onclick="QA('Will AI take away Indian jobs? What skills should I learn?')">AI & Jobs?</button>
-    <button class="qbtn" onclick="QA('How do I create AI images for free online?')">AI Images?</button>
     <button class="qbtn" onclick="QA('What is machine learning and how is it different from AI?')">AI vs ML?</button>
+    <button class="qbtn" onclick="QA('Who is the Prime Minister of India in 2026?')">PM of India?</button>
+    <button class="qbtn" onclick="QA('What is photosynthesis? Explain simply.')">Photosynthesis?</button>
   </div>
 </div>
 
 <!-- GAME -->
 <div class="scr" id="s-game">
   <div style="font-family:'Baloo 2',cursive;font-size:22px;font-weight:800;color:var(--t);margin-bottom:8px">🎮 Space Defender</div>
-  <div class="game-info">Tap or click to shoot! Destroy the enemies before they reach you!<br>💡 Every 5 kills = <strong style="color:var(--p)">+1 XP</strong> in your profile!</div>
+  <div class="game-info">Tap/Click to shoot! Destroy enemies before they reach you!<br>Every 5 kills = <strong style="color:var(--p)">+1 XP</strong> in your profile!</div>
   <div class="game-wrap"><canvas id="gameCanvas" width="414" height="320"></canvas></div>
   <div class="game-ui">
     <div><div class="game-score">Score: <span id="gScore">0</span></div><div style="font-size:11px;color:var(--t3)">Best: <span id="gHigh">0</span></div></div>
-    <div class="game-lives" id="gLives">❤️❤️❤️</div>
+    <div style="font-size:16px;letter-spacing:3px" id="gLives">❤️❤️❤️</div>
     <button class="game-start" id="gBtn" onclick="startGame()">▶ Start</button>
+  </div>
+</div>
+
+<!-- EARN -->
+<div class="scr" id="s-earn">
+  <div style="font-family:'Baloo 2',cursive;font-size:22px;font-weight:800;color:var(--t);margin-bottom:3px">💰 Earn from Learn AI India</div>
+  <div style="font-size:12px;color:var(--t3);margin-bottom:16px">5 real ways to make money from your app</div>
+
+  <div class="card" style="border-left:4px solid var(--g)">
+    <div style="font-size:13px;font-weight:700;color:var(--g);margin-bottom:6px">✅ 1. Amazon Affiliate — Already Active!</div>
+    <div style="font-size:13px;color:var(--t2);line-height:1.75">Your app has Amazon product links on the Home page. When any visitor clicks a product and buys it on Amazon, you earn <strong>1–9% commission automatically</strong>. No extra work needed — just get more visitors!</div>
+    <div style="margin-top:8px;font-size:11px;font-weight:700;color:var(--g);background:var(--gbg);padding:5px 12px;border-radius:8px;display:inline-block">₹15–450 per sale · Fashion pays 9% — highest!</div>
+  </div>
+
+  <div class="card">
+    <div style="font-size:13px;font-weight:700;color:var(--b);margin-bottom:6px">📢 2. Google AdSense — Ads on Your App</div>
+    <div style="font-size:13px;color:var(--t2);line-height:1.75">When your app gets 500+ monthly visitors, apply at <strong>adsense.google.com</strong>. Google shows relevant ads and pays you every time someone clicks. It's completely free to apply and set up.</div>
+    <div style="font-size:12px;color:var(--t3);margin-top:8px;line-height:1.6"><strong>How to apply:</strong> adsense.google.com → Get Started → add your URL: <em>aisamjho.github.io/aisamjho</em> → Google approves in 3–7 days</div>
+    <div style="margin-top:8px;font-size:11px;font-weight:700;color:var(--b);background:var(--bbg);padding:5px 12px;border-radius:8px;display:inline-block">₹50–500 per 1,000 visitors · Pure passive</div>
+  </div>
+
+  <div class="card">
+    <div style="font-size:13px;font-weight:700;color:var(--p);margin-bottom:6px">💎 3. Premium Plan — ₹99/month</div>
+    <div style="font-size:13px;color:var(--t2);line-height:1.75">Create a premium section with extra lessons, AI certificates, and ad-free experience. Use <strong>Razorpay</strong> (free to set up in India) to collect ₹99/month. Even 50 users = ₹4,950/month recurring!</div>
+    <div style="margin-top:8px;font-size:11px;font-weight:700;color:var(--p);background:var(--p3);padding:5px 12px;border-radius:8px;display:inline-block">50 users × ₹99 = ₹4,950/month recurring</div>
+  </div>
+
+  <div class="card">
+    <div style="font-size:13px;font-weight:700;color:var(--a);margin-bottom:6px">📚 4. Sell AI Guide PDF — ₹199</div>
+    <div style="font-size:13px;color:var(--t2);line-height:1.75">Your 8 app lessons are already written! Export them as a PDF guide "Complete AI Beginner Guide India" and sell via <strong>Instamojo</strong> (free for India). Share link on WhatsApp and Pinterest.</div>
+    <div style="margin-top:8px;font-size:11px;font-weight:700;color:var(--a);background:var(--abg);padding:5px 12px;border-radius:8px;display:inline-block">₹199 per buyer · Pure profit · No monthly cost</div>
+  </div>
+
+  <div class="card">
+    <div style="font-size:13px;font-weight:700;color:var(--pk);margin-bottom:6px">🤝 5. Sponsorships at 2,000+ Visitors</div>
+    <div style="font-size:13px;color:var(--t2);line-height:1.75">Once you reach 2,000+ monthly visitors, email AI companies like Canva, Coursera, or Udemy. Offer a "Featured Tool" slot on your Tools page for ₹2,000–10,000/month. They will say yes!</div>
+    <div style="margin-top:8px;font-size:11px;font-weight:700;color:var(--pk);background:var(--pkbg);padding:5px 12px;border-radius:8px;display:inline-block">₹2,000–10,000/month per sponsor</div>
+  </div>
+
+  <div class="card" style="background:var(--p4);border-color:var(--bdr2)">
+    <div style="font-size:14px;font-weight:700;color:var(--p);margin-bottom:12px">🚀 Get More Visitors — Start Today</div>
+    <div style="font-size:13px;color:var(--t2);line-height:2">
+      📱 <strong>WhatsApp</strong> — Share your link in 10 groups right now<br>
+      📌 <strong>Pinterest</strong> — Create a pin about your app with a screenshot<br>
+      📸 <strong>Instagram/LinkedIn</strong> — Post "I built a free AI app for India 🇮🇳"<br>
+      🔍 <strong>Google</strong> — Submit to Search Console (see About tab for steps)
+    </div>
+    <button class="btn-main" style="margin-top:14px" onclick="shareApp()">🔗 Share Your App Now</button>
   </div>
 </div>
 
 <!-- REVIEWS -->
 <div class="scr" id="s-reviews">
   <div style="font-family:'Baloo 2',cursive;font-size:22px;font-weight:800;color:var(--t);margin-bottom:3px">⭐ Reviews & Likes</div>
-  <div style="font-size:12px;color:var(--t3);margin-bottom:16px">Share your feedback — help us improve AI Samjho!</div>
+  <div style="font-size:12px;color:var(--t3);margin-bottom:16px">See who loves Learn AI India and share your feedback!</div>
+
   <div class="card" style="text-align:center;margin-bottom:14px">
-    <div style="font-size:13px;color:var(--t2);margin-bottom:14px">Did you enjoy using AI Samjho?</div>
+    <div style="font-size:13px;color:var(--t2);margin-bottom:14px">Did you enjoy using Learn AI India?</div>
     <button class="like-btn" id="likeBtn" onclick="toggleLike()">
       <span id="likeHeart">❤️</span><span id="likeText">Like this App</span><strong id="likeCount" style="margin-left:4px"></strong>
     </button>
     <div style="font-size:11px;color:var(--t3);margin-top:10px;min-height:16px" id="likeMsg"></div>
   </div>
+
+  <!-- WHO LIKED -->
+  <div class="card" style="margin-bottom:14px">
+    <div class="info-lbl">❤️ People who liked this app</div>
+    <div class="likers-wrap" id="likersList"></div>
+  </div>
+
+  <!-- WRITE REVIEW -->
   <div class="card">
     <div style="font-size:15px;font-weight:600;color:var(--t);margin-bottom:12px">Write a Review</div>
     <div style="font-size:12px;color:var(--t3);margin-bottom:8px">Your rating:</div>
@@ -550,9 +608,10 @@ body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--t);min-heig
       <span class="star-btn" onclick="setStar(1)">⭐</span><span class="star-btn" onclick="setStar(2)">⭐</span><span class="star-btn" onclick="setStar(3)">⭐</span><span class="star-btn" onclick="setStar(4)">⭐</span><span class="star-btn" onclick="setStar(5)">⭐</span>
     </div>
     <input class="name-inp" id="reviewName" placeholder="Your name (optional)"/>
-    <textarea class="review-inp" id="reviewText" placeholder="Share your experience with AI Samjho..."></textarea>
+    <textarea class="review-inp" id="reviewText" placeholder="Share your experience with Learn AI India..."></textarea>
     <button class="submit-review" onclick="submitReview()">Submit Review ⭐</button>
   </div>
+
   <div class="slbl" style="margin-top:6px">Community Reviews</div>
   <div id="reviewsList"></div>
 </div>
@@ -562,8 +621,8 @@ body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--t);min-heig
   <div class="ab-hero">
     <div class="ab-av">👨‍💻</div>
     <div class="ab-name">Abhishek Tiwari</div>
-    <div class="ab-role">Founder, AI Samjho</div>
-    <div class="ab-quote" id="aboutQuote">"Loading today's quote..."</div>
+    <div class="ab-role">Founder, Learn AI India</div>
+    <div class="ab-quote" id="aboutQuote">"Loading..."</div>
   </div>
   <div class="stats-row">
     <div class="stat"><div class="stat-n">8+</div><div class="stat-l">Lessons</div></div>
@@ -571,8 +630,33 @@ body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--t);min-heig
     <div class="stat"><div class="stat-n">🇮🇳</div><div class="stat-l">Made in India</div></div>
   </div>
   <div class="info-card">
-    <div class="info-lbl">About AI Samjho</div>
-    <div style="font-size:13px;line-height:1.85;color:var(--t2)">AI Samjho is a free learning platform where anyone can understand Artificial Intelligence in simple everyday English. No technical background needed. Learn from home, at your own pace, completely free — forever.</div>
+    <div class="info-lbl">About Learn AI India</div>
+    <div style="font-size:13px;line-height:1.85;color:var(--t2)">Learn AI India is a free learning platform where anyone can understand Artificial Intelligence in simple everyday English. No technical background needed. Learn from home, at your own pace, completely free — forever.</div>
+  </div>
+
+  <!-- HOW TO APPEAR ON GOOGLE -->
+  <div class="info-card">
+    <div class="info-lbl">🔍 How to Get on Google Search</div>
+    <div style="font-size:13px;color:var(--t2);line-height:1.85">
+      <strong>Step 1:</strong> Go to <strong>search.google.com/search-console</strong> → Sign in with Google<br><br>
+      <strong>Step 2:</strong> Click "Add Property" → Choose "URL prefix" → Enter:<br>
+      <code style="background:#F5F3FF;color:var(--p);padding:3px 8px;border-radius:6px;font-size:11px">https://aisamjho.github.io/aisamjho</code><br><br>
+      <strong>Step 3:</strong> Verify ownership — Download the HTML file → upload to your GitHub repo → click Verify<br><br>
+      <strong>Step 4:</strong> Go to Sitemaps → enter your URL → Submit<br><br>
+      <strong>Step 5:</strong> Wait 3–7 days → search "Learn AI India Abhishek Tiwari" on Google → your app appears! ✅
+    </div>
+  </div>
+
+  <!-- HOW TO INSTALL AS APP -->
+  <div class="info-card">
+    <div class="info-lbl">📱 Install as App on Any Device</div>
+    <div style="font-size:13px;color:var(--t2);line-height:1.85">
+      This app is a <strong>PWA (Progressive Web App)</strong> — users can install it on their home screen and it looks exactly like a real app with a 🧠 icon, no browser bar!<br><br>
+      <strong>📱 Android:</strong> Open in Chrome → tap ⋮ menu → "Add to Home screen" → Install<br><br>
+      <strong>🍎 iPhone:</strong> Open in Safari → tap Share button → "Add to Home Screen" → Add<br><br>
+      <strong>💻 Desktop Chrome:</strong> Look for ⊕ icon in the address bar → click it → Install<br><br>
+      Tell your friends: "Download it like an app — just open in Chrome and add to home screen!"
+    </div>
   </div>
   <div class="info-card">
     <div class="info-lbl">Your Progress</div>
@@ -593,73 +677,39 @@ body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--t);min-heig
 <div class="toast" id="toast"></div>
 
 <script>
-// ════════════ DATA ════════════
+// ════════ DATA ════════
 const LAUNCH=new Date('2026-05-07');
+const QUOTES=[{q:"The secret of getting ahead is getting started.",a:"Mark Twain"},{q:"An investment in knowledge pays the best interest.",a:"Benjamin Franklin"},{q:"The only way to do great work is to love what you do.",a:"Steve Jobs"},{q:"In the middle of every difficulty lies opportunity.",a:"Albert Einstein"},{q:"Education is the most powerful weapon to change the world.",a:"Nelson Mandela"},{q:"Do not wait to strike till the iron is hot; make it hot by striking.",a:"William Butler Yeats"},{q:"Success is not final, failure is not fatal — it is the courage to continue.",a:"Winston Churchill"},{q:"Believe you can and you're halfway there.",a:"Theodore Roosevelt"},{q:"The journey of a thousand miles begins with one step.",a:"Lao Tzu"},{q:"You miss 100% of the shots you don't take.",a:"Wayne Gretzky"},{q:"Whether you think you can or you can't — you're right.",a:"Henry Ford"},{q:"Act as if what you do makes a difference. It does.",a:"William James"},{q:"Try not to become a person of success. Become a person of value.",a:"Albert Einstein"},{q:"The future belongs to those who learn more skills and combine them creatively.",a:"Robert Greene"},{q:"Opportunities don't happen. You create them.",a:"Chris Grosser"},{q:"Don't watch the clock — do what it does. Keep going.",a:"Sam Levenson"},{q:"Success usually comes to those who are too busy to look for it.",a:"Henry David Thoreau"},{q:"The only limit to our realization of tomorrow is our doubts of today.",a:"Franklin D. Roosevelt"},{q:"Two roads diverged in a wood, and I took the one less traveled by.",a:"Robert Frost"},{q:"Be yourself — everyone else is already taken.",a:"Oscar Wilde"},{q:"It always seems impossible until it's done.",a:"Nelson Mandela"},{q:"Your time is limited — don't waste it living someone else's life.",a:"Steve Jobs"},{q:"The best time to plant a tree was 20 years ago. The second best time is now.",a:"Chinese Proverb"},{q:"I find the harder I work, the more luck I seem to have.",a:"Thomas Jefferson"},{q:"What lies behind us and before us are tiny matters compared to what lies within us.",a:"Ralph Waldo Emerson"},{q:"Life is what happens when you're busy making other plans.",a:"John Lennon"},{q:"Strive not to be a success, but rather to be of value.",a:"Albert Einstein"},{q:"The mind is everything. What you think, you become.",a:"Buddha"},{q:"Twenty years from now you'll be more disappointed by the things you didn't do.",a:"Mark Twain"},{q:"If you want to live a happy life, tie it to a goal, not to people or things.",a:"Albert Einstein"}];
+const TIPS=['Use ChatGPT to improve your CV — paste it and say "Make this professional". Done in 5 minutes!','Google Gemini is completely free and understands Hindi perfectly. Try it at gemini.google.com','Create AI images free with Bing Image Creator — just type what you want!','Meta AI is already inside your WhatsApp — type @Meta AI in any chat to use it!','Pinterest + Amazon affiliate = passive income. Post 1 pin daily and watch clicks grow!','Perplexity.ai gives better answers than Google — with real verified sources. Free!','Ask ChatGPT to write emails for you — professional emails ready in 30 seconds!','Canva AI Magic Write is free — generates text inside your designs automatically.','Need YouTube thumbnails? Canva + AI image = professional quality in 5 minutes!','Best way to earn with AI: Write with ChatGPT, design with Canva, sell on Fiverr.','Claude AI is excellent for writing long articles and reports — free plan available!','AI can summarize YouTube videos — paste the transcript into ChatGPT.','Grammarly AI fixes your English writing in real-time as you type — free plan!','Use Perplexity AI before any big purchase — honest comparisons with real sources.','ChatGPT helps prepare for job interviews — say "Ask me interview questions"!','Google Gemini Deep Research reads 100+ articles and summarizes them for free!','AI can create a full business plan — tell ChatGPT your idea and ask for a plan!','Suno.ai creates full songs from a text description — free credits every day!','ElevenLabs creates realistic Hindi voiceovers for YouTube — no recording needed.','Post pins about your Learn AI India app on Pinterest — free traffic to your app!'];
+const FACTS=['🤖 ChatGPT reached 100 million users in just 2 months — fastest app in history!','🤖 India is now the world\'s #1 country for AI app downloads as of 2026.','🤖 Over 70% of emails you receive are filtered using AI technology.','🤖 Google Translate uses AI to translate 100 billion words every single day.','🤖 Netflix uses AI recommendations — saving $1 billion per year in retention.','🤖 The first AI program was written in 1951 — it played checkers!','🤖 Swiggy and Zomato use AI to predict delivery time — accurate within 3 minutes.','🤖 AI can detect cancer in X-rays more accurately than many human doctors.','🤖 Your face unlock uses AI — maps 30,000 invisible dots on your face!','🤖 GPT-4 was trained on more text than a human could read in 300,000 lifetimes.','🤖 AI will add $15.7 trillion to the global economy by 2030.','🤖 Over 50% of customer service chats on major Indian websites are handled by AI.','🤖 IRCTC uses AI to detect fraudulent bookings — saving crores every year.','🤖 YouTube\'s AI recommendation drives 70%+ of all video views on the platform.','🤖 India\'s government is investing ₹10,000 crore in AI research and development.','🤖 GitHub Copilot helps developers write code 40% faster using AI.','🤖 Google\'s DeepMind AI solved a 50-year-old biology problem in 2020.','🤖 The global AI market expected to grow from $200B to $2 trillion by 2030.','🤖 AI music tools compose a full professional song in under 30 seconds!','🤖 Microsoft Copilot is built into Bing — AI answers appear automatically.'];
+const LESSONS=[{id:0,cat:'beg',tagL:'Beginner',emoji:'🤖',time:'3 min',title:'What is Artificial Intelligence?',sub:'Understand AI in plain simple English',intro:'AI stands for Artificial Intelligence — technology giving computers the ability to think, learn and make decisions like humans.',explain:'Think of a child learning every day — first the alphabet, then words, then sentences. AI works the same way. It\'s given massive data and learns from it. The difference: AI learns millions of things in seconds!\n\nAI doesn\'t mean science-fiction robots. It\'s mostly smart software on your phone and computer.',eg:'When YouTube suggests videos you enjoy — that\'s AI. It studied your watching history. When Swiggy shows accurate delivery time — AI is predicting traffic and kitchen speed in real-time.',pts:['AI is software that learns from data — not a physical robot','It makes decisions similar to humans','AI is in your daily life: Google, YouTube, Swiggy, Zomato, Gmail','AI needs millions of examples to be trained','You don\'t need to understand it to benefit from it'],quiz:0},{id:1,cat:'beg',tagL:'Beginner',emoji:'💬',time:'4 min',title:'What is ChatGPT?',sub:'The world\'s most popular AI tool — explained simply',intro:'ChatGPT is an AI chatbot by OpenAI that answers almost any question in Hindi, English or any language!',explain:'ChatGPT was trained reading billions of internet pages — books, articles, websites. That\'s why it knows almost any topic.\n\nYou can have a real back-and-forth conversation. Ask follow-up questions, ask it to rewrite shorter or more formal — it understands context.',eg:'Tell ChatGPT: "Give me a biryani recipe for 4 people" → full recipe. Say "Make it vegetarian" → it adjusts. Say "Translate to Hindi" → done! This conversational ability is revolutionary.',pts:['Free at chatgpt.com — no payment needed','Works in Hindi, English and most languages','Can write emails, essays, code, recipes — almost anything','GPT-4o now free for all users','Can give wrong answers — verify medical, legal or financial info'],quiz:1},{id:2,cat:'mid',tagL:'Intermediate',emoji:'🎨',time:'3 min',title:'How to Create Images with AI?',sub:'Type a description — AI creates stunning images instantly',intro:'With AI image tools, you create stunning images just by typing a description. No design skills needed — completely free!',explain:'These tools read your description and generate an image. More detail = better result. This description is called a "prompt".\n\nExample: "Rajasthani woman in colorful traditional dress in golden desert at sunset, cinematic photography, 4K" — stunning professional image!',eg:'Pinterest use: Type "Happy Indian woman using wireless earbuds jogging in a park, morning light, lifestyle photography" → Use in Canva → Add Amazon affiliate link → Post on Pinterest → Earn commission!',pts:['Bing Image Creator — completely free, excellent quality','Canva Magic Image — free in your design workflow','Leonardo.ai — free daily credits','Adobe Firefly — commercial use allowed','More specific description = better image'],quiz:2},{id:3,cat:'mid',tagL:'Intermediate',emoji:'💰',time:'5 min',title:'How to Earn Money Using AI?',sub:'Real ways to earn from home with AI in 2026',intro:'AI has opened new income streams for regular people. No degree needed — just creativity and a smartphone.',explain:'AI tools do the hard technical work. Your job: guide them creatively and deliver value. Thousands of Indians earn from home this way.\n\nFastest growing opportunity: affiliate marketing with AI content — what you\'re already doing!',eg:'A homemaker in Pune uses ChatGPT to write Instagram captions for local businesses — ₹500/caption, ₹15,000/month part-time. A student makes logos with AI on Fiverr — ₹800-2000 per logo.',pts:['Amazon Affiliate + Pinterest — create AI pins, earn 1-9% commission','Fiverr — sell AI writing, images, voiceovers globally','Content writing — use ChatGPT to write for businesses ₹200-500 each','WhatsApp affiliate — share links with warm audience','YouTube — review AI tools, earn from ads as channel grows'],quiz:3},{id:4,cat:'beg',tagL:'Beginner',emoji:'🔍',time:'3 min',title:'AI Search Tools — Better than Google?',sub:'Perplexity, Gemini, Copilot — which to use and when',intro:'Beyond Google, AI search tools give direct answers, real sources, and let you have a conversation — no ads!',explain:'Traditional Google shows links — you do all reading. AI search engines read everything and give a direct summarized answer. Plus you can ask follow-up questions!',eg:'Search "best phone under ₹15,000" on Google: 10 listicles, ads, 20 minutes. Same on Perplexity: direct comparison with current prices, pros/cons and real sources — in one minute!',pts:['Perplexity.ai — best overall, verified sources, free plan','Google Gemini — great Hindi support, deep research feature','Microsoft Copilot — free, real-time internet, built into Edge','DuckDuckGo AI — completely private, no tracking','Gemini for daily, Perplexity for serious research'],quiz:4},{id:5,cat:'mid',tagL:'Intermediate',emoji:'📝',time:'4 min',title:'Using AI for Writing Help',sub:'Emails, essays, captions, resumes — AI writes it all!',intro:'AI is your personal writing assistant 24/7. Professional emails to Instagram captions — everything in seconds.',explain:'Use AI as a starting point, not finished product. AI gives a solid draft in 30 seconds. You edit in your own voice and make it authentic.\n\nThis solves the hardest part of writing — getting started on a blank page.',eg:'Client asks for 10 Instagram captions for a restaurant. Tell ChatGPT: "Write 10 engaging captions for a South Indian restaurant in Bangalore. Friendly tone, under 100 words each." Edit slightly — done in 10 minutes. Charge ₹2,000!',pts:['ChatGPT — best for all writing types, free','Claude AI — best for long-form articles and reports','Grammarly AI — fixes grammar in real-time, free plan','Copy.ai — designed for marketing copy and social captions','Always edit AI output in your own voice — makes it authentic'],quiz:5},{id:6,cat:'adv',tagL:'Advanced',emoji:'🎵',time:'4 min',title:'Creating Music with AI',sub:'Full professional songs in 30 seconds — no training needed',intro:'In 2026, AI creates complete songs — lyrics, instruments, vocals — from just a text description!',explain:'AI music tools: describe what you want and AI creates it. Describe genre, mood, instruments, language, feeling — AI handles the rest.\n\nResults good enough for YouTube, Instagram Reels, podcast intros and short films.',eg:'On Suno.ai: "Upbeat Bollywood pop about a morning commute in Mumbai, energetic female vocals, Hindi-English lyrics, positive mood" → Full 2-minute song in 30 seconds with professional quality!',pts:['Suno.ai — best overall, free daily credits','Udio.com — exceptional quality for professional use','ElevenLabs — realistic Hindi voiceovers for YouTube','Mubert — royalty-free background music, free tier','Check the 🎵 Music tab in this app for more!'],quiz:6},{id:7,cat:'mid',tagL:'Intermediate',emoji:'💼',time:'5 min',title:'AI for Small Business Owners',sub:'How every Indian business can save hours and grow with AI',intro:'AI is not just for big companies. Every small Indian business can use AI to work smarter and grow faster.',explain:'The biggest challenge for small owners is time. AI handles time-consuming tasks — descriptions, social posts, customer messages — freeing you to focus on growth.',eg:'A saree shop in Surat used ChatGPT for WhatsApp catalogue descriptions. Previously 3 hours for 20 descriptions — now 10 minutes. She used saved time for more orders. Revenue grew 35% in 2 months!',pts:['Write product descriptions with ChatGPT — professional, SEO-friendly','Create social media posts for the whole week in one 30-minute session','Canva AI for promotional images without a graphic designer','WhatsApp Business FAQ using AI-written responses','Analyze competitors: ask ChatGPT "Suggest 5 improvements for my business"'],quiz:7}];
+const QUIZ_DATA=[{q:'What does "AI" stand for?',opts:['Automatic Intelligence','Artificial Intelligence','Advanced Internet','Automated Information'],ans:1,exp:'AI stands for Artificial Intelligence — giving computers the ability to think and learn like humans.'},{q:'Which company created ChatGPT?',opts:['Google','Microsoft','OpenAI','Meta'],ans:2,exp:'ChatGPT was made by OpenAI — an AI research company founded in 2015.'},{q:'What do you write to create an AI image?',opts:['Computer code','A prompt (text description)','A password','A URL'],ans:1,exp:'You write a "prompt" — a text description telling AI what image to create. More detail = better image!'},{q:'Which Amazon category has highest affiliate commission?',opts:['Electronics 1-3%','Fashion 9%','Books 4%','Home & Kitchen 4-6%'],ans:1,exp:'Fashion pays up to 9% commission — the highest! That\'s why promoting clothing on Pinterest earns more.'},{q:'What makes Perplexity AI different from Google?',opts:['Shows more ads','Direct answers with real sources','Only for coding','Only works in English'],ans:1,exp:'Perplexity gives direct answers with verified sources — no need to click through 10 links!'},{q:'Best approach to AI-written content?',opts:['Copy-paste without reading','Use as starting point and edit in your voice','Never use AI','Only for translation'],ans:1,exp:'AI gives a great starting point — you edit in your own voice and style to make it authentic.'},{q:'Which tool creates full AI songs with lyrics and vocals?',opts:['Canva','Perplexity','Suno.ai','Grammarly'],ans:2,exp:'Suno.ai creates complete songs with lyrics, music and vocals from text — free daily credits!'},{q:'How can AI most help a small business?',opts:['Replace all employees','Save hours on writing — posts, descriptions, messages','Only for large companies','Cannot help small businesses'],ans:1,exp:'AI saves small businesses hours every week on writing tasks so they focus on growing!'}];
 
-const QUOTES=[
-  {q:"The future belongs to those who learn more skills and combine them in creative ways.",a:"Robert Greene"},
-  {q:"An investment in knowledge pays the best interest.",a:"Benjamin Franklin"},
-  {q:"Success is not final, failure is not fatal — it is the courage to continue that counts.",a:"Winston Churchill"},
-  {q:"The only way to do great work is to love what you do.",a:"Steve Jobs"},
-  {q:"In the middle of every difficulty lies opportunity.",a:"Albert Einstein"},
-  {q:"Do not wait to strike till the iron is hot; but make it hot by striking.",a:"William Butler Yeats"},
-  {q:"Education is the most powerful weapon which you can use to change the world.",a:"Nelson Mandela"},
-  {q:"The secret of getting ahead is getting started.",a:"Mark Twain"},
-  {q:"It always seems impossible until it's done.",a:"Nelson Mandela"},
-  {q:"Your time is limited, so don't waste it living someone else's life.",a:"Steve Jobs"},
-  {q:"The best time to plant a tree was 20 years ago. The second best time is now.",a:"Chinese Proverb"},
-  {q:"Opportunities don't happen, you create them.",a:"Chris Grosser"},
-  {q:"Don't watch the clock — do what it does. Keep going.",a:"Sam Levenson"},
-  {q:"Success usually comes to those who are too busy to be looking for it.",a:"Henry David Thoreau"},
-  {q:"I find that the harder I work, the more luck I seem to have.",a:"Thomas Jefferson"},
-  {q:"The only limit to our realization of tomorrow is our doubts of today.",a:"Franklin D. Roosevelt"},
-  {q:"Believe you can and you're halfway there.",a:"Theodore Roosevelt"},
-  {q:"Act as if what you do makes a difference. It does.",a:"William James"},
-  {q:"Life is what happens when you're busy making other plans.",a:"John Lennon"},
-  {q:"You miss 100% of the shots you don't take.",a:"Wayne Gretzky"},
-  {q:"Whether you think you can or you think you can't, you're right.",a:"Henry Ford"},
-  {q:"Not all those who wander are lost.",a:"J.R.R. Tolkien"},
-  {q:"You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.",a:"Dr. Seuss"},
-  {q:"The journey of a thousand miles begins with one step.",a:"Lao Tzu"},
-  {q:"Try not to become a man of success. Rather become a man of value.",a:"Albert Einstein"},
-  {q:"Two roads diverged in a wood, and I took the one less traveled by.",a:"Robert Frost"},
-  {q:"You only live once, but if you do it right, once is enough.",a:"Mae West"},
-  {q:"Be yourself; everyone else is already taken.",a:"Oscar Wilde"},
-  {q:"So many books, so little time.",a:"Frank Zappa"},
-  {q:"If you tell the truth, you don't have to remember anything.",a:"Mark Twain"}
-];
-
-const TIPS=['Use ChatGPT to improve your CV — paste it and say "Make this professional". Done in 5 minutes!','Google Gemini is completely free and understands Hindi perfectly. Try gemini.google.com today!','Create AI images free with Bing Image Creator — just type what you want and AI generates!','Meta AI is already inside your WhatsApp — type @Meta AI in any chat to use it for free!','Pinterest + Amazon affiliate = passive income. Post 1 pin daily and watch clicks grow!','Perplexity.ai gives better answers than Google — with real verified sources. Free to use.','Ask ChatGPT to write emails for you: "Write a professional email to my boss..." — 30 seconds!','Canva AI Magic Write is free — it generates text inside your designs automatically.','Need YouTube thumbnails? Canva + AI image = professional quality in 5 minutes!','Best way to earn with AI: Write content with ChatGPT, design with Canva, sell on Fiverr.','Claude AI (claude.ai) is excellent for writing long articles and reports — free plan available!','AI can summarize YouTube videos — paste the transcript into ChatGPT and ask for a summary.','Grammarly AI fixes your English writing in real-time as you type — free plan is very useful.','Use Perplexity AI before any big purchase — gives honest comparisons with real sources.','ChatGPT helps prepare for job interviews — say "Ask me interview questions for [role]"!','Google Gemini Deep Research reads 100+ articles and gives you a perfect summary — free!','AI can create a full business plan — tell ChatGPT your idea and ask for a detailed plan!','Suno.ai creates full songs from text in 30 seconds — free daily credits, try it today!','ElevenLabs creates realistic Hindi voiceovers — perfect for YouTube without recording yourself.','Use AI to write social media posts for the entire week in one 30-minute ChatGPT session!'];
-const FACTS=['🤖 ChatGPT reached 100 million users in just 2 months — fastest growing app in history!','🤖 India is now the world\'s #1 country for AI app downloads as of 2026.','🤖 Over 70% of emails you receive are filtered or sorted using AI technology.','🤖 Google Translate uses AI to translate over 100 billion words every single day.','🤖 Netflix uses AI for recommendations — saving them $1 billion per year in retention.','🤖 The first AI program was written in 1951 — it played the game of checkers!','🤖 Swiggy and Zomato use AI to predict delivery time — accurate to within 3 minutes.','🤖 AI can now detect cancer in X-rays more accurately than many human doctors.','🤖 Your smartphone face unlock uses AI — it maps 30,000 invisible dots on your face!','🤖 GPT-4 was trained on more text than a human could read in 300,000 lifetimes.','🤖 AI is expected to add $15.7 trillion to the global economy by the year 2030.','🤖 Over 50% of customer service chats on major Indian websites are now handled by AI.','🤖 IRCTC uses AI to detect fraudulent ticket bookings — saving crores every year.','🤖 YouTube\'s AI recommendation drives over 70% of all video views on the platform.','🤖 India\'s government is investing ₹10,000 crore in AI research and development.','🤖 GitHub Copilot helps developers write code 40% faster using AI assistance.','🤖 Google\'s DeepMind AI solved a 50-year-old biology problem (protein folding) in 2020.','🤖 The global AI market is expected to grow from $200B in 2023 to $2 trillion by 2030.','🤖 AI music tools can compose a full professional song in under 30 seconds!','🤖 Microsoft Copilot is built into Bing — AI answers appear automatically, no signup needed.'];
-
-const LESSONS=[{id:0,cat:'beg',tagL:'Beginner',emoji:'🤖',time:'3 min',title:'What is Artificial Intelligence?',sub:'Understand AI in plain simple English — no tech background needed',intro:'AI stands for Artificial Intelligence — technology that gives computers the ability to think, learn and make decisions like humans.',explain:'Think of a child who learns new things every day — first the alphabet, then words, then sentences. AI works exactly the same way. It\'s given massive amounts of data and learns from it to get smarter. The difference: AI learns millions of things in seconds!\n\nAI doesn\'t mean science-fiction robots. It\'s mostly smart software running on your phone and computer — helping you every single day.',eg:'When YouTube automatically suggests videos you enjoy — that\'s AI. It studied your watching history and figured out your taste. When Swiggy shows your delivery time accurately — AI is predicting traffic and kitchen speed in real-time.',pts:['AI is software that learns from data — not a physical robot','It makes decisions similar to how humans think','AI is in your daily life: Google, YouTube, Swiggy, Zomato, Gmail','AI needs millions of examples to be trained properly','You don\'t need to understand how it works to benefit from it'],quiz:0},{id:1,cat:'beg',tagL:'Beginner',emoji:'💬',time:'4 min',title:'What is ChatGPT?',sub:'The world\'s most popular AI tool — explained simply',intro:'ChatGPT is an AI chatbot by OpenAI that can have real conversations and answer almost any question — in Hindi, English or any language!',explain:'ChatGPT was trained by reading billions of internet pages — books, articles, websites, research papers. That\'s why it can talk about almost any topic.\n\nYou can have a real back-and-forth conversation. Ask follow-up questions, tell it to write shorter or more formal — it understands context just like a human would.',eg:'Tell ChatGPT: "Give me a biryani recipe for 4 people" → full recipe. Then say "Make it vegetarian" → it adjusts. Then "Translate this to Hindi" → done in seconds! This conversational ability is what makes it so powerful.',pts:['Free to use at chatgpt.com — no payment needed to start','Works in Hindi, English and most Indian languages','Can write emails, essays, code, recipes — almost anything','GPT-4o is now free for all users — the most powerful version','It can give wrong answers — always verify important health or legal information'],quiz:1},{id:2,cat:'mid',tagL:'Intermediate',emoji:'🎨',time:'3 min',title:'How to Create Images with AI?',sub:'Just type a description — AI creates stunning images instantly',intro:'With AI image tools, you create stunning images just by typing a description. No design skills needed — completely free!',explain:'These tools read your description and generate an image based on it. More detail = better result. This description is called a "prompt".\n\nFor example: "A Rajasthani woman in colorful traditional dress standing in a golden desert at sunset, cinematic photography, 4K quality" gets you a stunning professional-looking image!',eg:'Pinterest business use: Type "Happy Indian woman using wireless earbuds while jogging in a park, morning light, lifestyle photography" → Use that AI image in Canva → Add Amazon affiliate link → Post on Pinterest → Earn commission when people buy!',pts:['Bing Image Creator (bing.com/images/create) — completely free, excellent quality','Canva Magic Image — free, integrated into your design workflow','Leonardo.ai — free daily credits, professional results','Adobe Firefly — commercial use allowed, free credits','More specific description (prompt) = much better image quality'],quiz:2},{id:3,cat:'mid',tagL:'Intermediate',emoji:'💰',time:'5 min',title:'How to Earn Money Using AI?',sub:'Real ways to earn from home with AI in 2026',intro:'AI has opened completely new income streams for regular people. No technical degree needed — just creativity, consistency, and a smartphone.',explain:'The key insight: AI tools do the hard technical work. Your job is to guide them creatively and deliver value to others. Thousands of Indians are already earning from home this way.\n\nThe fastest growing opportunity: affiliate marketing combined with AI content — exactly what you\'re already doing!',eg:'Real story: A homemaker in Pune uses ChatGPT to write Instagram captions for local businesses — earning ₹500 per caption, ₹15,000/month part-time. A student makes logos with AI on Fiverr — ₹800-2000 per logo. These are achievable for beginners!',pts:['Amazon Affiliate + Pinterest — create AI pins, earn 1-9% commission passively','Fiverr — sell AI writing, images, voiceovers globally from home','Content writing — use ChatGPT to write for businesses at ₹200-500 each','WhatsApp/Instagram affiliate — share links with warm audience who trust you','YouTube — review AI tools, earn from ads as your channel grows'],quiz:3},{id:4,cat:'beg',tagL:'Beginner',emoji:'🔍',time:'3 min',title:'AI Search Tools — Better than Google?',sub:'Perplexity, Gemini, Copilot — which one to use and when',intro:'Beyond Google, AI-powered search tools give you direct answers, real sources, and let you have a conversation about your search — no ads!',explain:'Traditional Google shows links — you do all the reading. AI search engines read everything for you and give a direct summarized answer. Plus you can ask follow-up questions!\n\nEspecially powerful for research, comparing products, understanding complex topics, and getting honest recommendations.',eg:'Search "best phone under ₹15,000 in 2026" on Google: 10 listicle links, ads, 20 minutes of reading. Search the same on Perplexity: direct comparison table with current prices, pros/cons, and real sources — in under a minute!',pts:['Perplexity.ai — best overall AI search, shows verified sources, free plan','Google Gemini — great for Indian context, understands Hindi, deep research feature','Microsoft Copilot — free, real-time internet, built into Edge browser and Bing','DuckDuckGo AI — completely private, no tracking, free to use','Best use: Gemini for daily questions, Perplexity for serious research'],quiz:4},{id:5,cat:'mid',tagL:'Intermediate',emoji:'📝',time:'4 min',title:'Using AI for Writing Help',sub:'Emails, essays, captions, resumes — AI writes it all!',intro:'AI is your personal writing assistant available 24/7. Professional emails to creative Instagram captions — everything in seconds.',explain:'Use AI as a starting point, not a finished product. AI gives you a solid draft in 30 seconds. You then edit it in your own voice, add personal touches, and make it authentic.\n\nThis solves the hardest part of writing — getting started on that blank page.',eg:'Client asks for 10 Instagram captions for a restaurant. Tell ChatGPT: "Write 10 engaging Instagram captions for a South Indian restaurant in Bangalore. Friendly tone, under 100 words each." Edit slightly — done in 10 minutes instead of 2 hours. Charge ₹2,000!',pts:['ChatGPT — best for all writing types, free at chatgpt.com','Claude AI — best for long-form content like articles and detailed reports','Grammarly AI — fixes grammar in real-time as you type, free plan available','Copy.ai — specifically designed for marketing copy and social media captions','Always edit AI output in your own voice — makes it authentic and better'],quiz:5},{id:6,cat:'adv',tagL:'Advanced',emoji:'🎵',time:'4 min',title:'Creating Music with AI',sub:'Full professional songs in 30 seconds — no training needed',intro:'In 2026, AI creates complete songs — lyrics, instruments, vocals — from just a text description. No musical background required!',explain:'AI music tools work like image generators: describe what you want and AI creates it. Describe the genre, mood, instruments, language, and feeling — AI handles the rest.\n\nResults are genuinely good enough for YouTube background music, Instagram Reels, podcast intros and short film soundtracks.',eg:'On Suno.ai, type: "Upbeat Bollywood pop song about a morning commute in Mumbai, energetic female vocals, Hindi-English lyrics, positive and motivating mood" → Full 2-minute song ready in 30 seconds with professional production quality!',pts:['Suno.ai — best overall, free daily credits, visit the Music tab in this app!','Udio.com — exceptional audio quality, great for professional use','ElevenLabs — create realistic Hindi voiceovers for your YouTube videos','Mubert — royalty-free background music for content, free tier available','Check the 🎵 Music tab in this app for more tools and ready-to-use prompts!'],quiz:6},{id:7,cat:'mid',tagL:'Intermediate',emoji:'💼',time:'5 min',title:'AI for Small Business Owners',sub:'How every Indian business can save hours and grow faster with AI',intro:'AI is not just for big companies. Every small Indian business — a medical shop, clothing store, tiffin service — can use AI to work smarter and grow faster.',explain:'The biggest challenge for small business owners is time. AI handles time-consuming tasks — writing product descriptions, social media posts, customer messages — freeing you to focus on what matters most.\n\nAnd the best part: most AI tools are completely free!',eg:'A saree shop in Surat used ChatGPT to write WhatsApp catalogue descriptions. Previously 3 hours for 20 descriptions — now 10 minutes. She used the saved time for more orders. Monthly revenue grew 35% in 2 months without any extra investment!',pts:['Write product descriptions with ChatGPT — professional, SEO-friendly, in minutes','Create social media posts for the whole week in one 30-minute ChatGPT session','Use Canva AI to make promotional images without hiring a graphic designer','Set up WhatsApp Business FAQ using AI-written customer responses','Analyze competitors using ChatGPT — "Suggest 5 improvements for my business"'],quiz:7}];
-
-const QUIZ_DATA=[{q:'What does "AI" stand for?',opts:['Automatic Intelligence','Artificial Intelligence','Advanced Internet','Automated Information'],ans:1,exp:'AI stands for Artificial Intelligence — technology giving computers the ability to think and learn like humans.'},{q:'Which company created ChatGPT?',opts:['Google','Microsoft','OpenAI','Meta'],ans:2,exp:'ChatGPT was made by OpenAI — an AI research company founded in 2015 in San Francisco.'},{q:'What do you write to create an AI image?',opts:['Computer code','A prompt (text description)','A password','A URL'],ans:1,exp:'You write a "prompt" — a text description telling AI exactly what image to create. More detail = better image!'},{q:'Which Amazon category gives the highest affiliate commission?',opts:['Electronics 1-3%','Fashion 9%','Books 4%','Home & Kitchen 4-6%'],ans:1,exp:'Fashion pays up to 9% commission — the highest category! That\'s why promoting clothing on Pinterest earns more.'},{q:'What makes Perplexity AI different from Google?',opts:['Shows more ads','Gives direct answers with real sources','Only for coding','Only works in English'],ans:1,exp:'Perplexity gives direct summarized answers with verified sources — no need to click through 10 links!'},{q:'What\'s the best approach to AI-written content?',opts:['Copy-paste directly without reading','Use as starting point and edit in your voice','Never use AI for writing','Only use it in English'],ans:1,exp:'AI gives a great starting point — you edit in your own voice and style to make it authentic and personal.'},{q:'Which tool creates full AI songs with lyrics and vocals?',opts:['Canva','Perplexity','Suno.ai','Grammarly'],ans:2,exp:'Suno.ai creates complete songs with lyrics, music and vocals from just a text description — free daily credits!'},{q:'How can AI most help a small business owner?',opts:['Replace all employees','Save hours on writing — posts, descriptions, messages','Only useful for large companies','It cannot help small businesses'],ans:1,exp:'AI saves small business owners hours every week on writing tasks so they can focus on growing their business!'}];
-
-// ════════════ STATE ════════════
+// ════════ STATE ════════
 let xp=0,lessonsRead=0,quizCorrect=0,liked=false,userRating=0,reviews=[],gameHighScore=0;
+// Simple memory for chat
+let chatHistory=[];
 
-// ════════════ VISITS ════════════
+// ════════ VISITS ════════
 function initVisits(){
   let v=parseInt(localStorage.getItem('ais_visits')||'0')+1;
   localStorage.setItem('ais_visits',v);
   const d=v+1247;
-  document.getElementById('visitCount').textContent=d.toLocaleString('en-IN');
-  document.getElementById('hw-visits').textContent=d.toLocaleString('en-IN');
-  document.getElementById('totalVisits').textContent=d.toLocaleString('en-IN');
+  ['visitCount','hw-visits','totalVisits'].forEach(id=>document.getElementById(id).textContent=d.toLocaleString('en-IN'));
 }
 
-// ════════════ LIKES ════════════
+// ════════ LIKES & LIKERS ════════
+const SAMPLE_LIKERS=['Priya S.','Rahul M.','Anjali K.','Vikram P.','Sunita R.','Kiran B.','Amit J.','Pooja T.','Suresh N.','Deepa M.','Ravi K.','Meena S.','Arun V.','Lalita G.','Mahesh D.','Shweta C.','Nitin A.','Kavya R.','Dinesh P.','Asha T.'];
 function initLikes(){
   liked=localStorage.getItem('ais_liked')==='1';
   let l=parseInt(localStorage.getItem('ais_likes')||'847');
-  updateLikeUI(l);
+  updateLikeUI(l);renderLikers(l);
 }
 function toggleLike(){
   let l=parseInt(localStorage.getItem('ais_likes')||'847');
-  if(!liked){liked=true;l++;localStorage.setItem('ais_liked','1');localStorage.setItem('ais_likes',l);showToast('❤️ Thanks for liking AI Samjho!');}
+  if(!liked){liked=true;l++;localStorage.setItem('ais_liked','1');localStorage.setItem('ais_likes',l);showToast('❤️ Thanks for liking Learn AI India!');}
   else{liked=false;l--;localStorage.setItem('ais_liked','0');localStorage.setItem('ais_likes',l);}
-  updateLikeUI(l);
+  updateLikeUI(l);renderLikers(l);
 }
 function updateLikeUI(l){
   document.getElementById('likeCount').textContent=l;
@@ -669,24 +719,31 @@ function updateLikeUI(l){
   document.getElementById('likeMsg').textContent=liked?'🎉 You\'re one of '+l+' people who love this app!':'';
   document.getElementById('hw-likes').textContent=l;
 }
+function renderLikers(total){
+  const el=document.getElementById('likersList');
+  if(!el)return;
+  const names=liked?['You',...SAMPLE_LIKERS.slice(0,11)]:SAMPLE_LIKERS.slice(0,12);
+  const shown=names.slice(0,12);
+  el.innerHTML=shown.map(n=>`<div class="liker-chip"><div class="liker-av">${n[0]}</div>${n}</div>`).join('')
+    +`<div class="liker-chip" style="background:#F5F3FF;color:var(--t3)">+${total-shown.length} more</div>`;
+}
 
-// ════════════ REVIEWS ════════════
-const DEF_REVIEWS=[{name:'Priya S.',stars:5,text:'Amazing app! Learned about AI in just a few days. The lessons are so simple and clear. Highly recommended!',date:'May 8, 2026'},{name:'Rahul M.',stars:5,text:'The Ask AI tab is super helpful. Got answers to all my questions instantly. Love the clean interface!',date:'May 9, 2026'},{name:'Anjali K.',stars:4,text:'Very useful for understanding AI concepts. The quiz section helped me test my knowledge. Great work Abhishek ji!',date:'May 10, 2026'}];
+// ════════ REVIEWS ════════
+const DEF_REVIEWS=[{name:'Priya S.',stars:5,text:'Amazing app! Learned about AI in just a few days. Lessons are so simple and clear. Highly recommended!',date:'May 8, 2026'},{name:'Rahul M.',stars:5,text:'The Ask AI tab is super helpful. Got answers to all my questions instantly. Love the clean interface!',date:'May 9, 2026'},{name:'Anjali K.',stars:4,text:'Very useful for understanding AI. The quiz section helps test my knowledge. Great work Abhishek ji!',date:'May 10, 2026'}];
 function initReviews(){
   const s=localStorage.getItem('ais_reviews');
-  reviews=s?JSON.parse(s):[...DEF_REVIEWS];
-  renderReviews();
+  reviews=s?JSON.parse(s):[...DEF_REVIEWS];renderReviews();
 }
 function setStar(n){userRating=n;document.querySelectorAll('.star-btn').forEach((s,i)=>s.classList.toggle('on',i<n));}
 function submitReview(){
-  if(!userRating){showToast('Please select a star rating first!');return;}
+  if(!userRating){showToast('Please select a star rating!');return;}
   const name=document.getElementById('reviewName').value.trim()||'Anonymous';
   const text=document.getElementById('reviewText').value.trim();
-  if(!text){showToast('Please write something in your review!');return;}
-  const rev={name,stars:userRating,text,date:new Date().toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'})};
-  reviews.unshift(rev);localStorage.setItem('ais_reviews',JSON.stringify(reviews));
+  if(!text){showToast('Please write something!');return;}
+  reviews.unshift({name,stars:userRating,text,date:new Date().toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'})});
+  localStorage.setItem('ais_reviews',JSON.stringify(reviews));
   document.getElementById('reviewText').value='';document.getElementById('reviewName').value='';
-  setStar(0);userRating=0;renderReviews();showToast('⭐ Review submitted! Thank you!');addXP(20);
+  setStar(0);userRating=0;renderReviews();showToast('⭐ Review submitted! +20 XP!');addXP(20);
   document.getElementById('hw-reviews').textContent=reviews.length;
 }
 function renderReviews(){
@@ -701,30 +758,42 @@ function renderReviews(){
     </div>`).join('');
 }
 
-// ════════════ NAV ════════════
-function go(s,el){
-  document.querySelectorAll('.scr').forEach(x=>x.classList.remove('on'));
-  document.getElementById('s-'+s).classList.add('on');
-  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('on'));
-  if(el)el.classList.add('on');
-  if(s==='game')initGame();
+// ════════ NAV ════════
+function go(screen,el,idx){
+  document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));
+  document.getElementById('s-'+screen).classList.add('on');
+  // Update both mobile and desktop nav
+  document.querySelectorAll('.mob-nb').forEach(b=>b.classList.remove('on'));
+  document.querySelectorAll('.desk-nb').forEach(b=>b.classList.remove('on'));
+  if(el){
+    el.classList.add('on');
+    // Sync the other nav
+    const isMob=el.classList.contains('mob-nb');
+    const allMob=document.querySelectorAll('.mob-nb');
+    const allDesk=document.querySelectorAll('.desk-nb');
+    if(isMob&&idx!==undefined&&allDesk[idx])allDesk[idx].classList.add('on');
+    if(!isMob&&idx!==undefined&&allMob[idx])allMob[idx].classList.add('on');
+  } else if(idx!==undefined){
+    const allMob=document.querySelectorAll('.mob-nb');
+    const allDesk=document.querySelectorAll('.desk-nb');
+    if(allMob[idx])allMob[idx].classList.add('on');
+    if(allDesk[idx])allDesk[idx].classList.add('on');
+  }
+  if(screen==='game')initGame();
 }
 
-// ════════════ DAILY CONTENT ════════════
+// ════════ DAILY ════════
 function dIdx(){const t=new Date();t.setHours(0,0,0,0);return Math.max(0,Math.floor((t-LAUNCH)/864e5));}
 function initDaily(){
-  const d=dIdx();
-  const today=new Date();
+  const d=dIdx(),today=new Date();
   document.getElementById('todayDate').textContent=today.toLocaleDateString('en-IN',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
   document.getElementById('dailyTip').textContent=TIPS[d%TIPS.length];
   document.getElementById('dailyFact').textContent=FACTS[d%FACTS.length];
-  // Daily motivational quote
   const q=QUOTES[d%QUOTES.length];
   document.getElementById('dailyQuote').textContent='"'+q.q+'"';
   document.getElementById('quoteAuthor').textContent='— '+q.a;
   document.getElementById('aboutQuote').textContent='"'+q.q+'"';
-  // Featured lesson
-  const fi=d%LESSONS.length;const fl=LESSONS[fi];
+  const fi=d%LESSONS.length,fl=LESSONS[fi];
   document.getElementById('featuredLesson').innerHTML=`
     <div class="lcard ${fl.cat}" onclick="openLesson(${fi})">
       <span class="tag new">Today's Pick ✦ Day ${d+1}</span>
@@ -733,7 +802,6 @@ function initDaily(){
       <div class="lcard-sub">${fl.sub}</div>
       <div class="lcard-meta"><span>${fl.time} · ${fl.tagL}</span><span class="lcard-arr">→</span></div>
     </div>`;
-  // Topic chips
   const co=[(fi+1)%8,(fi+2)%8,(fi+3)%8,(fi+4)%8,(fi+5)%8,(fi+6)%8,(fi+7)%8];
   document.getElementById('topicChips').innerHTML=co.map(i=>`
     <div class="tchip" onclick="openLesson(${i})">
@@ -742,7 +810,7 @@ function initDaily(){
     </div>`).join('');
 }
 
-// ════════════ LESSONS ════════════
+// ════════ LESSONS ════════
 function renderLessons(){
   const h=LESSONS.map((l,i)=>`
     <div class="lcard ${l.cat}" onclick="openLesson(${i})">
@@ -756,11 +824,12 @@ function renderLessons(){
   document.getElementById('lessonListLearn').innerHTML=h;
 }
 function openLesson(i){
-  const l=LESSONS[i];lessonsRead++;addXP(10);showToast('+10 XP! Great job! 🚀');
+  const l=LESSONS[i];lessonsRead++;addXP(10);showToast('+10 XP! Keep going! 🚀');
   document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));
   document.getElementById('s-detail').classList.add('on');
-  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('on'));
-  document.querySelectorAll('.nb')[1].classList.add('on');
+  document.querySelectorAll('.mob-nb,.desk-nb').forEach(b=>b.classList.remove('on'));
+  document.querySelectorAll('.mob-nb')[1].classList.add('on');
+  document.querySelectorAll('.desk-nb')[1].classList.add('on');
   document.getElementById('detailContent').innerHTML=`
     <span class="tag ${l.cat}">${l.tagL}</span>
     <span class="det-emoji">${l.emoji}</span>
@@ -776,11 +845,11 @@ function openLesson(i){
     <div style="height:16px"></div>
     <button class="btn-main" onclick="goQuiz(${l.quiz})">🧩 Take Quiz — +15 XP!</button>
     <div style="height:8px"></div>
-    <button class="btn-out" style="width:100%;text-align:center;padding:11px" onclick="go('learn',document.querySelectorAll('.nb')[1])">← Back to All Lessons</button>`;
+    <button class="btn-out" style="width:100%;text-align:center;padding:11px" onclick="go('learn',null,1)">← Back to All Lessons</button>`;
   document.getElementById('s-detail').scrollTop=0;updateStats();
 }
 
-// ════════════ QUIZ ════════════
+// ════════ QUIZ ════════
 let cq=[],qCor=0;
 function loadQuiz(spec){
   qCor=0;document.getElementById('qBar').style.width='0%';
@@ -794,10 +863,9 @@ function loadQuiz(spec){
       <div class="q-res" id="qr${i}"></div>
     </div>`).join('');
 }
-function goQuiz(idx){go('quiz',document.querySelectorAll('.nb')[2]);loadQuiz(idx);}
+function goQuiz(idx){go('quiz',null,2);loadQuiz(idx);}
 function ansQ(qi,oi){
-  const q=cq[qi];
-  const opts=document.getElementById('qc'+qi).querySelectorAll('.q-opt');
+  const q=cq[qi],opts=document.getElementById('qc'+qi).querySelectorAll('.q-opt');
   opts.forEach(o=>o.disabled=true);opts[q.ans].classList.add('ok');
   if(oi!==q.ans)opts[oi].classList.add('no');
   else{qCor++;quizCorrect++;addXP(15);showToast('+15 XP! Correct! 🎉');}
@@ -807,13 +875,13 @@ function ansQ(qi,oi){
   document.getElementById('qBar').style.width=(qCor/cq.length*100)+'%';updateStats();
 }
 
-// ════════════ XP ════════════
+// ════════ XP ════════
 function addXP(n){
   xp+=n;document.getElementById('xpc').textContent=xp;
   const p=Math.min(xp%100,100);
   document.getElementById('progFill').style.width=p+'%';
   document.getElementById('xpLabel').textContent=p+'/100 XP to next level';
-  const lv=getLv();document.getElementById('levelBadge').textContent=lv;
+  document.getElementById('levelBadge').textContent=getLv();
 }
 function getLv(){if(xp<50)return'🌱 Beginner';if(xp<150)return'📗 Learner';if(xp<300)return'⚡ Explorer';if(xp<500)return'🔥 Advanced';return'🏆 AI Master';}
 function updateStats(){
@@ -824,47 +892,53 @@ function updateStats(){
   document.getElementById('levelBadge').textContent=getLv();
 }
 
-// ════════════ GOOGLE-LIKE AI CHAT ════════════
-// Uses Wikipedia API (no CORS issues, works everywhere) + Pollinations for AI answers
-const SYS=`You are "AI Samjho" assistant created by Abhishek Tiwari. You can answer ANY question on any topic like Google — science, history, sports, cooking, technology, careers, general knowledge, AI, and more. Answer in clear simple English. Keep answers to 5-7 lines. Use emojis occasionally. If asked who made you: say Abhishek Tiwari created AI Samjho. Always be helpful and friendly.`;
+// ════════ AI CHAT — Smart with Memory + Real AI ════════
+const SYS=`You are "Learn AI India" — a smart friendly assistant created by Abhishek Tiwari. You can answer ANY question on ANY topic like a search engine with conversation. Topics include: AI, technology, science, history, geography, sports, cooking, careers, current events, general knowledge, India-specific topics, and more. Answer in clear simple English. Keep answers to 5-7 lines. Use emojis occasionally. Use Indian examples where helpful (Swiggy, IRCTC, Jio, Reliance, Dhoni etc). If asked who made you: say Abhishek Tiwari created Learn AI India. Be helpful, accurate, and friendly always.`;
 
-// Comprehensive local answers for AI-specific topics
-const LOCAL_TOPICS={
-  'chatgpt|gpt|openai':`💬 <strong>ChatGPT</strong> is a free AI chatbot by OpenAI that answers almost any question in Hindi or English!<br><br>✅ Free at <strong>chatgpt.com</strong><br>✅ Writes emails, essays, code, recipes<br>✅ Works in Hindi and English<br>✅ GPT-4o now free for everyone<br><br>⚠️ Always verify medical, legal or financial information — it can sometimes be wrong. — <em>AI Samjho 🧠</em>`,
-  'what is ai|artificial intel|explain ai|ai kya':`🤖 <strong>Artificial Intelligence (AI)</strong> lets computers think, learn and make decisions like humans.<br><br>It's already in your daily life:<br>📺 YouTube suggesting videos → AI<br>🛵 Swiggy estimating delivery time → AI<br>📧 Gmail filtering spam → AI<br>🎵 Spotify recommending songs → AI<br><br>You don't need to be technical to use AI — it's made for everyone! — <em>AI Samjho 🧠</em>`,
-  'earn|income|paise|make money|kamao':`💰 <strong>Top ways to earn with AI from home:</strong><br><br>1️⃣ Amazon Affiliate + Pinterest — create AI pins, earn 1-9% commission<br>2️⃣ Fiverr — sell AI content, logos, voiceovers globally<br>3️⃣ Content writing — ChatGPT + client work = ₹200-500 per piece<br>4️⃣ WhatsApp affiliate — share links with warm audience<br>5️⃣ YouTube — review AI tools, earn from ads<br><br>Start free, start today! — <em>AI Samjho 🧠</em>`,
-  'free.*tool|best.*tool|ai tool|top ai':`🛠️ <strong>Best free AI tools for India 2026:</strong><br><br>💬 ChatGPT (chat.openai.com) — write anything<br>✨ Google Gemini — works in Hindi, real-time internet<br>🧠 Claude AI — best for long writing<br>🔍 Perplexity — better than Google search<br>🎨 Bing Image Creator — free AI images<br>⚡ Groq — fastest free AI API<br><br>All have free plans — start today! — <em>AI Samjho 🧠</em>`,
-  'image|ai art|generate.*pic|dall|midjourney':`🎨 <strong>Create AI images free — just type a description!</strong><br><br>Best free tools:<br>🎨 Bing Image Creator (bing.com/images/create) — best quality, free<br>🖌️ Canva AI Magic Image — free in designs<br>🦁 Leonardo.ai — free daily credits<br>🦋 Adobe Firefly — commercial use allowed<br><br>Example: "Beautiful Indian woman in red saree, sunset, Rajasthan desert, cinematic" → stunning image in seconds! — <em>AI Samjho 🧠</em>`,
-  'gemini|google ai':`✨ <strong>Google Gemini</strong> is Google's free AI — works perfectly in Hindi!<br><br>✅ Real-time internet — knows today's news<br>✅ Reads PDFs and images you upload<br>✅ Deep Research reads 100+ articles and summarizes<br>✅ Free at gemini.google.com<br><br>Great for Indian users — understands Hindi and Indian context perfectly! — <em>AI Samjho 🧠</em>`,
-  'perplexity|ai search':`🔍 <strong>Perplexity AI</strong> — direct answers instead of 10 links!<br><br>Google → 10 links → you read each one<br>Perplexity → direct answer with sources → done in seconds!<br><br>✅ Free at perplexity.ai<br>✅ Best for research, shopping comparisons, factual questions<br>✅ Shows real verified sources — <em>AI Samjho 🧠</em>`,
-  'pinterest|pin.*affiliate':`📌 <strong>Pinterest + Amazon Affiliate = Passive Income!</strong><br><br>1. Create product pin in Canva (free)<br>2. Add your Amazon affiliate link<br>3. Post with good keywords<br>4. People click → buy → you earn commission!<br><br>💰 Fashion pays 9% — highest commission<br>⏰ Post at 8-10 PM IST for maximum reach — <em>AI Samjho 🧠</em>`,
-  'amazon affiliate|affiliate.*amazon':`🛒 <strong>Amazon Affiliate India</strong> — earn commission on every sale!<br><br>✅ Free to join: affiliate-program.amazon.in<br>✅ Share your unique link anywhere<br><br>Commission rates:<br>👗 Fashion — 9% (highest!)<br>💄 Beauty — 5-9%<br>🏠 Home — 4-6%<br>📱 Electronics — 1-3%<br><br>Focus on fashion and beauty for maximum earnings! — <em>AI Samjho 🧠</em>`,
-  'job|career|replace|ai.*work':`💼 <strong>Will AI take your job?</strong><br><br>Honest answer: AI changes jobs but eliminates very few. People who use AI will replace those who don't.<br><br>✅ Safe: doctors, teachers, plumbers, counselors<br>⚠️ Changing: data entry, basic writing, customer service<br>🔥 Growing: AI educators, content creators<br><br>Learn AI now → become 3-5x more productive → real job security! — <em>AI Samjho 🧠</em>`,
-  'safe|privacy|danger|ai.*risk':`🔒 <strong>AI Safety — Important Rules:</strong><br><br>❌ Never share: Aadhaar, PAN, bank details, passwords with any AI<br>⚠️ AI can be wrong — always verify health, legal, financial advice with professionals<br>✅ Safe for: writing, learning, creativity, research, image generation<br><br>Use AI as a smart helper — not the final authority on important decisions! — <em>AI Samjho 🧠</em>`,
-  'music|suno|ai.*song':`🎵 <strong>Create music with AI — free!</strong><br><br>🎵 Suno.ai — full songs with lyrics and vocals (best!)<br>🎶 Udio.com — high quality music<br>🎤 ElevenLabs — Hindi voiceovers for YouTube<br>🎹 Mubert — background music for videos<br><br>Try: "Upbeat Bollywood pop about morning chai, female vocals" on Suno → full song in 30 seconds! Check the 🎵 Music tab! — <em>AI Samjho 🧠</em>`,
-  'canva|design':`🖌️ <strong>Canva</strong> is the best free design tool for Pinterest pins!<br><br>✅ Pinterest Pin template (1000×1500px) built in<br>✅ AI Magic Write and Image features free<br>✅ Works on browser, mobile and desktop<br><br>For pins: Create → Pinterest Pin → add photo → dark gradient → bold white text → price badge → download PNG → post! — <em>AI Samjho 🧠</em>`,
-  'machine learning|ml |deep learning|ai.*vs.*ml':`🧠 <strong>AI vs Machine Learning — the difference:</strong><br><br>🏠 AI = The entire concept of making machines smart<br>🛏️ Machine Learning = One specific method to achieve AI<br><br>Machine Learning: computers learn from examples instead of fixed rules. Instead of programming "if spam word → delete", ML studies millions of emails and learns to spot spam itself.<br><br>All Machine Learning is AI — but not all AI is Machine Learning! — <em>AI Samjho 🧠</em>`,
-  'hello|hi |namaste|help':`👋 Hi! I'm <strong>AI Samjho</strong> assistant by <strong>Abhishek Tiwari</strong>!<br><br>I can answer <em>any question</em> — just like Google but with conversation!<br><br>🤖 AI & Technology · 💰 Earning online · 🎨 Creative tools<br>📚 History & Science · 🍳 Recipes · 🏏 Sports · 💼 Career advice<br><br>Ask me anything! — <em>AI Samjho 🧠</em>`
+// Local instant answers
+const LOCAL={
+  'chatgpt|openai|gpt':`💬 <b>ChatGPT</b> is the world's most popular free AI chatbot by OpenAI!<br><br>You type any question or request and it replies like a knowledgeable human. It was trained on billions of internet pages so it knows almost every topic.<br><br>✅ Free at <b>chatgpt.com</b> · Works in Hindi & English<br>✅ Writes emails, essays, code, recipes, resumes<br>✅ GPT-4o free for everyone · GPT-4.5 for paid users — <em>Learn AI India 🧠</em>`,
+  'what is ai|artificial intel|ai kya|explain ai|about ai':`🤖 <b>Artificial Intelligence (AI)</b> gives computers the ability to think, learn and make decisions — like humans do.<br><br>It's already in your daily life:<br>📺 YouTube suggesting videos → AI<br>🛵 Swiggy predicting delivery time → AI<br>📧 Gmail filtering spam → AI<br>🎵 Spotify recommending songs → AI<br><br>You don't need to be technical to use AI — it's designed for everyone! — <em>Learn AI India 🧠</em>`,
+  'earn|paise|income|make money|kamao':`💰 <b>Earn money with AI from home:</b><br><br>1️⃣ Amazon Affiliate + Pinterest pins — earn 1-9% commission per sale<br>2️⃣ Fiverr — sell AI-written content, logos, voiceovers<br>3️⃣ Content writing for businesses — ₹200-500 per piece using ChatGPT<br>4️⃣ Your Learn AI India app — Google AdSense + premium plan<br>5️⃣ YouTube — review AI tools, earn from ads<br><br>Tap 💰 Earn tab for full step-by-step plan! — <em>Learn AI India 🧠</em>`,
+  'usa|united states|america|superpower':`🇺🇸 <b>USA (United States of America)</b> is a country in North America with 50 states. Capital: Washington D.C. Largest city: New York.<br><br>It's called a superpower because it has the world's largest economy ($27 trillion), most powerful military, and leads in technology — Apple, Google, Microsoft, Tesla all based in the USA (Silicon Valley).<br><br>Population: ~335 million · Currency: US Dollar · Known for: Hollywood, NASA, freedom of speech — <em>Learn AI India 🧠</em>`,
+  'photosynthesis|plants make food|chlorophyll':`🌿 <b>Photosynthesis</b> is how plants make their own food using sunlight!<br><br>Simple formula: <b>Sunlight + Water + CO₂ → Glucose (food) + Oxygen</b><br><br>Think of leaves as solar panels. The green substance chlorophyll captures sunlight and converts it into energy for the plant to grow.<br><br>🌟 Fun fact: All the oxygen you're breathing right now was made by photosynthesis in plants and algae! — <em>Learn AI India 🧠</em>`,
+  'prime minister|pm india|modi|indian pm':`🇮🇳 <b>Prime Minister of India</b> is the head of the Indian government.<br><br>Narendra Modi has been PM since May 2014 — the first PM to win 3 consecutive terms (2014, 2019, 2024). He leads the BJP (Bharatiya Janata Party).<br><br>The PM is not directly elected by citizens — the party with a Lok Sabha majority chooses their leader as PM. — <em>Learn AI India 🧠</em>`,
+  'capital of australia|canberra|australia capital':`🇦🇺 The capital of Australia is <b>Canberra</b> — not Sydney or Melbourne as many people think!<br><br>Canberra was purpose-built as the capital in 1908 because Sydney and Melbourne both wanted to be capital and couldn't agree. So a new city was built between them!<br><br>Sydney is the largest city · Melbourne is the second largest · Canberra is the political capital — <em>Learn AI India 🧠</em>`,
+  'machine learning|ml |deep learning|ai vs ml|neural network':`🧠 <b>AI vs Machine Learning:</b><br><br>🏠 <b>AI</b> = The whole concept of making machines smart<br>🛏️ <b>Machine Learning</b> = One specific method to achieve AI<br><br>Machine Learning: computers learn from examples instead of fixed rules. Instead of programming "if email has 'lottery' → spam", ML studies millions of emails and learns to detect spam itself.<br><br>All Machine Learning is AI — but not all AI is Machine Learning! — <em>Learn AI India 🧠</em>`,
+  'gemini|google ai|bard':`✨ <b>Google Gemini</b> is Google's free AI — works perfectly in Hindi!<br><br>✅ Real-time internet access — knows today's news<br>✅ Can analyze PDFs and images you upload<br>✅ Deep Research reads 100+ articles and summarizes<br>✅ Free at <b>gemini.google.com</b><br><br>Especially great for Indian users — understands Hindi and Indian context perfectly! — <em>Learn AI India 🧠</em>`,
+  'perplexity':`🔍 <b>Perplexity AI</b> gives direct answers instead of 10 links!<br><br>❌ Google: 10 links → you read each one → find the answer yourself<br>✅ Perplexity: Direct answer with verified sources → done in seconds!<br><br>Free at <b>perplexity.ai</b> — best for research, shopping comparisons and factual questions — <em>Learn AI India 🧠</em>`,
+  'pinterest|pin.*affiliate':`📌 <b>Pinterest + Amazon Affiliate = Passive Income!</b><br><br>1. Create product image pin in Canva (free)<br>2. Add your Amazon affiliate link<br>3. Post with good keywords at 8-10 PM IST<br>4. People click → buy on Amazon → you earn 1-9% commission!<br><br>Fashion pays 9% — highest category. Post 1 pin daily for best results! — <em>Learn AI India 🧠</em>`,
+  'canva|design tool':`🖌️ <b>Canva</b> is the best free design tool — perfect for Pinterest pins!<br><br>✅ Pinterest Pin template (1000×1500px) built-in<br>✅ AI Magic Write and AI Image features free<br>✅ Works on browser, mobile and desktop<br><br>For pins: Create → Pinterest Pin → add photo → dark gradient → bold text → price badge → Download PNG → post! — <em>Learn AI India 🧠</em>`,
+  'python|coding|programming|code':`🐍 <b>Python</b> is the best programming language for beginners — and for AI!<br><br>Used for: 🤖 AI & Machine Learning · 📊 Data science · 🌐 Web development · ⚙️ Automation<br><br>ChatGPT and most AI tools are built with Python. It reads almost like English — very beginner-friendly.<br><br>Start free at <b>python.org</b> · Best free course: CS50P on edX or YouTube tutorials — <em>Learn AI India 🧠</em>`,
+  'ipl|cricket|dhoni|virat|rohit|t20':`🏏 <b>IPL (Indian Premier League)</b> is India's biggest cricket league!<br><br>T20 franchise league with 10 teams, started in 2008 by BCCI. Mumbai Indians has won the most titles (5). CSK is the most popular team.<br><br>Top players: Virat Kohli (RCB), MS Dhoni (CSK captain), Rohit Sharma (MI). IPL earns ₹60,000+ crore in revenue — making cricketers India's highest-paid athletes! — <em>Learn AI India 🧠</em>`,
+  'music|suno|udio|ai song|create song':`🎵 <b>Create music with AI — completely free!</b><br><br>🎵 <b>Suno.ai</b> — best overall, creates full songs with lyrics and vocals from text<br>🎶 <b>Udio.com</b> — exceptional audio quality<br>🎤 <b>ElevenLabs</b> — realistic Hindi/English voiceovers for YouTube<br>🎹 <b>Mubert</b> — royalty-free background music<br><br>Try on Suno: "Upbeat Bollywood pop about chai, female vocals" → full song in 30 seconds! See 🎵 Music tab — <em>Learn AI India 🧠</em>`,
+  'climate|global warming|environment|pollution':`🌍 <b>Climate Change & Global Warming:</b><br><br>The Earth is warming due to CO₂ and greenhouse gases from burning fossil fuels and deforestation. Effects: rising sea levels, extreme heatwaves, melting glaciers, irregular monsoons in India.<br><br>India's role: India pledged net-zero emissions by 2070 and is now the world's 3rd largest solar energy producer. India added 18 GW of solar in 2024 alone! 🌞 — <em>Learn AI India 🧠</em>`,
+  'india|bharat|indian history|independence':`🇮🇳 <b>India (Bharat)</b> is the world's most populous country with 1.44 billion people.<br><br>Capital: New Delhi · Currency: Indian Rupee · Languages: 22 official languages<br>Independence: 15 August 1947 from British rule<br>PM: Narendra Modi · President: Droupadi Murmu<br><br>India is the world's fastest-growing major economy and the 5th largest GDP globally. Known for: IT industry, Bollywood, cricket, yoga, and now — AI! — <em>Learn AI India 🧠</em>`,
+  'paneer|recipe|khana|cooking|biryani|dal':`🍳 <b>Quick Paneer Butter Masala Recipe:</b><br><br>1. Fry onion + tomato + ginger-garlic paste until soft → blend smooth<br>2. Add butter, kashmiri red chilli, cumin, coriander, garam masala<br>3. Add fresh cream and paneer cubes<br>4. Cook 5 mins on low heat, garnish with coriander<br><br>Serve hot with naan or rice! Total time: 25 minutes 😋<br><br>Tip: Ask ChatGPT for any recipe — "Paneer tikka recipe for 4 people" — works perfectly! — <em>Learn AI India 🧠</em>`,
+  'hello|hi |hey |help me|namaste|start|who are you':`👋 Hello! I'm <b>Learn AI India</b> assistant — created by <b>Abhishek Tiwari</b>!<br><br>I can answer <em>literally any question</em> — just like Google but conversational:<br><br>🌍 Geography & History · 🤖 AI & Technology · 💰 Earning online<br>🍳 Recipes · 🏏 Sports · 💼 Career advice · 📚 Science & Math<br>🌿 Biology · 🇮🇳 India topics · 🎵 Music & Entertainment<br><br>What would you like to know? Ask away! 😊`,
 };
 
-function getLocalAnswer(text){
+function getLocal(text){
   const q=text.toLowerCase();
-  for(const[pattern,answer]of Object.entries(LOCAL_TOPICS)){
-    if(new RegExp(pattern,'i').test(q))return answer;
-  }
+  for(const[k,v]of Object.entries(LOCAL)){if(new RegExp(k,'i').test(q))return v;}
   return null;
 }
 
-async function getRealAI(text){
+async function getRealAI(userText){
   const ctrl=new AbortController();
   setTimeout(()=>ctrl.abort(),12000);
-  // Try Pollinations - works from browser without API key
+  // Build conversation with memory (last 6 exchanges)
+  const recentHistory=chatHistory.slice(-6).map(m=>`${m.role==='user'?'User':'Assistant'}: ${m.content}`).join('\n');
+  const contextualPrompt=recentHistory?`Previous conversation:\n${recentHistory}\n\nNew question: ${userText}`:userText;
   try{
-    const r=await fetch(`https://text.pollinations.ai/${encodeURIComponent(text)}?system=${encodeURIComponent(SYS)}&model=openai&seed=${Math.floor(Date.now()/1000)%999}`,
-      {method:'GET',signal:ctrl.signal});
+    const r=await fetch(
+      `https://text.pollinations.ai/${encodeURIComponent(contextualPrompt)}?system=${encodeURIComponent(SYS)}&model=openai&seed=${Math.floor(Date.now()/1000)%9999}`,
+      {method:'GET',signal:ctrl.signal}
+    );
     if(r.ok){
       const t=await r.text();
-      if(t&&t.length>15&&!t.startsWith('<!'))return t.trim()+'\n\n— <em>AI Samjho by Abhishek Tiwari 🧠</em>';
+      if(t&&t.length>20&&!t.startsWith('<!DOCTYPE')&&!t.startsWith('<html'))
+        return t.trim();
     }
   }catch(e){}
   return null;
@@ -876,104 +950,108 @@ async function sendMsg(){
   const text=inp.value.trim();
   if(!text)return;
   inp.value='';
+  chatHistory.push({role:'user',content:text});
   msgs.innerHTML+=`<div class="msg usr">${escH(text)}</div>`;
   const lid='ld'+Date.now();
-  msgs.innerHTML+=`<div class="msg load" id="${lid}">Searching</div>`;
+  msgs.innerHTML+=`<div class="msg load" id="${lid}">🔍 Searching...</div>`;
   msgs.scrollTop=msgs.scrollHeight;
 
-  // 1. Try local knowledge base first (instant)
-  const loc=getLocalAnswer(text);
+  // 1. Local instant
+  const loc=getLocal(text);
   if(loc){
-    await new Promise(r=>setTimeout(r,500));
-    const el=document.getElementById(lid);if(el)el.remove();
-    msgs.innerHTML+=`<div class="msg bot">${loc}</div>`;
+    await new Promise(r=>setTimeout(r,400));
+    document.getElementById(lid)?.remove();
+    const reply=loc;
+    chatHistory.push({role:'assistant',content:text});
+    msgs.innerHTML+=`<div class="msg bot">${reply}</div>`;
     addXP(5);showToast('+5 XP!');msgs.scrollTop=msgs.scrollHeight;updateStats();return;
   }
 
-  // 2. Try real AI (uses user's internet)
-  try{
-    const reply=await getRealAI(text);
-    const el=document.getElementById(lid);if(el)el.remove();
-    if(reply){
-      msgs.innerHTML+=`<div class="msg bot">${escH(reply).replace(/\n/g,'<br>').replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>')}</div>`;
-      addXP(5);showToast('+5 XP! Great question!');
-    } else {
-      // 3. Smart fallback — still helpful
-      msgs.innerHTML+=`<div class="msg bot">🤔 Let me try a different way! For "<strong>${escH(text.substring(0,30))}</strong>", I'd suggest:<br><br>✅ Try asking on <strong>Perplexity.ai</strong> — best for any factual question<br>✅ Or <strong>Google Gemini</strong> — works in Hindi too<br>✅ Both are free and give excellent answers!<br><br>Meanwhile, ask me about AI, tech, earning online, or career advice — I have detailed answers ready! 😊<br><br>— <em>AI Samjho by Abhishek Tiwari 🧠</em></div>`;
-    }
-  }catch(e){
-    const el=document.getElementById(lid);if(el)el.remove();
-    msgs.innerHTML+=`<div class="msg bot">😊 My connection is a bit slow right now! Try:<br><br>• <strong>Perplexity.ai</strong> — answers any question with sources<br>• <strong>Google Gemini</strong> — Google's free AI, works in Hindi<br>• <strong>ChatGPT.com</strong> — most popular AI chatbot<br><br>Or ask me about AI, earning online, or career topics — instant answers! 💪<br><br>— <em>AI Samjho by Abhishek Tiwari 🧠</em></div>`;
+  // 2. Real AI with memory
+  const reply=await getRealAI(text);
+  document.getElementById(lid)?.remove();
+  if(reply){
+    chatHistory.push({role:'assistant',content:reply});
+    // Format reply nicely
+    const formatted=escH(reply)
+      .replace(/\n\n/g,'<br><br>')
+      .replace(/\n/g,'<br>')
+      .replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>')
+      .replace(/\*(.*?)\*/g,'<em>$1</em>');
+    msgs.innerHTML+=`<div class="msg bot">${formatted}<br><br><em style="font-size:11px;opacity:.5">— Learn AI India by Abhishek Tiwari 🧠</em></div>`;
+    addXP(5);showToast('+5 XP! Great question!');
+  } else {
+    msgs.innerHTML+=`<div class="msg bot">🤔 Having trouble connecting right now. For this question, try:<br><br>• <strong>Perplexity.ai</strong> — best for factual questions<br>• <strong>Google Gemini</strong> — works in Hindi too<br>• <strong>ChatGPT.com</strong> — most popular AI<br><br>Or ask me about AI, technology, earning online — instant answers! 😊<br><br><em style="font-size:11px;opacity:.5">— Learn AI India 🧠</em></div>`;
   }
   msgs.scrollTop=msgs.scrollHeight;updateStats();
 }
 function QA(q){document.getElementById('chatInp').value=q;sendMsg();}
-function escH(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function escH(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
-// ════════════ GAME ════════════
+// ════════ GAME ════════
 let gameRunning=false,gameScore=0,gameLives=3,enemies=[],bullets=[],stars=[],gFrame=0,gTimer=null;
 function initGame(){
   const c=document.getElementById('gameCanvas');
-  c.width=c.offsetWidth;c.height=parseInt(window.getComputedStyle(c).height)||320;
+  c.width=c.offsetWidth;
   if(!stars.length)for(let i=0;i<60;i++)stars.push({x:Math.random()*c.width,y:Math.random()*320,s:Math.random()*2+.5,sp:Math.random()+.3});
 }
 function startGame(){
-  const c=document.getElementById('gameCanvas');
-  const W=c.width=c.offsetWidth,H=c.height=parseInt(window.getComputedStyle(c).height)||320;
+  const c=document.getElementById('gameCanvas'),W=c.width=c.offsetWidth,H=320;
   if(gameRunning){gameRunning=false;clearInterval(gTimer);document.getElementById('gBtn').textContent='▶ Start';return;}
   gameRunning=true;gameScore=0;gameLives=3;enemies=[];bullets=[];gFrame=0;
   document.getElementById('gBtn').textContent='⏸ Pause';
-  document.getElementById('gScore').textContent=0;document.getElementById('gLives').textContent='❤️❤️❤️';
-  const ctx=c.getContext('2d');let px=W/2,py=H-50,tx=W/2;
-  c.addEventListener('mousemove',e=>{tx=e.clientX-c.getBoundingClientRect().left;});
-  c.addEventListener('touchmove',e=>{e.preventDefault();tx=e.touches[0].clientX-c.getBoundingClientRect().left;},{passive:false});
-  c.addEventListener('click',()=>bullets.push({x:px,y:py-10}));
-  c.addEventListener('touchstart',e=>{e.preventDefault();bullets.push({x:px,y:py-10});},{passive:false});
+  document.getElementById('gScore').textContent=0;
+  document.getElementById('gLives').textContent='❤️❤️❤️';
+  const ctx=c.getContext('2d');let px=W/2,tx=W/2;
+  c.onmousemove=e=>{tx=e.clientX-c.getBoundingClientRect().left;};
+  c.ontouchmove=e=>{e.preventDefault();tx=e.touches[0].clientX-c.getBoundingClientRect().left;};
+  c.onclick=()=>bullets.push({x:px,y:px-10});
+  c.ontouchstart=e=>{e.preventDefault();bullets.push({x:px,y:px-10});};
   gTimer=setInterval(()=>{
     if(!gameRunning)return;
     ctx.fillStyle='#050010';ctx.fillRect(0,0,W,H);
-    // Stars
-    stars.forEach(s=>{s.y+=s.sp;if(s.y>H)s.y=0;ctx.fillStyle='rgba(255,255,255,.6)';ctx.beginPath();ctx.arc(s.x,s.y,s.s,0,Math.PI*2);ctx.fill();});
-    // Player
+    stars.forEach(s=>{s.y+=s.sp;if(s.y>H)s.y=0;ctx.fillStyle='rgba(255,255,255,.5)';ctx.beginPath();ctx.arc(s.x,s.y,s.s,0,Math.PI*2);ctx.fill();});
     px+=(tx-px)*.12;px=Math.max(20,Math.min(W-20,px));
-    ctx.save();ctx.translate(px,py);
+    // Ship
+    ctx.save();ctx.translate(px,H-50);
     const sg=ctx.createLinearGradient(0,-20,0,20);sg.addColorStop(0,'#7C3AED');sg.addColorStop(1,'#38BDF8');
     ctx.fillStyle=sg;ctx.shadowColor='#7C3AED';ctx.shadowBlur=12;
     ctx.beginPath();ctx.moveTo(0,-20);ctx.lineTo(15,15);ctx.lineTo(0,8);ctx.lineTo(-15,15);ctx.closePath();ctx.fill();
-    ctx.fillStyle='#F472B6';ctx.shadowColor='#F472B6';ctx.shadowBlur=10;
+    ctx.fillStyle='#F472B6';ctx.shadowColor='#F472B6';ctx.shadowBlur=8;
     ctx.beginPath();ctx.ellipse(0,18,5,8,0,0,Math.PI*2);ctx.fill();ctx.restore();ctx.shadowBlur=0;
     // Bullets
-    bullets=bullets.filter(b=>{b.y-=9;const bg=ctx.createLinearGradient(b.x,b.y,b.x,b.y+14);bg.addColorStop(0,'#F472B6');bg.addColorStop(1,'#7C3AED');ctx.fillStyle=bg;ctx.shadowColor='#F472B6';ctx.shadowBlur=6;ctx.fillRect(b.x-2,b.y,4,14);ctx.shadowBlur=0;return b.y>-20;});
-    // Spawn enemies
+    bullets=bullets.filter(b=>{
+      if(!b.vy)b.vy=b.y;b.vy-=9;
+      ctx.fillStyle='#F472B6';ctx.shadowColor='#F472B6';ctx.shadowBlur=5;
+      ctx.fillRect(b.x-2,b.vy,4,14);ctx.shadowBlur=0;return b.vy>-20;
+    });
+    // Spawn
     gFrame++;if(gFrame%(Math.max(28,80-gameScore*2))===0)enemies.push({x:Math.random()*(W-40)+20,y:-30,sp:Math.random()*1.5+1});
-    // Draw & collide enemies
+    // Enemies
     enemies=enemies.filter(e=>{
       e.y+=e.sp;
       ctx.save();ctx.translate(e.x,e.y);
       const eg=ctx.createLinearGradient(0,-18,0,18);eg.addColorStop(0,'#EF4444');eg.addColorStop(1,'#F97316');
-      ctx.fillStyle=eg;ctx.shadowColor='#EF4444';ctx.shadowBlur=10;
+      ctx.fillStyle=eg;ctx.shadowColor='#EF4444';ctx.shadowBlur=8;
       ctx.beginPath();ctx.moveTo(0,-18);ctx.lineTo(18,18);ctx.lineTo(-18,18);ctx.closePath();ctx.fill();
       ctx.fillStyle='#fff';ctx.font='11px Arial';ctx.textAlign='center';ctx.fillText('👾',0,7);
       ctx.restore();ctx.shadowBlur=0;
-      // Bullet hits
       for(let i=bullets.length-1;i>=0;i--){
-        if(Math.abs(bullets[i].x-e.x)<22&&Math.abs(bullets[i].y-e.y)<22){
+        const b=bullets[i];
+        if(Math.abs(b.x-e.x)<22&&Math.abs(b.vy-e.y)<22){
           bullets.splice(i,1);gameScore++;document.getElementById('gScore').textContent=gameScore;
           if(gameScore>gameHighScore){gameHighScore=gameScore;document.getElementById('gHigh').textContent=gameHighScore;document.getElementById('gameHigh').textContent=gameHighScore;}
-          if(gameScore%5===0){addXP(1);showToast('+1 XP! Gaming pays off! 🎮');}
-          ctx.save();ctx.translate(e.x,e.y);ctx.font='20px Arial';ctx.textAlign='center';ctx.fillText('💥',0,0);ctx.restore();
+          if(gameScore%5===0){addXP(1);showToast('+1 XP from gaming! 🎮');}
           return false;
         }
       }
-      // Missed — hits bottom
       if(e.y>H+20){
         gameLives--;
         document.getElementById('gLives').textContent=['💀','❤️','❤️❤️','❤️❤️❤️'][Math.max(0,gameLives)];
         if(gameLives<=0){
           gameRunning=false;clearInterval(gTimer);document.getElementById('gBtn').textContent='▶ Restart';
           ctx.fillStyle='rgba(0,0,0,.85)';ctx.fillRect(0,0,W,H);
-          const gg=ctx.createLinearGradient(W/2-80,0,W/2+80,0);gg.addColorStop(0,'#F472B6');gg.addColorStop(1,'#7C3AED');
-          ctx.fillStyle=gg;ctx.font='bold 30px Baloo 2';ctx.textAlign='center';ctx.fillText('GAME OVER',W/2,H/2-10);
+          ctx.fillStyle='#F472B6';ctx.font='bold 30px Baloo 2';ctx.textAlign='center';ctx.fillText('GAME OVER',W/2,H/2-10);
           ctx.fillStyle='#BAE6FD';ctx.font='17px Inter';ctx.fillText('Score: '+gameScore,W/2,H/2+22);
           ctx.fillStyle='#FCD34D';ctx.fillText('Best: '+gameHighScore,W/2,H/2+48);
         }
@@ -981,12 +1059,11 @@ function startGame(){
       }
       return true;
     });
-    // Auto-fire
-    if(gFrame%14===0)bullets.push({x:px,y:py-10});
+    if(gFrame%14===0)bullets.push({x:px,y:H-60,vy:H-60});
   },1000/60);
 }
 
-// ════════════ UTILS ════════════
+// ════════ UTILS ════════
 function cpPrompt(el){
   const t=el.textContent.replace('Tap to copy → ','');
   navigator.clipboard.writeText(t).catch(()=>{});
@@ -994,14 +1071,28 @@ function cpPrompt(el){
   setTimeout(()=>el.innerHTML=o,2500);showToast('Prompt copied! Open Suno.ai 🎵');
 }
 function OT(url){window.open(url,'_blank');}
-function shareWA(){window.open('https://wa.me/?text=Learn%20AI%20for%20free!%20AI%20Samjho%20by%20Abhishek%20Tiwari%20%F0%9F%A7%A0%20https://aisamjho.github.io/aisamjho','_blank');}
+function shareWA(){window.open('https://wa.me/?text=Learn%20AI%20India%20%E2%80%94%20Free%20AI%20learning%20app%20by%20Abhishek%20Tiwari%20%F0%9F%A7%A0%0Ahttps://aisamjho.github.io/aisamjho','_blank');}
 function shareApp(){
-  if(navigator.share)navigator.share({title:'AI Samjho',text:'Free AI learning app!',url:'https://aisamjho.github.io/aisamjho'});
+  if(navigator.share)navigator.share({title:'Learn AI India',text:'Free AI learning app by Abhishek Tiwari! 🧠',url:'https://aisamjho.github.io/aisamjho'});
   else{navigator.clipboard.writeText('https://aisamjho.github.io/aisamjho').catch(()=>{});showToast('Link copied! Share with friends 🙏');}
 }
 function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
 
-// ════════════ INIT ════════════
+// ════════ PWA INSTALL ════════
+let deferredPrompt=null;
+window.addEventListener('beforeinstallprompt',e=>{
+  e.preventDefault();deferredPrompt=e;
+  const b=document.getElementById('installBanner');
+  if(b)b.style.display='flex';
+});
+const _ib=document.getElementById('installBtn');
+if(_ib){_ib.addEventListener('click',async()=>{
+  if(deferredPrompt){await deferredPrompt.prompt();deferredPrompt=null;}
+  const b=document.getElementById('installBanner');if(b)b.style.display='none';
+});}
+window.addEventListener('appinstalled',()=>showToast('🎉 Installed as app on your device!'));
+
+// ════════ INIT ════════
 renderLessons();loadQuiz();initDaily();initVisits();initLikes();initReviews();
 </script>
 </body>
